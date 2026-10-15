@@ -1,0 +1,259 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "It took one country to account for half of 1990s cinema. Today it takes three.",
+    "subtitle": [
+      "Countries or regions in order of their share of the decade's widely seen films.",
+      "The black bar marks where the running total passes half; each row stops at four-fifths."
+    ]
+  },
+  "width": 700,
+  "height": 270,
+  "data": {
+    "url": "data/02_country_shares_decade.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"decade": "number", "share_pct": "number", "iso_num": "number"}
+    }
+  },
+  "transform": [
+    {
+      "window": [
+        {"op": "row_number", "as": "rank"},
+        {"op": "sum", "field": "share_pct", "as": "cum"}
+      ],
+      "sort": [{"field": "share_pct", "order": "descending"}],
+      "groupby": ["decade"],
+      "frame": [null, 0]
+    },
+    {"calculate": "datum.cum - datum.share_pct", "as": "before"},
+    {"filter": "datum.before < 80"},
+    {"calculate": "datum.before < 50 ? 'Half' : 'Four-fifths'", "as": "group"},
+    {
+      "lookup": "iso_num",
+      "from": {
+        "data": {
+          "url": "data/02d_country_shares_wide.csv",
+          "format": {"type": "csv", "parse": {"iso_num": "number"}}
+        },
+        "key": "iso_num",
+        "fields": ["region"]
+      }
+    },
+    {
+      "calculate": "indexof(['Africa', 'Oceania', 'Middle East & Central Asia'], datum.region) >= 0 ? 'Rest of the world' : datum.region",
+      "as": "region6"
+    },
+    {
+      "calculate": "datum.iso_a3 === 'USA' ? 'US' : datum.iso_a3 === 'GBR' ? 'UK' : datum.iso_a3 === 'KOR' ? 'S. Korea' : datum.iso_a3 === 'HKG' ? 'Hong\\nKong' : datum.country",
+      "as": "short"
+    },
+    {
+      "calculate": "datum.decade === 2020 ? '2020–22' : datum.decade + 's'",
+      "as": "decade_label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "decade_label",
+      "type": "ordinal",
+      "title": null,
+      "sort": {"field": "decade"},
+      "scale": {"paddingInner": 0.14},
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFont": "Oswald, Inter, sans-serif",
+        "labelFontSize": 14,
+        "labelColor": "#1F1B16",
+        "labelPadding": 8
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "cornerRadius": 3},
+      "encoding": {
+        "x": {
+          "field": "rank",
+          "type": "ordinal",
+          "title": null,
+          "axis": null,
+          "scale": {
+            "domain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+            "paddingInner": 0.08
+          }
+        },
+        "color": {
+          "field": "region6",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "Europe",
+              "East Asia",
+              "South & Southeast Asia",
+              "Latin America",
+              "Rest of the world"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {"field": "country", "type": "nominal", "title": "title"},
+          {"field": "decade_label", "type": "nominal", "title": "Decade"},
+          {"field": "rank", "type": "quantitative", "title": "Rank"},
+          {
+            "field": "share_pct",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "% of the decade's films"
+          },
+          {
+            "field": "cum",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Running total %"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.group === 'Half'"},
+        {
+          "joinaggregate": [{"op": "max", "field": "rank", "as": "last_half"}],
+          "groupby": ["decade"]
+        },
+        {"filter": "datum.rank === datum.last_half"}
+      ],
+      "mark": {
+        "type": "tick",
+        "orient": "vertical",
+        "color": "#1F1B16",
+        "opacity": 1,
+        "thickness": 3,
+        "size": 48,
+        "xOffset": {"expr": "bandwidth('x') * 0.04 / 0.92"}
+      },
+      "encoding": {
+        "x": {
+          "field": "rank",
+          "type": "ordinal",
+          "bandPosition": 1,
+          "scale": {"domain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
+        },
+        "tooltip": {"value": "Half of the decade's films"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.iso_a3 !== 'HKG'"}],
+      "mark": {"type": "text", "fontSize": 12, "fontWeight": 600},
+      "encoding": {
+        "x": {
+          "field": "rank",
+          "type": "ordinal",
+          "scale": {"domain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
+        },
+        "text": {"field": "short", "type": "nominal"},
+        "color": {
+          "condition": {
+            "test": "datum.region6 === 'North America'",
+            "value": "#FFFFFF"
+          },
+          "value": "#1F1B16"
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.iso_a3 === 'HKG'"}],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 600,
+        "lineBreak": "\n",
+        "lineHeight": 13,
+        "dy": -6.5
+      },
+      "encoding": {
+        "x": {
+          "field": "rank",
+          "type": "ordinal",
+          "scale": {"domain": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]}
+        },
+        "text": {"field": "short", "type": "nominal"},
+        "color": {
+          "condition": {
+            "test": "datum.region6 === 'North America'",
+            "value": "#FFFFFF"
+          },
+          "value": "#1F1B16"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

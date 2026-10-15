@@ -1,0 +1,7 @@
+decade,countries,n_for_50pct,n_for_80pct,effective_countries,top1_share_pct,top1_country
+1970,61,2,7,5.43,37.6,United States of America
+1980,64,2,7,3.71,49.6,United States of America
+1990,81,1,6,3.13,55.0,United States of America
+2000,110,2,9,4.75,43.5,United States of America
+2010,126,3,11,5.45,40.1,United States of America
+2020,100,3,11,5.77,38.8,United States of America

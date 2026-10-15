@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>From Hollywood to Home: Five Decades of Movies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+</head>
+<body>
+<!--
+  The page is a single scrolling article. Each chart is an empty <div class="viz">
+  with an id; js/main.js loads the matching Vega-Lite spec into it.
+-->
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">FIT3179 Data Visualisation 2</p>
+    <h1>From Hollywood to Home</h1>
+    <p class="standfirst">Five decades of movies, and how Malaysia started watching itself</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="hook">
+    <div class="prose">
+      <p class="lede">In March 2023 an actress born in Ipoh walked onto the stage at the Dolby
+        Theatre and became the first Asian woman to win the Academy Award for Best Actress.
+        Malaysia's own entries for the Academy's international feature award have yet to be
+        nominated.</p>
+    </div>
+    <figure class="card"><div id="v14" class="viz"></div>
+      <figcaption>Malaysia has entered eleven films for the Academy Award for Best International
+        Feature Film since 2004. None of the first ten was nominated. The eleventh, Woo Ming Jin's
+        <em>The Fox King</em> (<em>Semusim Lara</em>), awaits the 99th Academy Awards in March
+        2027. Hover over a square for the film.
+        <span class="source">Sources: Wikipedia; The Star.</span></figcaption></figure>
+    <div class="prose">
+      <p class="lede">Three years later came a quieter milestone, at home. Between January and July
+        2026, Malaysian films drew <strong class="malaysia">7.55 million</strong> cinema admissions against
+        Hollywood's <strong class="hollywood">6.94 million</strong>. Malaysians were watching more of their own films
+        than of Hollywood's.</p>
+      <p>This is the story of how the world's cinema changed around us, and how we changed with it.</p>
+    </div>
+  </section>
+
+  <section id="origins">
+    <p class="eyebrow">Part one</p>
+    <h2>Where the movies come from</h2>
+    <div class="prose">
+      <p>Start with a simple question: where do the films that reach an audience come from? The
+        answer here comes from TMDB (The Movie Database), a free online film database whose users
+        rate the films they have seen. Unless a chart says otherwise, a film counts once at least 25
+        people have rated it there, so the charts follow films that found viewers rather than every
+        film ever shot.</p>
+      <p>The record runs from 1970 to 2022. In the TMDB dataset used here, films released in 2024
+        or later have no ratings at all and 2023 films have far fewer than earlier years, so 2022
+        is the last year that can be compared fairly. The 2020s on this page therefore means 2020
+        to 2022.</p>
+    </div>
+    <figure class="card"><div id="v01" class="viz"></div>
+      <figcaption>Each band is a region's share of that year's widely seen films; North America is
+        mostly the United States and Canada. To keep the colours few, Africa, Oceania and the
+        Middle East and Central Asia are grouped as "Rest of the world"; the same six regions and
+        colours are used across the page.
+        <span class="source">Source: TMDB.</span></figcaption></figure>
+    <div class="prose">
+      <p>Hollywood's grip was not loosening through the 1970s and 80s. It was tightening. On this
+        page, Hollywood means films produced in the United States. Their share of widely seen films
+        climbed from 37.6% in the 1970s to <strong>55.0% in the 1990s</strong>, then fell back to
+        38.8% in the 2020s. The 64% in the chart's title is higher because it counts all of North
+        America, in its single peak year of 1990; across the whole decade North America made up
+        58.0%. The 1970s and the 2020s look similarly un-American. What changed is <em>who
+        else</em> is in the picture.</p>
+    </div>
+    <figure class="card wide"><div id="v02" class="viz"></div>
+      <figcaption>Drag the decade slider to watch the 1990s peak form and dissolve. Each circle
+        sits within its country or region, and its area is proportional to that place's share, so
+        circles can be compared across decades. Hover over a circle for the exact
+        figure. <span class="source">Sources: TMDB; outlines from Natural Earth.</span></figcaption></figure>
+    <div class="prose">
+      <p>In the 1970s the non-American half of cinema was mostly European, with Italy alone accounting
+        for 12.7% of widely seen films. By the 2010s the picture had changed completely. Italy was
+        down to 3.7% and Hong Kong's share had slipped from 2.4% to 0.8%, while India rose from 0.6%
+        to 4.1%, South Korea from 0.1% to 2.4% and Canada from 1.2% to 5.1%. The same share of the
+        whole, an entirely different world.</p>
+    </div>
+    <figure class="card"><div id="v02c" class="viz"></div>
+      <figcaption>Read each row from the left: countries and regions are in order of their share of
+        that decade's films, coloured by region as in the charts above. In the 1990s the United
+        States alone made up half. Today it takes the
+        United States, France and the United Kingdom together, and it takes eleven countries and
+        regions to reach four-fifths, up from six. <span class="source">Source: TMDB.</span></figcaption></figure>
+  </section>
+
+  <section id="partners">
+    <p class="eyebrow">Part two</p>
+    <h2>Who makes them together, and where they are filmed</h2>
+    <div class="prose">
+      <p>Many of those films belong to more than one country. A film made by two countries counts
+        half for each in the charts above, so it is worth asking who makes films with whom.</p>
+    </div>
+    <figure class="card wide"><div id="v09" class="viz"></div>
+      <figcaption>Each line joins two countries or regions that co-produced at least 15 widely seen
+        films; thicker means more. Lines follow the shortest route over the globe, so a link across
+        the Pacific leaves one edge of the map and comes back at the other. Malaysia's own
+        partnerships are all smaller than 15 films.
+        <span class="source">Sources: TMDB; outlines from Natural Earth.</span></figcaption></figure>
+    <div class="prose">
+      <p>Working across borders is not new. The share of films made by two or more countries has
+        moved between 17% and 28% since the 1970s, with no steady rise. What is striking is
+        <em>who</em> works with whom. Pairs within Europe and North America account for
+        <strong>80.7%</strong> of the co-produced films on the map, and pairs involving East, South
+        or Southeast Asia for <strong>10.5%</strong>. Malaysia's strongest partnerships are five
+        films with China and five with the United States.</p>
+      <p>There is another map hiding behind these. A film's production country is a matter of
+        money and paperwork. Where the camera actually points is a different question.</p>
+    </div>
+    <figure class="card wide"><div id="v15" class="viz"></div>
+      <figcaption>Filming locations recorded in Wikidata, 1970 to 2022, gathered on a one-degree
+        grid. Circle area is proportional to the number of shoots, with the smallest enlarged
+        slightly so they stay visible. Drag the slider to show one decade at a time (at its far
+        left it shows them all), and hover over a circle to name the place. Malaysia's eight
+        shoots are the red marks, too close together at this scale
+        to separate, so here they are in full: the Petronas Towers and Bukit Jalil LRT station
+        (<em>Entrapment</em>, 1999), Redang Island (<em>Summer Holiday</em>, 2000), Kuching
+        (<em>The Sleeping Dictionary</em>, 2003), Kuala Lumpur (<em>Warkop DKI Reborn: Jangkrik
+        Boss Part 2</em>, 2017), Kuala Lumpur and Langkawi (<em>Assassins</em>, 2020), and Bentong
+        (2021, film untitled in the source). Wikidata's coverage is partial and skews Western, so read this as where filming
+        is <em>recorded</em> rather than a census of every shoot.
+        <span class="source">Sources: Wikidata; outlines from Natural Earth.</span></figcaption></figure>
+    <div class="prose">
+      <p>Three place names account for <strong>14.6%</strong> of every recorded shoot since 1970: Los
+        Angeles, New York City and "California", recorded without a more exact place. The top ten
+        account for 27.3%. North America and Europe together held <strong>about nine in ten</strong>
+        recorded shoots in the 1970s and still hold <strong>about four in five</strong> today.
+        Several of the busiest names on the map, among them Vancouver, Toronto and Atlanta, grew
+        into filming hubs partly thanks to tax incentives.</p>
+      <p>Malaysia appears <strong>eight times in fifty years</strong>, most famously in
+        <em>Entrapment</em> (1999), which was filmed at the Petronas Towers.</p>
+    </div>
+  </section>
+
+  <section id="money">
+    <p class="eyebrow">Part three</p>
+    <h2>What the movies cost, and what they are about</h2>
+    <div class="prose">
+      <p>Comparing budgets across fifty years is harder than it sounds. TMDB records a budget for only
+        21% of 1970s films but 38% of 1990s films, and the small films added in later decades drag
+        the typical budget down, which makes budgets look as though they <em>fell</em>. So the next
+        two charts follow a fixed group instead: the twenty highest-grossing films of every single
+        year. A 1975 dot and a 2015 dot describe the same kind of thing. All figures are adjusted
+        for inflation to 2025 US dollars.</p>
+    </div>
+    <figure class="card"><div id="v03" class="viz"></div>
+      <figcaption>Each dot is one year: the median budget and median box office of that year's 20
+        biggest films. The median is the middle value when the films are lined up from smallest to
+        largest, so a single blockbuster cannot pull it up. The line joins the years in order. Both
+        axes use a log scale, where equal distances mean equal multiples: the step from $10 million
+        to $100 million is as long as the step from $100 million to $1 billion.
+        <span class="source">Sources: TMDB; inflation from US CPI-U.</span></figcaption></figure>
+    <div class="prose">
+      <p>Between the 1970s and the 2010s the median budget of a year's twenty biggest films rose from
+        an average of <strong>$26 million to $207 million</strong>, roughly eightfold. Their median
+        box office rose from $218 million to $882 million, about fourfold. The money going in grew
+        nearly twice as fast as the money coming out. The sharp hook back to the left is 2020 and
+        the pandemic.</p>
+    </div>
+    <figure class="card"><div id="v04" class="viz"></div>
+      <figcaption>Each ridge shows how that decade's biggest budgets were spread out; a taller peak
+        means more films clustered at that cost. The figure on the right of each ridge is the
+        share that cost $100 million or more. The 2020–22 ridge rests on only 50 films, against
+        169 to 199 for each earlier decade.
+        <span class="source">Sources: TMDB; inflation from US CPI-U.</span></figcaption></figure>
+    <div class="prose">
+      <p>In the 1970s fewer than one in twelve of the year's biggest films cost $100 million in
+        today's money. By the 2010s, <strong>nearly nine in ten did</strong>.</p>
+      <p>Money was not the only thing that changed. So did the kinds of films that reach an
+        audience.</p>
+    </div>
+    <figure class="card"><div id="v05" class="viz"></div>
+      <figcaption>Each genre's share of the decade's widely seen films; a film with several genres
+        counts partly towards each. Read down a column for a decade's mix, or across a row for a
+        genre's fortunes. <span class="source">Source: TMDB.</span></figcaption></figure>
+    <div class="prose">
+      <p>The Western collapsed from 2.8% of 1970s cinema to 0.4% today. The documentary went the other
+        way, from 1.8% to 6.6%. Drama led every decade except the 1980s, when comedy briefly took
+        first place.</p>
+    </div>
+  </section>
+
+  <section id="judgement">
+    <p class="eyebrow">Part four</p>
+    <h2>Did any of it make films better?</h2>
+    <div class="prose">
+      <p>Films now cost far more to make. Are they any better? Two judges can answer: the millions
+        of people who rate films on TMDB, and the Academy of Motion Picture Arts and Sciences.</p>
+    </div>
+    <div class="row-2">
+      <figure class="card"><div id="v06" class="viz"></div>
+        <figcaption>Each hexagon groups films with similar budgets and similar scores; darker means
+          more films in that cell. The black lines give the average rating in each budget range,
+          from $10,000 to $100,000 at the left to $100 million and more at the right.
+          <span class="source">Sources: TMDB; inflation from US CPI-U.</span></figcaption></figure>
+      <figure class="card"><div id="v07" class="viz"></div>
+        <figcaption>The box holds the middle half of each decade's films and the line inside it is
+          the median, the score of the typical film. The thin lines either side stretch to the
+          lowest and highest scores, leaving out a few extreme ones. The small rise in the 2020s
+          probably reflects that recent films are rated mostly by their fans.
+          <span class="source">Source: TMDB.</span></figcaption></figure>
+    </div>
+    <div class="prose">
+      <p>Money and quality do move together, but only just. A film costing a thousand times more than
+        an indie scores only about <strong>six-tenths of a point higher out of ten</strong>: 5.90
+        for films under $100,000 against 6.53 for films over $100 million. The relationship holds
+        in every single decade, but it is always weak: a bigger budget buys slightly better
+        ratings, not much better ones.</p>
+      <p>Across five decades the typical film scores between 6.25 and 6.57 out of ten. Budgets grew
+        eightfold; the audience verdict barely moved.</p>
+    </div>
+    <figure class="card"><div id="v08" class="viz"></div>
+      <figcaption>Column width is proportional to the number of nominations that decade, and the
+        coloured bands are the region the nominated film was made in. Click a region in the legend,
+        or a band, to pick out the thin bands; double-click the chart to show every region again. The 2020s
+        column covers 2020 to 2022 only.
+        <span class="source">Sources: DLu/oscar_data; TMDB.</span></figcaption></figure>
+    <div class="prose">
+      <p>North America and Europe took <strong>97.8%</strong> of Academy Award nominations in the
+        1970s. By the 2020s that was 90.5%, real movement but slow. East Asia went from 0.7% to
+        3.0%, and South and Southeast Asia, the region Malaysia belongs to, from 0.1% to 2.1% in
+        the 2010s. Malaysia's own entries, as the first chart showed, are still waiting for a
+        nomination.</p>
+    </div>
+  </section>
+
+  <section id="home">
+    <p class="eyebrow">Part five</p>
+    <h2>What happened here</h2>
+    <div class="prose">
+      <p>At home, two things changed at once: the kind of films Malaysians make, and how many
+        Malaysians go to see them.</p>
+    </div>
+    <div class="row-2">
+      <figure class="card"><div id="v10" class="viz"></div>
+        <figcaption>Every Malaysian-produced film listed on TMDB counts here, however few ratings it
+          has. With 29 films in the 1990s against 721 in the 2010s, the 1990s ranks are only
+          indicative. Hover over a dot to follow one genre.
+          <span class="source">Source: TMDB.</span></figcaption></figure>
+      <figure class="card"><div id="v11" class="viz"></div>
+        <figcaption>For 2026 the chart uses the January–July totals from FINAS, the National Film
+          Development Corporation Malaysia. The minister's statement of 24 August gave a lower
+          figure for local films, 6.10 million "as of July", without an exact end date.
+          <span class="source">Source: FINAS, via Bernama, 21 and 24 August 2026.</span></figcaption></figure>
+    </div>
+    <div class="prose">
+      <p>Drama has topped every decade of Malaysian film-making. The real movement is horror, which
+        climbed from seventh place in the 1990s to <strong>second</strong> today, while romance slid
+        from fifth to ninth.</p>
+      <p>Audiences followed. Local films took 16.8% of Malaysian admissions in 2023 and
+        <strong>36.5%</strong> in 2025, with attendance rising from 5.87 million to 14.83
+        million.</p>
+      <p>Skim Wajib Tayang, the Compulsory or Mandatory Screening Scheme, is FINAS's scheme
+        requiring cinemas to screen approved Malaysian films, normally for 14 consecutive days.
+        According to the Communications Minister, takings from local films shown under it roughly
+        doubled in a single year, from RM125.28 million in 2024 to RM253.31 million in 2025.</p>
+      <p>Then, in the first seven months of 2026, local films passed Hollywood outright: 7.55 million
+        admissions to 6.94 million, a lead of about 610,000. Five of them had each taken more than
+        RM10 million, led by <em>Tarung: Unforgiven</em> at RM23.59 million.</p>
+    </div>
+    <figure class="card"><div id="v13" class="viz"></div>
+      <figcaption>Cinemas mapped in OpenStreetMap per million residents. "Per million" simply scales
+        for population, so a big state and a small one can be compared fairly. The box enlarges the
+        Klang Valley, where the two federal territories are too small to see on the main map. Grey
+        states are those where volunteers have not mapped any cinema, which is not the same as having
+        no cinemas.
+        <span class="source">Sources: OpenStreetMap; DOSM; outlines from geoBoundaries.</span></figcaption></figure>
+    <div class="prose">
+      <p>Kuala Lumpur has 9.6 mapped cinemas per million residents and Putrajaya 8.2, against 2.0 in
+        Sarawak and 1.6 in Terengganu. Putrajaya's figure rests on a single cinema for its 121,000
+        residents, but Kuala Lumpur's rests on 20. Measured per person, the cinemas themselves are
+        concentrated in the two federal territories at the centre of the Klang Valley.</p>
+    </div>
+  </section>
+
+</main>
+
+<section class="coda" id="resolution">
+  <div class="wrap">
+    <p class="eyebrow">In closing</p>
+    <h2>The film you buy a ticket for tonight</h2>
+    <ul class="takeaways">
+      <li><b>55.0%</b><span>Hollywood's peak share of the world's widely seen films, reached in the
+        1990s</span></li>
+      <li><b>8&times;</b><span>Growth in the median budget of a year's twenty biggest films, 1970s
+        to 2010s</span></li>
+      <li><b>36.5%</b><span>Malaysian films' share of local admissions in 2025, up from 16.8% in
+        2023</span></li>
+    </ul>
+    <div class="prose">
+      <p class="lede">Five decades ago the cinema that travelled the world was mostly American and
+        European. It became <em>more</em> American, not less, right through the 1990s, and then it
+        broke open. The films that reach us now come from a wider spread of countries than at any
+        time since 1970, they cost enormously more to make, and audiences rate them almost exactly
+        as they always did.</p>
+      <p>And in 2026, Malaysian films sold more cinema tickets at home than Hollywood's did.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <h2>About this page</h2>
+  <div class="prose">
+    <p><strong>Author:</strong> Mingze Zheng (32433786). Built September to October 2026.
+      Built with <a href="https://vega.github.io/vega-lite/">Vega-Lite</a>, Vega and vega-embed
+      (BSD-3-Clause), with the Oswald and Inter typefaces from <a
+              href="https://fonts.google.com/">Google Fonts</a> (SIL Open Font License).</p>
+    <p><strong>What counts as a film here.</strong> A film enters the global charts once it has at
+       least 25 ratings on TMDB, so these show the cinema that still reaches an audience rather than
+       raw production output. A film credited to two countries contributes half to each, so shares
+       total 100% and no film is double-counted. Money is adjusted to 2025 US dollars using the
+       annual average of the US consumer price index (CPI-U). The analysis covers 1970 to 2022: in
+       the TMDB dataset used here, films from 2024 onward have no ratings and 2023 films only a
+       fraction of theirs, so the 2020s means 2020 to 2022 throughout.</p>
+    <p><strong>Regions.</strong> Countries are grouped by the United Nations geographic regions into
+       six: North America, Europe, East Asia, South and Southeast Asia, Latin America, and the rest
+       of the world (Africa, Oceania, the Middle East and Central Asia).</p>
+    <p><strong>Malaysian figures.</strong> Admissions are as reported by Bernama from FINAS and the
+       Communications Minister. Skim Wajib Tayang collections are the box-office takings of local
+       films screened under the scheme, as reported by the minister on 24 August 2026; other
+       official statements give different totals for 2024 and 2025.</p>
+    <p><strong>Boundaries and names.</strong> World outlines follow Natural Earth and Malaysian state
+       outlines follow geoBoundaries. They are drawn as those sources supply them and are not a
+       statement on any territorial claim. Circles and line ends on the world maps sit at a point
+       inside each country's largest outline; 16 small countries and territories with no outline at
+       this scale, among them Hong Kong, Macao and Singapore, are placed at their Wikidata
+       coordinates. Figures are labelled "country or region" so that territories and special
+       administrative regions are not described as states. Films from countries that no longer exist, such as the Soviet
+       Union, Czechoslovakia, Yugoslavia and East Germany, are attributed to a present-day
+       successor so they can be placed on a map. That affects 0.7% of the films charted here and
+       is a mapping convenience rather than a political judgement. Place names on the filming map
+       are shown as Wikidata supplies them and describe geography, not sovereignty.</p>
+    <p><strong>Sources.</strong></p>
+    <ul class="sources">
+      <li>Films, budgets, box office, ratings, genres and production countries: <a
+        href="https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies">Full
+        TMDB Movies Dataset 2024 (1M Movies)</a> by asaniczka on Kaggle, ODC-By, downloaded 11
+        September 2026; the file was unchanged in the version of 11 October 2026.</li>
+      <li>Academy Award nominations: <a href="https://github.com/DLu/oscar_data">DLu/oscar_data</a>,
+        BSD-2-Clause, fetched 12 September 2026.</li>
+      <li>Malaysian admissions and box office (FINAS): Bernama, <a
+        href="https://www.bernama.com/tv/news.php?id=2597480">21 August 2026</a> and <a
+        href="https://www.bernama.com/en/general/news.php?id=2598519">24 August 2026</a> (<a
+        href="https://www.bernama.com/bm/am/news.php?id=2598512">Malay version</a>); the January–July
+        2026 comparison was also fact-checked by <a
+        href="https://www.thestar.com.my/news/true-or-not/2026/08/21/quickcheck-did-malaysian-films-beat-hollywood-movies-at-the-local-box-office">The
+        Star, 21 August 2026</a>.</li>
+      <li>Skim Wajib Tayang rules: <a href="https://www.finas.gov.my/services/wajib-tayang">FINAS,
+        Wajib Tayang</a>.</li>
+      <li>State population, 2026: <a
+        href="https://open.dosm.gov.my/data-catalogue/population_state">OpenDOSM, Population Table:
+        States</a>, Department of Statistics Malaysia, CC BY 4.0, downloaded 11 September 2026.</li>
+      <li>Cinema locations: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap
+        contributors</a>, ODbL, queried through <a href="https://overpass-turbo.eu/">Overpass
+        Turbo</a> on 11 September 2026.</li>
+      <li>Malaysian state boundaries: <a
+        href="https://www.geoboundaries.org/api/current/gbOpen/MYS/ADM1/">geoBoundaries, Malaysia
+        ADM1</a> (Runfola et al., 2020), from OpenStreetMap, ODbL, downloaded 11 September 2026.</li>
+      <li>World outline: Natural Earth 1:110m (public domain) via the TopoJSON World Atlas in <a
+        href="https://github.com/vega/vega-datasets">vega-datasets</a>, fetched 12 September
+        2026.</li>
+      <li>Inflation: US Bureau of Labor Statistics CPI-U via <a
+        href="https://github.com/datasets/cpi-us">datasets/cpi-us</a>, ODC-PDDL, fetched 12
+        September 2026.</li>
+      <li>Regions of each country: the United Nations geographic regions as listed in <a
+        href="https://github.com/mustafasaifee42/Tile-Grid-Map">Tile-Grid-Map</a>, CC BY-SA 4.0,
+        fetched 12 September 2026.</li>
+      <li>Filming locations and the coordinates of small countries: <a
+        href="https://query.wikidata.org/">Wikidata</a>, CC0, queried 11 September and 11 October
+        2026.</li>
+      <li>Michelle Yeoh's Best Actress award and Ipoh birthplace: Malay Mail, 13 March 2023 (<a
+        href="https://www.malaymail.com/news/showbiz/2023/03/13/michelle-yeoh-becomes-the-first-malaysian-and-asian-to-win-best-actress-at-oscars/59330">report
+        of the award</a>; <a
+        href="https://www.malaymail.com/news/malaysia/2023/03/13/pm-anwar-congratulates-michelle-yeoh-for-historic-best-actress-win-at-the-oscars/59400">the
+        Prime Minister's congratulations</a>).</li>
+      <li>Filming hubs and tax incentives: Wikipedia, <a
+        href="https://en.wikipedia.org/wiki/Hollywood_North">Hollywood North</a> and <a
+        href="https://en.wikipedia.org/wiki/Film_industry_in_Georgia_(U.S._state)">Film industry in
+        Georgia (U.S. state)</a>, CC BY-SA 4.0, consulted 12 October 2026.</li>
+      <li>Malaysian Academy Award submissions: <a
+        href="https://en.wikipedia.org/wiki/List_of_Malaysian_submissions_for_the_Academy_Award_for_Best_International_Feature_Film">Wikipedia</a>,
+        CC BY-SA 4.0, retrieved 11 September 2026 and checked again on 11 October 2026; the 2026
+        entry from <a
+        href="https://www.thestar.com.my/news/nation/2026/09/29/woo-ming-jins-the-fox-king-set-to-represent-malaysia-at-the-oscars">The
+        Star, 29 September 2026</a>.</li>
+      <li>Built with <a href="https://vega.github.io/vega-lite/">Vega-Lite</a>, Vega and vega-embed
+        (BSD-3-Clause), with the Oswald and Inter typefaces from <a
+        href="https://fonts.google.com/">Google Fonts</a> (SIL Open Font License).</li>
+    </ul>
+    <p><strong>This product uses the TMDB API but is not endorsed or certified by TMDB.</strong></p>
+    <p><strong>Use of AI.</strong> Claude was used to clean and aggregate
+       the source data, to suggest design changes, and to check figures
+       against the sources. I reviewed every suggestion and verified every
+      figure against the cleaned data or the cited source.</p>
+    <p>Chart specifications and cleaned data are in the
+       <a href="https://github.com/zmz999/FIT3179_DV2">GitHub repository</a>.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "North American films peaked at 64% of the total in 1990",
+    "subtitle": "Share of each year's widely seen films, by region of production, 1970–2022"
+  },
+  "width": 760,
+  "height": 300,
+  "data": {
+    "url": "data/01_stacked_area_region_year.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"year": "number", "films": "number", "share": "number"}
+    }
+  },
+  "transform": [
+    {
+      "calculate": "indexof(['Africa', 'Oceania', 'Middle East & Central Asia'], datum.region) >= 0 ? 'Rest of the world' : datum.region",
+      "as": "region6"
+    },
+    {
+      "aggregate": [
+        {"op": "sum", "field": "share", "as": "share"},
+        {"op": "sum", "field": "films", "as": "films"}
+      ],
+      "groupby": ["year", "region6"]
+    },
+    {
+      "calculate": "indexof(['North America', 'Europe', 'East Asia', 'South & Southeast Asia', 'Latin America', 'Rest of the world'], datum.region6)",
+      "as": "order_idx"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [1970, 2022], "nice": false},
+      "axis": {
+        "format": "d",
+        "values": [1970, 1980, 1990, 2000, 2010, 2020],
+        "grid": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "area", "interpolate": "monotone"},
+      "encoding": {
+        "y": {
+          "field": "share",
+          "type": "quantitative",
+          "stack": "zero",
+          "title": null,
+          "scale": {"domain": [0, 1]},
+          "axis": {
+            "format": ".0%",
+            "values": [0, 0.25, 0.5, 0.75, 1],
+            "domain": false,
+            "ticks": false
+          }
+        },
+        "color": {
+          "field": "region6",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "Europe",
+              "East Asia",
+              "South & Southeast Asia",
+              "Latin America",
+              "Rest of the world"
+            ]
+          },
+          "legend": null
+        },
+        "order": {"field": "order_idx", "type": "quantitative"},
+        "tooltip": [
+          {"field": "region6", "type": "nominal", "title": "title"},
+          {
+            "field": "year",
+            "type": "quantitative",
+            "format": "d",
+            "title": "Year"
+          },
+          {
+            "field": "share",
+            "type": "quantitative",
+            "format": ".1%",
+            "title": "Share of films"
+          },
+          {
+            "field": "films",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Films"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.year === 2022"},
+        {
+          "stack": "share",
+          "groupby": ["year"],
+          "sort": [{"field": "order_idx"}],
+          "as": ["y0", "y1"]
+        },
+        {"calculate": "(datum.y0 + datum.y1) / 2", "as": "ymid"}
+      ],
+      "mark": {"type": "text", "align": "left", "dx": 8, "fontWeight": 500},
+      "encoding": {
+        "y": {"field": "ymid", "type": "quantitative"},
+        "text": {"field": "region6", "type": "nominal"}
+      }
+    },
+    {
+      "data": {
+        "values": [{"year": 1990, "share": 0.64, "label": "64% in 1990"}]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "point",
+            "shape": "circle",
+            "size": 40,
+            "filled": true,
+            "opacity": 1,
+            "color": "#FFFFFF",
+            "stroke": "#1F1B16",
+            "strokeWidth": 1.5
+          },
+          "encoding": {"y": {"field": "share", "type": "quantitative"}}
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 26,
+            "color": "#FFFFFF",
+            "fontWeight": 600,
+            "fontSize": 13
+          },
+          "encoding": {
+            "y": {"field": "share", "type": "quantitative"},
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

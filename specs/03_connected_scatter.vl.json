@@ -1,0 +1,249 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "The money going in grew nearly twice as fast as the money coming out",
+    "subtitle": [
+      "Median budget and box office of each year's 20 biggest films, in 2025 US dollars (log scales).",
+      "Darker dots are later years; dashed lines mark box office of 8, 4 and 2 times the budget."
+    ]
+  },
+  "width": 520,
+  "height": 400,
+  "data": {
+    "url": "data/03_budget_revenue_year.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "year": "number",
+        "pool": "number",
+        "budget_films": "number",
+        "median_budget_musd": "number",
+        "median_revenue_musd": "number",
+        "decade": "number"
+      }
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "median_budget_musd",
+      "type": "quantitative",
+      "scale": {"type": "log", "domain": [10, 300], "nice": false},
+      "title": "Median budget (US$m, 2025 dollars)",
+      "axis": {"values": [10, 20, 50, 100, 200], "format": "d"}
+    },
+    "y": {
+      "field": "median_revenue_musd",
+      "type": "quantitative",
+      "scale": {"type": "log", "domain": [100, 1200], "nice": false},
+      "title": "Median box office (US$m, 2025 dollars)",
+      "axis": {"values": [100, 200, 500, 1000], "format": "d"}
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {"median_budget_musd": 12.5, "median_revenue_musd": 100, "k": 8},
+          {"median_budget_musd": 150, "median_revenue_musd": 1200, "k": 8},
+          {"median_budget_musd": 25, "median_revenue_musd": 100, "k": 4},
+          {"median_budget_musd": 300, "median_revenue_musd": 1200, "k": 4},
+          {"median_budget_musd": 50, "median_revenue_musd": 100, "k": 2},
+          {"median_budget_musd": 300, "median_revenue_musd": 600, "k": 2}
+        ]
+      },
+      "mark": {
+        "type": "line",
+        "color": "#B9B0A4",
+        "strokeWidth": 1,
+        "strokeDash": [4, 4]
+      },
+      "encoding": {
+        "detail": {"field": "k", "type": "nominal"},
+        "order": {"field": "median_budget_musd", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"median_budget_musd": 150, "median_revenue_musd": 1200, "label": "box office = 8\u00d7 budget"},
+          {"median_budget_musd": 300, "median_revenue_musd": 1200, "label": "4\u00d7"},
+          {"median_budget_musd": 300, "median_revenue_musd": 600, "label": "2\u00d7"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "dx": -6,
+        "dy": 4,
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "color": "#6B6259"
+      },
+      "encoding": {"text": {"field": "label", "type": "nominal"}}
+    },
+    {
+      "mark": {"type": "line", "strokeWidth": 1.2, "color": "#C4BCB1"},
+      "encoding": {"order": {"field": "year", "type": "quantitative"}}
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 66,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.6,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "field": "decade",
+          "type": "ordinal",
+          "title": "Decade",
+          "scale": {
+            "range": [
+              "#EBB160",
+              "#D98931",
+              "#BB6616",
+              "#92480B",
+              "#663005",
+              "#3F1A02"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "type": "quantitative",
+            "format": "d",
+            "title": "title"
+          },
+          {
+            "field": "median_budget_musd",
+            "type": "quantitative",
+            "format": "$,.0f",
+            "title": "Median budget (US$m)"
+          },
+          {
+            "field": "median_revenue_musd",
+            "type": "quantitative",
+            "format": "$,.0f",
+            "title": "Median box office (US$m)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "indexof([1970, 1980, 1990, 2010, 2019, 2022], datum.year) >= 0"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dx": 8,
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1F1B16",
+        "align": "left"
+      },
+      "encoding": {
+        "text": {"field": "year", "type": "quantitative", "format": "d"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2000"}],
+      "mark": {
+        "type": "text",
+        "dx": -8,
+        "dy": -8,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1F1B16",
+        "align": "right"
+      },
+      "encoding": {
+        "text": {"field": "year", "type": "quantitative", "format": "d"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.year === 2020"}],
+      "mark": {
+        "type": "text",
+        "dx": 10,
+        "dy": 2,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1F1B16",
+        "align": "left"
+      },
+      "encoding": {"text": {"value": "2020: cinemas close for the pandemic"}}
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "Films come from everywhere now. They are still shot in the same few places.",
+    "subtitle": "Filming locations recorded in Wikidata, 1970–2022. Circle area shows the number of shoots."
+  },
+  "width": 760,
+  "height": 400,
+  "usermeta": {"aspect": 0.5263},
+  "params": [
+    {
+      "name": "eraSel",
+      "value": 1960,
+      "bind": {
+        "input": "range",
+        "min": 1960,
+        "max": 2020,
+        "step": 10,
+        "name": "Decade"
+      }
+    }
+  ],
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "data/world-110m.topojson",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#EDE8E0",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "data/B2_filming_locations_grid.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lon": "number",
+            "lat": "number",
+            "decade": "number",
+            "shoots": "number"
+          }
+        }
+      },
+      "transform": [
+        {"filter": "eraSel === 1960 || datum.decade === eraSel"},
+        {
+          "aggregate": [{"op": "sum", "field": "shoots", "as": "shoots"}],
+          "groupby": ["lon", "lat", "place"]
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#8B440A",
+        "opacity": 0.5,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.3
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "shoots",
+          "type": "quantitative",
+          "title": "Shoots",
+          "scale": {
+            "type": "linear",
+            "zero": true,
+            "domain": [0, 1642],
+            "range": [3, 1300]
+          },
+          "legend": {
+            "orient": "none",
+            "legendX": 8,
+            "legendY": {"expr": "height - 120"},
+            "values": [10, 100, 800],
+            "direction": "vertical"
+          }
+        },
+        "order": {"field": "shoots", "type": "quantitative", "sort": "descending"},
+        "tooltip": [
+          {"field": "place", "type": "nominal", "title": "title"},
+          {
+            "field": "shoots",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Shoots recorded nearby"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/B2_filming_locations_grid.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lon": "number",
+            "lat": "number",
+            "decade": "number",
+            "shoots": "number"
+          }
+        }
+      },
+      "transform": [
+        {"filter": "eraSel === 1960 || datum.decade === eraSel"},
+        {
+          "aggregate": [{"op": "sum", "field": "shoots", "as": "shoots"}],
+          "groupby": ["lon", "lat", "place"]
+        },
+        {
+          "lookup": "place",
+          "from": {
+            "data": {
+              "url": "data/B2_filming_hubs.csv",
+              "format": {"type": "csv", "parse": {"lon": "number", "lat": "number"}}
+            },
+            "key": "locLabel",
+            "fields": ["lon", "lat"]
+          },
+          "as": ["hub_lon", "hub_lat"]
+        },
+        {
+          "filter": {
+            "field": "place",
+            "oneOf": ["Los Angeles", "Vancouver", "London", "Hong Kong", "Toronto", "Paris", "Atlanta", "New York City"]
+          }
+        }
+      ],
+      "encoding": {
+        "longitude": {"field": "hub_lon", "type": "quantitative"},
+        "latitude": {"field": "hub_lat", "type": "quantitative"},
+        "text": {"field": "place", "type": "nominal"},
+        "tooltip": [
+          {"field": "place", "type": "nominal", "title": "title"},
+          {
+            "field": "shoots",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Shoots recorded nearby"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "transform": [{"filter": {"field": "place", "oneOf": ["Los Angeles", "Vancouver", "London", "Hong Kong", "Toronto"]}}],
+          "mark": {
+            "type": "text",
+            "dy": -14,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 3,
+            "strokeOpacity": 0.9
+          }
+        },
+        {
+          "transform": [{"filter": {"field": "place", "oneOf": ["Los Angeles", "Vancouver", "London", "Hong Kong", "Toronto"]}}],
+          "mark": {
+            "type": "text",
+            "dy": -14,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16"
+          }
+        },
+        {
+          "transform": [{"filter": {"field": "place", "oneOf": ["Paris", "Atlanta"]}}],
+          "mark": {
+            "type": "text",
+            "dy": 15,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 3,
+            "strokeOpacity": 0.9
+          }
+        },
+        {
+          "transform": [{"filter": {"field": "place", "oneOf": ["Paris", "Atlanta"]}}],
+          "mark": {
+            "type": "text",
+            "dy": 15,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16"
+          }
+        },
+        {
+          "transform": [{"filter": {"field": "place", "oneOf": ["New York City"]}}],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 10,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 3,
+            "strokeOpacity": 0.9
+          }
+        },
+        {
+          "transform": [{"filter": {"field": "place", "oneOf": ["New York City"]}}],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 10,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/B2_malaysia_shoots.csv",
+        "format": {
+          "type": "csv",
+          "parse": {"lon": "number", "lat": "number", "year": "number"}
+        }
+      },
+      "transform": [
+        {"calculate": "floor(datum.year / 10) * 10", "as": "decade"},
+        {"filter": "eraSel === 1960 || datum.decade === eraSel"},
+        {
+          "aggregate": [{"op": "count", "as": "shoots"}],
+          "groupby": ["lon", "lat", "place"]
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#E63946",
+        "size": 40,
+        "opacity": 0.95,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "tooltip": [
+          {"field": "place", "type": "nominal", "title": "title"},
+          {
+            "field": "shoots",
+            "type": "quantitative",
+            "title": "Shoots recorded"
+          }
+        ]
+      }
+    },
+    {
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "text",
+        "text": {"expr": "eraSel === 1960 ? 'All decades' : eraSel === 2020 ? '2020–22' : eraSel + 's'"},
+        "align": "left",
+        "baseline": "top",
+        "font": "Oswald, Inter, sans-serif",
+        "fontSize": 26,
+        "fontWeight": 600,
+        "color": "#6B6259"
+      },
+      "encoding": {"x": {"value": 0}, "y": {"value": 2}}
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

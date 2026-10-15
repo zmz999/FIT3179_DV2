@@ -1,0 +1,246 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": ["A thousand times the budget adds", "just 0.6 to the average rating"],
+    "subtitle": [
+      "Widely seen films with budget data, 1970–2022.",
+      "Darker hexagons hold more films; black lines",
+      "show the average rating in each budget range."
+    ]
+  },
+  "usermeta": {"aspect": 1.3117},
+  "width": 300,
+  "height": 394,
+  "data": {
+    "url": "data/06_hexbin_budget_rating.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "log_budget": "number",
+        "rating": "number",
+        "films": "number",
+        "budget_usd": "number"
+      }
+    }
+  },
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  },
+  "layer": [
+    {
+      "transform": [
+        {"calculate": "round(datum.rating / 0.25)", "as": "row_i"},
+        {
+          "calculate": "datum.log_budget + (datum.row_i % 2 === 0 ? 0 : 0.125)",
+          "as": "xpos"
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "shape": "M0,-1.1547005383792515L1,-0.5773502691896258 1,0.5773502691896258 0,1.1547005383792515 -1,0.5773502691896258 -1,-0.5773502691896258Z",
+        "size": {"expr": "pow(width * 0.25 / 5.15, 2)"},
+        "filled": true,
+        "opacity": 1,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "x": {
+          "field": "xpos",
+          "type": "quantitative",
+          "title": "Budget (log scale, 2025 US dollars)",
+          "scale": {"domain": [3.85, 9], "nice": false},
+          "axis": {
+            "values": [4, 5, 6, 7, 8, 9],
+            "labelExpr": "datum.value === 4 ? '$10k' : datum.value === 5 ? '$100k' : datum.value === 6 ? '$1m' : datum.value === 7 ? '$10m' : datum.value === 8 ? '$100m' : '$1bn'",
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "rating",
+          "type": "quantitative",
+          "title": "Audience rating (out of 10)",
+          "scale": {"domain": [1.5, 9.3], "nice": false},
+          "axis": {"values": [2, 4, 6, 8], "grid": false}
+        },
+        "color": {
+          "field": "films",
+          "type": "quantitative",
+          "title": "Films",
+          "scale": {
+            "type": "log",
+            "range": [
+              "#F2C77F",
+              "#E49A3E",
+              "#C8701A",
+              "#9C4E0C",
+              "#6B3206",
+              "#3F1A02"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "gradientLength": 120
+          }
+        },
+        "tooltip": [
+          {
+            "field": "budget_usd",
+            "type": "quantitative",
+            "format": "$,.0f",
+            "title": "Budget (bin centre)"
+          },
+          {
+            "field": "rating",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Rating (bin centre)"
+          },
+          {"field": "films", "type": "quantitative", "title": "Films"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/06b_rating_budget_bands.csv",
+        "format": {
+          "type": "csv",
+          "parse": {"band": "number", "films": "number", "avg_rating": "number"}
+        }
+      },
+      "transform": [
+        {"calculate": "datum.band + 1", "as": "band_end"},
+        {"calculate": "datum.band + 0.5", "as": "band_mid"},
+        {
+          "calculate": "['$10k–$100k', '$100k–$1m', '$1m–$10m', '$10m–$100m', '$100m–$1bn'][datum.band - 4]",
+          "as": "range"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "#1F1B16", "strokeWidth": 3},
+          "encoding": {
+            "x": {"field": "band", "type": "quantitative"},
+            "x2": {"field": "band_end"},
+            "y": {"field": "avg_rating", "type": "quantitative"},
+            "tooltip": [
+              {"field": "range", "type": "nominal", "title": "title"},
+              {
+                "field": "avg_rating",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "Average rating"
+              },
+              {
+                "field": "films",
+                "type": "quantitative",
+                "format": ",",
+                "title": "Films"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": -12,
+            "fontSize": 13,
+            "fontWeight": 600,
+            "stroke": "#FFFFFF",
+            "strokeWidth": 4,
+            "strokeOpacity": 0.9
+          },
+          "encoding": {
+            "x": {"field": "band_mid", "type": "quantitative"},
+            "y": {"field": "avg_rating", "type": "quantitative"},
+            "text": {
+              "field": "avg_rating",
+              "type": "quantitative",
+              "format": ".1f"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": -12,
+            "fontSize": 13,
+            "fontWeight": 600,
+            "color": "#1F1B16"
+          },
+          "encoding": {
+            "x": {"field": "band_mid", "type": "quantitative"},
+            "y": {"field": "avg_rating", "type": "quantitative"},
+            "text": {
+              "field": "avg_rating",
+              "type": "quantitative",
+              "format": ".1f"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

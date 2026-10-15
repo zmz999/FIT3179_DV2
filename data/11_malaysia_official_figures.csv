@@ -1,0 +1,15 @@
+period,year,group,metric,value,source
+2023,2023,Malaysian films,admissions_m,5.87,https://www.bernama.com/en/general/news.php?id=2598519
+2024,2024,Malaysian films,admissions_m,7.14,https://www.bernama.com/en/general/news.php?id=2598519
+2025,2025,Malaysian films,admissions_m,14.83,https://www.bernama.com/en/general/news.php?id=2598519
+2023,2023,Malaysian films,local_share_pct,16.8,https://www.bernama.com/en/general/news.php?id=2598519
+2024,2024,Malaysian films,local_share_pct,21.9,https://www.bernama.com/en/general/news.php?id=2598519
+2025,2025,Malaysian films,local_share_pct,36.5,https://www.bernama.com/en/general/news.php?id=2598519
+Jan–Jul 2026,2026,Malaysian films,admissions_m,7.55,https://www.bernama.com/tv/news.php?id=2597480
+Jan–Jul 2026,2026,Hollywood films,admissions_m,6.94,https://www.bernama.com/tv/news.php?id=2597480
+2024,2024,Skim Wajib Tayang,collections_rm_m,125.28,https://www.bernama.com/en/general/news.php?id=2598519
+2025,2025,Skim Wajib Tayang,collections_rm_m,253.31,https://www.bernama.com/en/general/news.php?id=2598519
+To 10 Aug 2026,2026,Skim Wajib Tayang,collections_rm_m,111.83,https://www.bernama.com/en/general/news.php?id=2598519
+2024,2024,Skim Wajib Tayang,films_screened,58,https://www.bernama.com/en/general/news.php?id=2598519
+2025,2025,Skim Wajib Tayang,films_screened,71,https://www.bernama.com/en/general/news.php?id=2598519
+To 2 Jul 2026,2026,Skim Wajib Tayang,films_screened,31,https://www.bernama.com/en/general/news.php?id=2598519

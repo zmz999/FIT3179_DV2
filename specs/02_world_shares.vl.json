@@ -1,0 +1,286 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "Hollywood peaked in the 1990s, then a different world came back",
+    "subtitle": "Circle area shows each country or region's share of the decade's widely seen films"
+  },
+  "width": 760,
+  "height": 380,
+  "usermeta": {"aspect": 0.5},
+  "params": [
+    {
+      "name": "decadeSel",
+      "value": 1990,
+      "bind": {
+        "input": "range",
+        "min": 1970,
+        "max": 2020,
+        "step": 10,
+        "name": "Decade"
+      }
+    }
+  ],
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "text",
+        "text": {"expr": "decadeSel === 2020 ? '2020–22' : decadeSel + 's'"},
+        "align": "left",
+        "baseline": "top",
+        "font": "Oswald, Inter, sans-serif",
+        "fontSize": 26,
+        "fontWeight": 600,
+        "color": "#6B6259"
+      },
+      "encoding": {"x": {"value": 0}, "y": {"value": 2}}
+    },
+    {
+      "data": {
+        "url": "data/world-110m.topojson",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#EDE8E0",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "data/02d_country_shares_wide.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "iso_num": "number",
+            "d1970": "number",
+            "d1980": "number",
+            "d1990": "number",
+            "d2000": "number",
+            "d2010": "number",
+            "d2020": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [
+        {"calculate": "datum['d' + decadeSel]", "as": "share_pct"},
+        {"filter": "isValid(datum.share_pct) && datum.share_pct > 0"},
+        {
+          "calculate": "indexof(['Africa', 'Oceania', 'Middle East & Central Asia'], datum.region) >= 0 ? 'Rest of the world' : datum.region",
+          "as": "region6"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "circle",
+            "opacity": 0.8,
+            "stroke": "#FFFFFF",
+            "strokeWidth": 0.8
+          },
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"},
+            "size": {
+              "field": "share_pct",
+              "type": "quantitative",
+              "title": "Share of the decade's films",
+              "scale": {
+                "type": "linear",
+                "domain": [0, 60],
+                "range": [0, 5200]
+              },
+              "legend": {
+                "orient": "none",
+                "legendX": 4,
+                "legendY": {"expr": "height - 144"},
+                "values": [1, 10, 30],
+                "labelExpr": "datum.value + '%'",
+                "symbolFillColor": "#B8B0A5",
+                "symbolStrokeColor": "#FFFFFF",
+                "symbolOpacity": 0.9
+              }
+            },
+            "color": {
+              "field": "region6",
+              "type": "nominal",
+              "title": "Region",
+              "scale": {
+                "domain": [
+                  "North America",
+                  "Europe",
+                  "East Asia",
+                  "South & Southeast Asia",
+                  "Latin America",
+                  "Rest of the world"
+                ]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "title": null,
+                "symbolType": "circle",
+                "symbolOpacity": 0.85,
+                "columnPadding": 14
+              }
+            },
+            "order": {
+              "field": "share_pct",
+              "type": "quantitative",
+              "sort": "descending"
+            },
+            "tooltip": [
+              {"field": "country", "type": "nominal", "title": "title"},
+              {"field": "region6", "type": "nominal", "title": "Region"},
+              {
+                "field": "share_pct",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "% of the decade's films"
+              }
+            ]
+          }
+        },
+        {
+          "transform": [
+            {
+              "window": [{"op": "row_number", "as": "rank"}],
+              "sort": [{"field": "share_pct", "order": "descending"}]
+            },
+            {"filter": "datum.rank === 1"},
+            {"calculate": "format(datum.share_pct, '.0f') + '%'", "as": "label"}
+          ],
+          "mark": {
+            "type": "text",
+            "color": "#FFFFFF",
+            "fontSize": 14,
+            "fontWeight": 600
+          },
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"},
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/02d_country_shares_wide.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "iso_num": "number",
+            "d1970": "number",
+            "d1980": "number",
+            "d1990": "number",
+            "d2000": "number",
+            "d2010": "number",
+            "d2020": "number",
+            "lon": "number",
+            "lat": "number"
+          }
+        }
+      },
+      "transform": [{"filter": "datum.iso_num === 458"}],
+      "layer": [
+        {
+          "mark": {
+            "type": "point",
+            "shape": "circle",
+            "size": 70,
+            "filled": false,
+            "opacity": 1,
+            "color": "#E63946",
+            "strokeWidth": 2
+          },
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 16,
+            "color": "#B3202D",
+            "fontWeight": 600
+          },
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"},
+            "text": {"value": "Malaysia"}
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

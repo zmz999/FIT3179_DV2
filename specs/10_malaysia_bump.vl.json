@@ -1,0 +1,247 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": [
+      "Malaysia found its genre:",
+      "horror climbed from seventh to second"
+    ],
+    "subtitle": [
+      "Rank among all genres of Malaysian-produced",
+      "films on TMDB, by decade. Seven genres are",
+      "shown; gaps in the ranks are genres not shown."
+    ]
+  },
+  "width": 240,
+  "height": 300,
+  "data": {
+    "url": "data/10_malaysia_genre_bump.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "decade": "number",
+        "films": "number",
+        "share_pct": "number",
+        "rank": "number",
+        "decade_films": "number"
+      }
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "decade",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'",
+        "labelFont": "Oswald, Inter, sans-serif",
+        "labelFontSize": 14,
+        "labelColor": "#1F1B16",
+        "grid": false,
+        "labelAngle": 0
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": "Rank",
+      "scale": {"domain": [10.5, 0.5], "nice": false},
+      "axis": {"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "format": "d"}
+    },
+    "color": {
+      "condition": [
+        {"param": "hoverGenre", "empty": false, "value": "#1F1B16"},
+        {"test": "datum.genre === 'Horror'", "value": "#1F1B16"},
+        {"test": "datum.genre === 'Romance'", "value": "#6B6259"}
+      ],
+      "value": "#C9C1B6"
+    },
+    "opacity": {
+      "condition": {"param": "hoverGenre", "empty": true, "value": 1},
+      "value": 0.25
+    }
+  },
+  "layer": [
+    {
+      "transform": [{"filter": "datum.genre !== 'Horror' && datum.genre !== 'Romance'"}],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "interpolate": "monotone",
+        "point": {"filled": true, "size": 60}
+      },
+      "encoding": {
+        "order": {"field": "decade", "type": "ordinal"},
+        "detail": {"field": "genre", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.genre === 'Romance'"}],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "strokeDash": [5, 3],
+        "interpolate": "monotone",
+        "point": {"filled": true, "size": 60}
+      },
+      "encoding": {"order": {"field": "decade", "type": "ordinal"}}
+    },
+    {
+      "transform": [{"filter": "datum.genre === 'Horror'"}],
+      "mark": {
+        "type": "line",
+        "strokeWidth": 4,
+        "interpolate": "monotone",
+        "point": {"filled": true, "size": 60}
+      },
+      "encoding": {"order": {"field": "decade", "type": "ordinal"}}
+    },
+    {
+      "transform": [
+        {"filter": "datum.decade === 2020"},
+        {"filter": "datum.genre !== 'Horror' && datum.genre !== 'Romance'"}
+      ],
+      "mark": {"type": "text", "align": "left", "dx": 10, "fontSize": 12},
+      "encoding": {
+        "text": {"field": "genre", "type": "nominal"},
+        "color": {
+          "condition": {"param": "hoverGenre", "empty": false, "value": "#1F1B16"},
+          "value": "#6B6259"
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.decade === 2020"},
+        {"filter": "datum.genre === 'Romance'"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {"field": "genre", "type": "nominal"},
+        "color": {
+          "condition": {"param": "hoverGenre", "empty": false, "value": "#1F1B16"},
+          "value": "#6B6259"
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.decade === 2020"},
+        {"filter": "datum.genre === 'Horror'"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {"field": "genre", "type": "nominal"},
+        "color": {"value": "#1F1B16"}
+      }
+    },
+    {
+      "params": [
+        {
+          "name": "hoverGenre",
+          "select": {
+            "type": "point",
+            "fields": ["genre"],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {"type": "point", "filled": true, "size": 700, "cursor": "pointer"},
+      "encoding": {
+        "opacity": {"value": 0},
+        "tooltip": [
+          {"field": "genre", "type": "nominal", "title": "title"},
+          {"field": "decade", "type": "ordinal", "title": "Decade"},
+          {"field": "rank", "type": "quantitative", "title": "Rank"},
+          {
+            "field": "share_pct",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "% of Malaysian films"
+          },
+          {
+            "field": "decade_films",
+            "type": "quantitative",
+            "title": "Malaysian films that decade"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

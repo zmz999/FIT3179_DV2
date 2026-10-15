@@ -1,0 +1,225 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "The $100 million film went from rare to routine",
+    "subtitle": "Budget spread of each year's 20 biggest films, by decade, in 2025 US dollars"
+  },
+  "data": {
+    "url": "data/04_ridgeline_budget_decade.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "decade": "number",
+        "log_budget": "number",
+        "budget_usd": "number",
+        "density": "number",
+        "films": "number"
+      }
+    }
+  },
+  "facet": {
+    "row": {
+      "field": "decade",
+      "type": "ordinal",
+      "title": null,
+      "header": {
+        "labelAngle": 0,
+        "labelAlign": "left",
+        "labelFont": "Oswald, Inter, sans-serif",
+        "labelFontSize": 14,
+        "labelColor": "#1F1B16",
+        "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'"
+      }
+    }
+  },
+  "spacing": -28,
+  "spec": {
+    "width": 620,
+    "height": 44,
+    "layer": [
+      {
+        "mark": {
+          "type": "area",
+          "interpolate": "monotone",
+          "line": {"color": "#1F1B16", "strokeWidth": 1},
+          "fillOpacity": 0.85
+        },
+        "encoding": {
+          "color": {
+            "field": "decade",
+            "type": "ordinal",
+            "scale": {
+              "range": [
+                "#EBB160",
+                "#D98931",
+                "#BB6616",
+                "#92480B",
+                "#663005",
+                "#3F1A02"
+              ]
+            },
+            "legend": null
+          }
+        }
+      },
+      {
+        "mark": {
+          "type": "rule",
+          "color": "#1F1B16",
+          "strokeWidth": 1.4,
+          "strokeDash": [4, 3]
+        },
+        "encoding": {"x": {"datum": 8}, "y": {"value": 0}, "y2": {"value": 44}}
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum.decade === 1970 && abs(datum.log_budget - 8.125) < 0.01"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "dx": 6,
+          "baseline": "middle",
+          "fontSize": 12,
+          "fontWeight": 600,
+          "color": "#1F1B16"
+        },
+        "encoding": {
+          "x": {"datum": 8},
+          "y": {"value": 8},
+          "text": {"value": "$100 million"},
+          "tooltip": null
+        }
+      },
+      {
+        "transform": [
+          {"filter": "abs(datum.log_budget - 8.125) < 0.01"},
+          {
+            "calculate": "format(datum.share_100m, '.1%') + (datum.decade === 1970 ? ' cost $100m+' : '')",
+            "as": "share_label"
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "bottom",
+          "dx": 10,
+          "dy": -3,
+          "fontSize": 12,
+          "fontWeight": 600,
+          "color": "#1F1B16"
+        },
+        "encoding": {
+          "x": {"value": "width"},
+          "y": {"value": 44},
+          "text": {"field": "share_label", "type": "nominal"},
+          "tooltip": null
+        }
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "log_budget",
+        "type": "quantitative",
+        "title": "Budget (log scale, 2025 US dollars)",
+        "scale": {"domain": [4.8, 9.2], "nice": false},
+        "axis": {
+          "values": [5, 6, 7, 8, 9],
+          "labelExpr": "datum.value === 5 ? '$100k' : datum.value === 6 ? '$1m' : datum.value === 7 ? '$10m' : datum.value === 8 ? '$100m' : '$1bn'",
+          "grid": false
+        }
+      },
+      "y": {
+        "field": "density",
+        "type": "quantitative",
+        "axis": null,
+        "scale": {"domain": [0, 0.26]}
+      },
+      "tooltip": [
+        {"field": "decade", "type": "ordinal", "title": "Decade"},
+        {
+          "field": "budget_usd",
+          "type": "quantitative",
+          "format": "$,.0f",
+          "title": "Budget (bin centre)"
+        },
+        {"field": "films", "type": "quantitative", "title": "Films"}
+      ]
+    }
+  },
+  "resolve": {"scale": {"y": "shared"}},
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  },
+  "transform": [
+    {"filter": "datum.log_budget >= 4.8 && datum.log_budget <= 9.2"},
+    {"calculate": "datum.log_budget >= 8 ? datum.density : 0", "as": "density_100m"},
+    {
+      "joinaggregate": [{"op": "sum", "field": "density_100m", "as": "share_100m"}],
+      "groupby": ["decade"]
+    }
+  ]
+}

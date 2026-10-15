@@ -1,0 +1,3321 @@
+lon,lat,decade,shoots,place
+-172.0,67.0,2000,1,Enurmino
+-160.0,-21.0,1980,1,Rarotonga
+-160.0,0.0,2010,1,Pacific Ocean
+-159.0,22.0,1980,1,Kauaʻi
+-159.0,22.0,1990,1,Kauaʻi
+-159.0,22.0,2010,2,Kauaʻi
+-158.0,21.0,1970,1,Honolulu
+-158.0,21.0,1990,3,Honolulu
+-158.0,21.0,2000,6,Honolulu
+-158.0,21.0,2010,3,Honolulu
+-158.0,21.0,2020,2,Honolulu
+-158.0,22.0,1970,1,Hawaii
+-158.0,22.0,1980,5,Hawaii
+-158.0,22.0,1990,13,Hawaii
+-158.0,22.0,2000,22,Hawaii
+-158.0,22.0,2010,14,Hawaii
+-158.0,22.0,2020,1,Hawaii
+-156.0,21.0,2000,1,Maui
+-156.0,21.0,2010,1,Maui
+-156.0,21.0,2020,1,Maui
+-154.0,61.0,2000,1,Twin Lakes
+-152.0,-16.0,1970,1,Bora Bora
+-152.0,-16.0,2000,2,Bora Bora
+-152.0,58.0,2000,1,Kodiak
+-150.0,61.0,2010,1,Anchorage
+-150.0,64.0,1980,1,Alaska
+-150.0,64.0,2000,1,Alaska
+-150.0,64.0,2010,3,Alaska
+-149.0,-18.0,1980,1,Tahiti
+-149.0,-18.0,1990,1,Tahiti
+-149.0,-18.0,2000,1,Tahiti
+-149.0,-18.0,2010,4,Tahiti
+-149.0,-18.0,2020,1,Tahiti
+-135.0,61.0,2020,1,Yukon
+-132.0,54.0,2010,2,Old Massett
+-129.0,54.0,2020,1,Kitimat
+-127.0,52.0,2000,1,Bella Coola
+-127.0,55.0,2010,1,Smithers
+-126.0,49.0,2020,1,Tofino
+-126.0,50.0,1990,1,Vancouver Island
+-124.0,41.0,2010,1,Eureka
+-124.0,41.0,2020,1,Eureka
+-124.0,42.0,1980,1,Jedediah Smith Redwoods State Park
+-124.0,42.0,2010,1,Jedediah Smith Redwoods State Park
+-124.0,43.0,2020,1,Bandon
+-124.0,45.0,1970,1,Cloverdale
+-124.0,45.0,2020,1,Cloverdale
+-124.0,46.0,1990,5,Ecola State Park
+-124.0,46.0,2020,1,Ecola State Park
+-124.0,54.0,1970,4,British Columbia
+-124.0,54.0,1980,11,British Columbia
+-124.0,54.0,1990,20,British Columbia
+-124.0,54.0,2000,26,British Columbia
+-124.0,54.0,2010,34,British Columbia
+-124.0,54.0,2020,2,British Columbia
+-123.0,38.0,1970,4,Santa Rosa
+-123.0,38.0,1980,6,Santa Rosa
+-123.0,38.0,1990,7,Santa Rosa
+-123.0,38.0,2000,4,Santa Rosa
+-123.0,38.0,2010,2,Santa Rosa
+-123.0,38.0,2020,4,Santa Rosa
+-123.0,39.0,1970,1,Cloverdale
+-123.0,39.0,1990,2,Cloverdale
+-123.0,44.0,1970,3,Eugene
+-123.0,45.0,1970,1,Silverton
+-123.0,45.0,1990,1,Silverton
+-123.0,45.0,2020,3,Silverton
+-123.0,46.0,1990,1,Portland
+-123.0,46.0,2000,3,Portland
+-123.0,46.0,2010,1,Portland
+-123.0,46.0,2020,4,Portland
+-123.0,47.0,2020,1,Olympia
+-123.0,48.0,1980,1,Victoria
+-123.0,48.0,1990,1,Victoria
+-123.0,48.0,2000,1,Victoria
+-123.0,48.0,2010,2,Victoria
+-123.0,48.0,2020,2,Victoria
+-123.0,49.0,1970,4,Vancouver
+-123.0,49.0,1980,25,Vancouver
+-123.0,49.0,1990,75,Vancouver
+-123.0,49.0,2000,245,Vancouver
+-123.0,49.0,2010,133,Vancouver
+-123.0,49.0,2020,8,Vancouver
+-123.0,50.0,2010,2,Squamish
+-122.0,37.0,1970,2,Fort Ord
+-122.0,37.0,1980,1,Fort Ord
+-122.0,37.0,1990,7,Fort Ord
+-122.0,37.0,2000,1,Fort Ord
+-122.0,37.0,2010,2,Fort Ord
+-122.0,38.0,1970,74,San Francisco
+-122.0,38.0,1980,73,San Francisco
+-122.0,38.0,1990,119,San Francisco
+-122.0,38.0,2000,129,San Francisco
+-122.0,38.0,2010,78,San Francisco
+-122.0,38.0,2020,6,San Francisco
+-122.0,45.0,2020,3,Eagle Creek
+-122.0,47.0,1990,1,Stadium High School
+-122.0,48.0,1990,1,Seattle
+-122.0,48.0,2000,2,Seattle
+-122.0,48.0,2020,2,Seattle
+-122.0,49.0,2000,3,Bellingham
+-122.0,49.0,2020,1,Bellingham
+-121.0,38.0,1980,1,Northern California
+-121.0,38.0,2010,1,Northern California
+-121.0,39.0,1990,1,Sacramento
+-121.0,39.0,2010,3,Sacramento
+-121.0,44.0,1970,1,Oregon
+-121.0,44.0,1980,2,Oregon
+-121.0,44.0,2010,2,Oregon
+-121.0,49.0,1980,1,Skagit River
+-121.0,49.0,2000,1,Skagit River
+-121.0,50.0,2020,1,Merritt
+-120.0,34.0,1980,1,Santa Barbara
+-120.0,35.0,2010,2,Santa Barbara County
+-120.0,35.0,2020,2,Santa Barbara County
+-120.0,36.0,2020,1,Naval Air Station Lemoore
+-120.0,37.0,1970,87,California
+-120.0,37.0,1980,154,California
+-120.0,37.0,1990,175,California
+-120.0,37.0,2000,247,California
+-120.0,37.0,2010,257,California
+-120.0,37.0,2020,16,California
+-120.0,39.0,1980,3,Harrah's Lake Tahoe
+-120.0,39.0,2020,2,Harrah's Lake Tahoe
+-120.0,40.0,1980,2,Grand Sierra Resort
+-120.0,48.0,1980,1,Washington
+-120.0,48.0,1990,3,Washington
+-120.0,48.0,2000,2,Washington
+-120.0,48.0,2010,3,Washington
+-119.0,34.0,1970,12,Malibu
+-119.0,34.0,1980,13,Malibu
+-119.0,34.0,1990,37,Malibu
+-119.0,34.0,2000,38,Malibu
+-119.0,34.0,2010,15,Malibu
+-119.0,34.0,2020,1,Malibu
+-119.0,35.0,1990,1,Kern County
+-119.0,35.0,2000,2,Kern County
+-119.0,39.0,2020,1,Naval Air Station Fallon
+-119.0,48.0,2020,1,Eastern Washington
+-119.0,50.0,2010,2,Kelowna
+-118.0,33.0,1970,1,Santa Catalina Island
+-118.0,33.0,1990,1,Santa Catalina Island
+-118.0,34.0,1970,99,Los Angeles
+-118.0,34.0,1980,197,Los Angeles
+-118.0,34.0,1990,331,Los Angeles
+-118.0,34.0,2000,500,Los Angeles
+-118.0,34.0,2010,475,Los Angeles
+-118.0,34.0,2020,40,Los Angeles
+-118.0,35.0,1990,1,Edwards Air Force Base
+-118.0,35.0,2000,2,Edwards Air Force Base
+-118.0,35.0,2010,1,Edwards Air Force Base
+-118.0,35.0,2020,1,Edwards Air Force Base
+-118.0,36.0,1990,1,Olancha
+-118.0,36.0,2000,1,Olancha
+-118.0,37.0,1990,4,Alabama Hills
+-118.0,37.0,2000,2,Alabama Hills
+-118.0,49.0,2010,1,Castlegar
+-117.0,32.0,2010,1,Playas de Rosarito Municipality
+-117.0,33.0,1970,12,San Diego
+-117.0,33.0,1980,18,San Diego
+-117.0,33.0,1990,31,San Diego
+-117.0,33.0,2000,30,San Diego
+-117.0,33.0,2010,15,San Diego
+-117.0,33.0,2020,4,San Diego
+-117.0,34.0,2000,2,Palm Springs
+-117.0,34.0,2010,1,Palm Springs
+-117.0,34.0,2020,2,Palm Springs
+-117.0,35.0,1990,3,Fort Irwin National Training Center
+-117.0,39.0,1970,1,Nevada
+-117.0,39.0,1990,1,Nevada
+-117.0,39.0,2010,2,Nevada
+-117.0,43.0,2010,1,Jordan Valley
+-117.0,48.0,1990,2,Spokane
+-117.0,49.0,1990,1,Metaline Falls
+-116.0,34.0,2010,1,Joshua Tree
+-116.0,35.0,1970,1,Mojave Desert
+-116.0,35.0,1990,1,Mojave Desert
+-116.0,35.0,2020,1,Mojave Desert
+-116.0,44.0,1990,1,Albertsons Stadium
+-116.0,50.0,1990,1,Purcell Mountains
+-116.0,51.0,1980,1,Yoho National Park
+-116.0,51.0,1990,1,Yoho National Park
+-115.0,35.0,1970,1,Mojave Desert
+-115.0,35.0,1990,1,Mojave Desert
+-115.0,35.0,2000,1,Mojave Desert
+-115.0,35.0,2020,1,Mojave Desert
+-115.0,36.0,1970,8,Las Vegas Valley
+-115.0,36.0,1980,12,Las Vegas Valley
+-115.0,36.0,1990,22,Las Vegas Valley
+-115.0,36.0,2000,36,Las Vegas Valley
+-115.0,36.0,2010,28,Las Vegas Valley
+-115.0,36.0,2020,1,Las Vegas Valley
+-115.0,51.0,1970,1,Kananaskis Country
+-115.0,51.0,1980,1,Kananaskis Country
+-115.0,51.0,1990,3,Kananaskis Country
+-115.0,51.0,2010,3,Kananaskis Country
+-115.0,54.0,1970,5,Alberta
+-115.0,54.0,1980,8,Alberta
+-115.0,54.0,1990,9,Alberta
+-115.0,54.0,2000,8,Alberta
+-115.0,54.0,2010,14,Alberta
+-114.0,28.0,2000,1,Baja California peninsula
+-114.0,35.0,1980,1,Kingman
+-114.0,37.0,2000,2,Littlefield
+-114.0,41.0,1990,2,Bonneville Salt Flats
+-114.0,41.0,2010,3,Bonneville Salt Flats
+-114.0,45.0,2000,1,Idaho
+-114.0,51.0,1970,1,Calgary
+-114.0,51.0,1980,2,Calgary
+-114.0,51.0,1990,3,Calgary
+-114.0,51.0,2000,1,Calgary
+-114.0,51.0,2010,1,Calgary
+-114.0,51.0,2020,1,Calgary
+-114.0,54.0,1980,1,Edmonton
+-114.0,54.0,1990,1,Edmonton
+-114.0,54.0,2000,2,Edmonton
+-114.0,54.0,2010,2,Edmonton
+-114.0,54.0,2020,2,Edmonton
+-113.0,35.0,1980,1,Seligman
+-113.0,35.0,2010,1,Seligman
+-113.0,37.0,1970,1,Zion National Park
+-113.0,37.0,2000,1,Zion National Park
+-113.0,46.0,2000,1,Butte
+-113.0,46.0,2010,1,Butte
+-113.0,46.0,2020,1,Butte
+-113.0,51.0,1990,1,Drumheller
+-113.0,51.0,2000,1,Drumheller
+-113.0,54.0,1980,1,Northlands Coliseum
+-112.0,33.0,1970,1,Phoenix
+-112.0,33.0,1980,1,Phoenix
+-112.0,33.0,1990,1,Phoenix
+-112.0,33.0,2010,1,Phoenix
+-112.0,34.0,1970,21,Arizona
+-112.0,34.0,1980,35,Arizona
+-112.0,34.0,1990,51,Arizona
+-112.0,34.0,2000,50,Arizona
+-112.0,34.0,2010,20,Arizona
+-112.0,37.0,1980,1,Glen Canyon
+-112.0,40.0,1970,12,Utah
+-112.0,40.0,1980,21,Utah
+-112.0,40.0,1990,34,Utah
+-112.0,40.0,2000,39,Utah
+-112.0,40.0,2010,24,Utah
+-112.0,41.0,1970,2,Salt Lake City
+-112.0,41.0,1980,4,Salt Lake City
+-112.0,41.0,1990,7,Salt Lake City
+-112.0,41.0,2000,9,Salt Lake City
+-112.0,41.0,2010,5,Salt Lake City
+-112.0,45.0,1970,2,Virginia City
+-112.0,51.0,1990,1,Brooks
+-111.0,32.0,1970,1,Tucson
+-111.0,32.0,1990,5,Tucson
+-111.0,32.0,2020,1,Tucson
+-111.0,33.0,2000,1,Superior
+-111.0,35.0,2010,2,Roden Crater
+-111.0,37.0,2000,1,Page
+-111.0,38.0,2010,2,Torrey
+-111.0,39.0,2000,1,San Rafael Swell
+-111.0,41.0,1990,1,Park City
+-111.0,41.0,2000,1,Park City
+-111.0,44.0,1980,1,Grand Teton National Park
+-110.0,32.0,2000,1,Benson
+-110.0,34.0,2010,1,White Mountains
+-110.0,37.0,1970,1,Monument Valley
+-110.0,37.0,1990,1,Monument Valley
+-110.0,39.0,1990,1,Dead Horse Point State Park
+-110.0,39.0,2000,1,Dead Horse Point State Park
+-110.0,47.0,1970,2,Montana
+-110.0,47.0,2020,3,Montana
+-109.0,36.0,2010,1,Gallup
+-109.0,46.0,1970,1,Billings
+-108.0,27.0,2010,1,Sierra Madre Occidental
+-108.0,32.0,2010,1,Deming
+-108.0,38.0,1990,1,Ouray
+-108.0,39.0,1990,1,Black Canyon of the Gunnison National Park
+-108.0,43.0,1980,1,Wyoming
+-108.0,45.0,1970,2,Little Bighorn River
+-108.0,46.0,1970,2,Little Bighorn River
+-107.0,28.0,2000,1,Cuauhtémoc
+-107.0,32.0,1970,1,Las Cruces
+-107.0,32.0,2020,1,Las Cruces
+-107.0,34.0,1970,1,Socorro
+-107.0,35.0,2000,2,Albuquerque
+-107.0,35.0,2010,4,Albuquerque
+-107.0,35.0,2020,5,Albuquerque
+-107.0,36.0,1990,1,Sandoval County
+-107.0,36.0,2000,1,Sandoval County
+-107.0,36.0,2020,1,Sandoval County
+-107.0,37.0,1990,1,Rio Arriba County
+-107.0,37.0,2020,1,Rio Arriba County
+-107.0,38.0,1990,1,Lake City
+-107.0,43.0,1990,1,Hell's Half Acre
+-107.0,46.0,1970,4,Lame Deer
+-106.0,32.0,1990,1,El Paso
+-106.0,32.0,2010,1,El Paso
+-106.0,34.0,1970,17,New Mexico
+-106.0,34.0,1980,21,New Mexico
+-106.0,34.0,1990,22,New Mexico
+-106.0,34.0,2000,67,New Mexico
+-106.0,34.0,2010,80,New Mexico
+-106.0,34.0,2020,3,New Mexico
+-106.0,35.0,1990,1,Torrance County
+-106.0,35.0,2010,2,Torrance County
+-106.0,35.0,2020,1,Torrance County
+-106.0,36.0,1980,2,Santa Fe
+-106.0,36.0,1990,4,Santa Fe
+-106.0,36.0,2000,1,Santa Fe
+-106.0,36.0,2010,2,Santa Fe
+-106.0,36.0,2020,1,Santa Fe
+-106.0,39.0,1970,7,Colorado
+-106.0,39.0,1980,10,Colorado
+-106.0,39.0,1990,12,Colorado
+-106.0,39.0,2000,10,Colorado
+-106.0,39.0,2010,10,Colorado
+-106.0,55.0,1970,1,Saskatchewan
+-106.0,55.0,1990,2,Saskatchewan
+-106.0,55.0,2000,10,Saskatchewan
+-106.0,55.0,2010,4,Saskatchewan
+-105.0,21.0,1970,1,Puerto Vallarta
+-105.0,21.0,1980,1,Puerto Vallarta
+-105.0,21.0,1990,1,Puerto Vallarta
+-105.0,21.0,2000,1,Puerto Vallarta
+-105.0,21.0,2010,1,Puerto Vallarta
+-105.0,24.0,1970,1,Victoria de Durango
+-105.0,24.0,2020,1,Victoria de Durango
+-105.0,25.0,1970,1,Durango
+-105.0,36.0,1990,1,Las Vegas
+-105.0,38.0,1990,1,Cañon City
+-105.0,39.0,1990,1,Cheyenne Mountain
+-105.0,39.0,2010,1,Cheyenne Mountain
+-105.0,40.0,1990,1,Boulder
+-105.0,40.0,2010,1,Boulder
+-105.0,41.0,2000,1,Fort Collins
+-104.0,19.0,1980,1,Manzanillo
+-104.0,37.0,2000,1,Trinidad
+-103.0,19.0,1980,1,Tecalitlán Municipality
+-103.0,21.0,1990,1,Nochistlán de Mejía Municipality
+-103.0,23.0,1970,1,Zacatecas
+-102.0,19.0,2020,1,Michoacán
+-102.0,27.0,2010,1,Coahuila
+-100.0,17.0,1970,2,Acapulco de Juárez
+-100.0,17.0,1980,2,Acapulco de Juárez
+-100.0,17.0,2010,2,Acapulco de Juárez
+-100.0,19.0,2010,1,State of Mexico
+-100.0,20.0,2020,1,Mineral de Angangueo
+-100.0,31.0,1970,1,Texas
+-100.0,31.0,1980,4,Texas
+-100.0,31.0,1990,1,Texas
+-100.0,31.0,2000,1,Texas
+-100.0,31.0,2010,6,Texas
+-100.0,50.0,2000,1,Brandon
+-99.0,19.0,1970,2,Mexico City
+-99.0,19.0,1980,1,Mexico City
+-99.0,19.0,1990,1,Mexico City
+-99.0,19.0,2000,2,Mexico City
+-99.0,19.0,2010,6,Mexico City
+-99.0,19.0,2020,7,Mexico City
+-99.0,20.0,1980,1,Pachuca
+-98.0,19.0,1980,1,Puebla
+-98.0,19.0,2000,1,Puebla
+-98.0,19.0,2020,1,Puebla
+-98.0,30.0,1980,4,Austin
+-98.0,30.0,1990,7,Austin
+-98.0,30.0,2000,4,Austin
+-98.0,30.0,2010,2,Austin
+-98.0,31.0,1990,1,Bertram
+-98.0,36.0,1980,1,Oklahoma
+-98.0,36.0,2020,1,Oklahoma
+-98.0,38.0,1970,5,Kansas
+-98.0,38.0,1980,7,Kansas
+-98.0,38.0,1990,7,Kansas
+-98.0,38.0,2000,3,Kansas
+-98.0,38.0,2010,1,Kansas
+-98.0,38.0,2020,1,Kansas
+-97.0,18.0,2010,1,San Juan Bautista Cuicatlán Municipality
+-97.0,29.0,1980,1,Hallettsville
+-97.0,30.0,1970,1,Bastrop
+-97.0,30.0,1990,3,Bastrop
+-97.0,30.0,2010,2,Bastrop
+-97.0,33.0,1990,3,Dallas
+-97.0,33.0,2000,1,Dallas
+-97.0,33.0,2020,1,Dallas
+-97.0,36.0,2010,1,Langston
+-97.0,36.0,2020,1,Langston
+-97.0,50.0,1980,1,Winnipeg
+-97.0,50.0,2000,1,Winnipeg
+-97.0,50.0,2010,4,Winnipeg
+-97.0,50.0,2020,5,Winnipeg
+-97.0,51.0,2000,1,Gimli
+-97.0,51.0,2020,1,Gimli
+-97.0,55.0,1980,1,Manitoba
+-96.0,19.0,2020,1,Veracruz
+-96.0,35.0,2010,1,Boley
+-96.0,36.0,2010,1,Okmulgee
+-95.0,29.0,2020,1,Texas City
+-95.0,30.0,1970,2,Houston
+-95.0,30.0,1980,1,Houston
+-95.0,30.0,1990,4,Houston
+-95.0,30.0,2010,4,Houston
+-95.0,32.0,1970,1,Kilgore College
+-95.0,39.0,1980,1,Kansas City
+-94.0,33.0,2010,1,Shreveport
+-94.0,33.0,2020,1,Shreveport
+-94.0,45.0,2000,1,Rockford
+-94.0,46.0,1990,7,Minnesota
+-94.0,46.0,2010,1,Minnesota
+-93.0,30.0,1980,1,Southwest Louisiana
+-93.0,42.0,1990,1,Iowa
+-93.0,44.0,2000,1,St. Olaf College
+-93.0,45.0,1990,11,Minneapolis
+-93.0,45.0,2000,7,Minneapolis
+-93.0,45.0,2010,2,Minneapolis
+-93.0,47.0,2010,1,Iron Range
+-92.0,15.0,2010,1,Quetzaltenango
+-92.0,31.0,1970,4,Louisiana
+-92.0,31.0,2000,3,Louisiana
+-92.0,31.0,2010,3,Louisiana
+-92.0,38.0,1970,1,Missouri
+-92.0,38.0,2020,1,Missouri
+-91.0,15.0,1980,1,La Recolección Architectural Complex
+-91.0,30.0,1980,1,Baton Rouge
+-91.0,30.0,2010,6,Baton Rouge
+-91.0,31.0,2020,1,Jackson
+-91.0,32.0,1990,1,Natchez
+-91.0,34.0,2020,1,Clarksdale
+-90.0,30.0,1970,11,New Orleans
+-90.0,30.0,1980,12,New Orleans
+-90.0,30.0,1990,31,New Orleans
+-90.0,30.0,2000,43,New Orleans
+-90.0,30.0,2010,106,New Orleans
+-90.0,30.0,2020,11,New Orleans
+-90.0,31.0,2010,2,Hammond
+-90.0,32.0,2020,2,Brookhaven
+-90.0,33.0,1970,1,Mississippi
+-90.0,33.0,1990,1,Mississippi
+-90.0,33.0,2010,2,Mississippi
+-90.0,34.0,1990,1,Southern United States
+-90.0,35.0,1990,2,Memphis
+-90.0,38.0,2000,1,Oakville
+-90.0,39.0,2000,5,Washington University in St. Louis
+-90.0,43.0,2010,1,Lone Rock
+-90.0,44.0,2000,1,Wisconsin
+-90.0,46.0,1970,1,Harshaw
+-89.0,30.0,2010,1,St. Bernard Parish
+-89.0,32.0,2010,1,Jones County
+-89.0,41.0,1980,2,Pontiac
+-89.0,42.0,2010,1,DeKalb
+-89.0,48.0,2010,1,Thunder Bay
+-88.0,31.0,1970,2,Mobile
+-88.0,31.0,1980,2,Mobile
+-88.0,31.0,1990,8,Mobile
+-88.0,31.0,2000,5,Mobile
+-88.0,31.0,2010,6,Mobile
+-88.0,31.0,2020,2,Mobile
+-88.0,40.0,1990,1,Champaign
+-88.0,41.0,2010,1,Thawville
+-88.0,42.0,1970,17,Chicago
+-88.0,42.0,1980,55,Chicago
+-88.0,42.0,1990,58,Chicago
+-88.0,42.0,2000,56,Chicago
+-88.0,42.0,2010,30,Chicago
+-88.0,42.0,2020,3,Chicago
+-88.0,43.0,2000,1,Milwaukee
+-88.0,43.0,2010,2,Milwaukee
+-87.0,33.0,1970,3,Alabama
+-87.0,33.0,1980,3,Alabama
+-87.0,33.0,1990,5,Alabama
+-87.0,33.0,2000,7,Alabama
+-87.0,33.0,2010,14,Alabama
+-87.0,34.0,2020,1,Birmingham
+-87.0,36.0,1980,1,Nashville
+-87.0,36.0,2010,1,Nashville
+-87.0,40.0,1980,1,New Richmond
+-87.0,42.0,1980,1,Three Oaks
+-86.0,30.0,1990,1,Seaside
+-86.0,35.0,1980,2,Manchester
+-86.0,35.0,1990,1,Manchester
+-86.0,36.0,1990,1,Tennessee
+-86.0,36.0,2000,1,Tennessee
+-86.0,36.0,2010,1,Tennessee
+-86.0,40.0,1980,3,Knightstown
+-86.0,40.0,2010,1,Knightstown
+-86.0,40.0,2020,1,Knightstown
+-86.0,43.0,2010,3,Grand Rapids
+-86.0,44.0,2000,1,Michigan
+-86.0,44.0,2010,2,Michigan
+-86.0,44.0,2020,1,Michigan
+-86.0,50.0,2010,1,Northern Ontario
+-85.0,32.0,2020,1,Columbus
+-85.0,33.0,1970,1,Pinewood Atlanta Studios
+-85.0,33.0,2010,7,Pinewood Atlanta Studios
+-85.0,33.0,2020,1,Pinewood Atlanta Studios
+-85.0,34.0,2010,3,Douglasville
+-85.0,34.0,2020,1,Douglasville
+-85.0,35.0,2020,1,Southern Adventist University
+-85.0,36.0,1990,2,Crossville
+-85.0,36.0,2010,1,Crossville
+-85.0,38.0,1970,1,Kentucky
+-85.0,38.0,1980,1,Kentucky
+-85.0,38.0,2000,1,Kentucky
+-85.0,39.0,2010,3,Cincinnati
+-85.0,39.0,2020,1,Cincinnati
+-85.0,46.0,1980,1,Mackinac Island
+-85.0,50.0,1970,2,Ontario
+-85.0,50.0,1980,10,Ontario
+-85.0,50.0,1990,10,Ontario
+-85.0,50.0,2000,19,Ontario
+-85.0,50.0,2010,38,Ontario
+-84.0,31.0,2020,2,Thomasville
+-84.0,33.0,1970,9,Georgia
+-84.0,33.0,1980,10,Georgia
+-84.0,33.0,1990,14,Georgia
+-84.0,33.0,2000,23,Georgia
+-84.0,33.0,2010,60,Georgia
+-84.0,33.0,2020,6,Georgia
+-84.0,34.0,1970,9,Atlanta
+-84.0,34.0,1980,6,Atlanta
+-84.0,34.0,1990,12,Atlanta
+-84.0,34.0,2000,39,Atlanta
+-84.0,34.0,2010,229,Atlanta
+-84.0,34.0,2020,56,Atlanta
+-84.0,35.0,2010,1,Hiawassee
+-84.0,36.0,1990,1,Oliver Springs
+-84.0,39.0,2020,1,Felicity
+-84.0,40.0,1980,1,Hara Arena
+-84.0,42.0,2010,1,Ann Arbor
+-84.0,42.0,2020,1,Ann Arbor
+-83.0,28.0,2010,2,Tampa Bay
+-83.0,32.0,2020,1,Fitzgerald
+-83.0,34.0,2010,3,Madison
+-83.0,35.0,2010,1,Sylva
+-83.0,36.0,2000,1,Biltmore Estate
+-83.0,40.0,1980,1,Columbus
+-83.0,41.0,1990,3,Clyde
+-83.0,42.0,1980,2,Detroit
+-83.0,42.0,1990,2,Detroit
+-83.0,42.0,2000,6,Detroit
+-83.0,42.0,2010,13,Detroit
+-83.0,42.0,2020,1,Detroit
+-83.0,43.0,2010,1,Oakland County
+-83.0,43.0,2020,1,Oakland County
+-82.0,8.0,2010,1,Chiriquí Province
+-82.0,23.0,1980,1,Havana
+-82.0,23.0,2000,1,Havana
+-82.0,23.0,2010,2,Havana
+-82.0,23.0,2020,2,Havana
+-82.0,28.0,1970,16,Florida
+-82.0,28.0,1980,36,Florida
+-82.0,28.0,1990,57,Florida
+-82.0,28.0,2000,50,Florida
+-82.0,28.0,2010,33,Florida
+-82.0,28.0,2020,1,Florida
+-82.0,30.0,2000,2,Q16568
+-82.0,33.0,2020,2,Augusta
+-82.0,37.0,1990,1,Bristol Motor Speedway
+-82.0,40.0,2000,1,Ohio
+-82.0,40.0,2010,3,Ohio
+-82.0,41.0,1980,2,Cleveland
+-82.0,41.0,1990,2,Cleveland
+-82.0,41.0,2010,3,Cleveland
+-82.0,41.0,2020,3,Cleveland
+-81.0,27.0,1970,1,Sebring Regional Airport
+-81.0,28.0,1980,1,Orlando International Airport
+-81.0,28.0,1990,1,Orlando International Airport
+-81.0,28.0,2010,1,Orlando International Airport
+-81.0,29.0,1980,1,Daytona International Speedway
+-81.0,29.0,1990,2,Daytona International Speedway
+-81.0,29.0,2010,1,Daytona International Speedway
+-81.0,30.0,2000,1,Ponte Vedra Beach
+-81.0,32.0,1990,1,Savannah
+-81.0,32.0,2020,3,Savannah
+-81.0,34.0,1970,3,South Carolina
+-81.0,34.0,1980,13,South Carolina
+-81.0,34.0,1990,27,South Carolina
+-81.0,34.0,2000,13,South Carolina
+-81.0,34.0,2010,3,South Carolina
+-81.0,35.0,2000,1,Charlotte Coliseum
+-81.0,36.0,1990,1,North Wilkesboro Speedway
+-81.0,40.0,2010,1,Weirton
+-81.0,41.0,1980,1,Beachwood Place
+-81.0,46.0,2020,1,Greater Sudbury
+-80.0,9.0,2020,1,Panama City
+-80.0,20.0,1970,1,Cayman Islands
+-80.0,20.0,1990,2,Cayman Islands
+-80.0,20.0,2000,2,Cayman Islands
+-80.0,25.0,1980,1,Ocean Reef Club
+-80.0,26.0,1970,4,Miami
+-80.0,26.0,1980,7,Miami
+-80.0,26.0,1990,20,Miami
+-80.0,26.0,2000,15,Miami
+-80.0,26.0,2010,11,Miami
+-80.0,26.0,2020,1,Miami
+-80.0,27.0,2020,1,Palm Beach
+-80.0,34.0,1990,1,Darlington Raceway
+-80.0,36.0,1970,8,North Carolina
+-80.0,36.0,1980,38,North Carolina
+-80.0,36.0,1990,69,North Carolina
+-80.0,36.0,2000,61,North Carolina
+-80.0,36.0,2010,56,North Carolina
+-80.0,37.0,2000,1,Roanoke
+-80.0,39.0,2010,1,West Virginia
+-80.0,40.0,1970,5,Pittsburgh
+-80.0,40.0,1980,8,Pittsburgh
+-80.0,40.0,1990,29,Pittsburgh
+-80.0,40.0,2000,10,Pittsburgh
+-80.0,40.0,2010,22,Pittsburgh
+-80.0,40.0,2020,1,Pittsburgh
+-80.0,43.0,1980,3,Hamilton
+-80.0,43.0,1990,7,Hamilton
+-80.0,43.0,2000,39,Hamilton
+-80.0,43.0,2010,6,Hamilton
+-80.0,43.0,2020,4,Hamilton
+-80.0,44.0,1970,1,University of Toronto
+-80.0,44.0,1980,2,University of Toronto
+-80.0,44.0,1990,5,University of Toronto
+-80.0,44.0,2000,10,University of Toronto
+-80.0,44.0,2010,4,University of Toronto
+-80.0,45.0,2010,1,Parry Sound
+-80.0,45.0,2020,1,Parry Sound
+-80.0,46.0,2010,1,West Nipissing
+-79.0,-7.0,2010,1,Chota
+-79.0,0.0,2000,1,Quito
+-79.0,26.0,1990,3,South Bimini Airport
+-79.0,35.0,1970,1,Fayetteville
+-79.0,36.0,2010,1,Durham
+-79.0,38.0,1990,1,Virginia
+-79.0,38.0,2000,4,Virginia
+-79.0,38.0,2010,1,Virginia
+-79.0,40.0,1970,2,Johnstown
+-79.0,43.0,1970,2,Niagara Falls
+-79.0,43.0,1980,1,Niagara Falls
+-79.0,43.0,1990,5,Niagara Falls
+-79.0,43.0,2000,1,Niagara Falls
+-79.0,43.0,2010,1,Niagara Falls
+-79.0,43.0,2020,1,Niagara Falls
+-79.0,44.0,1970,10,Toronto
+-79.0,44.0,1980,40,Toronto
+-79.0,44.0,1990,64,Toronto
+-79.0,44.0,2000,166,Toronto
+-79.0,44.0,2010,71,Toronto
+-79.0,44.0,2020,8,Toronto
+-79.0,45.0,2010,3,Muskoka District Municipality
+-79.0,46.0,2010,1,North Bay
+-79.0,48.0,2010,1,Rouyn-Noranda
+-79.0,49.0,1970,1,Normétal
+-78.0,27.0,2000,1,Grand Bahama
+-78.0,34.0,1980,1,Wilmington
+-78.0,34.0,1990,2,Wilmington
+-78.0,34.0,2010,3,Wilmington
+-78.0,34.0,2020,1,Wilmington
+-78.0,36.0,2020,1,Rocky Mount
+-78.0,38.0,2010,1,Goochland
+-78.0,41.0,1980,1,Pennsylvania
+-78.0,41.0,2000,4,Pennsylvania
+-78.0,41.0,2010,3,Pennsylvania
+-78.0,42.0,2020,1,Allegany County
+-78.0,43.0,2010,1,Rochester
+-78.0,43.0,2020,1,Rochester
+-78.0,44.0,2000,1,Canadian Forces Base Trenton
+-78.0,48.0,2010,2,Val-d'Or
+-78.0,48.0,2020,1,Val-d'Or
+-78.0,54.0,2010,1,Radisson
+-77.0,-12.0,1980,1,Lima
+-77.0,-12.0,2000,2,Lima
+-77.0,-12.0,2020,2,Lima
+-77.0,-10.0,2000,1,Q110239368
+-77.0,-9.0,2000,1,Llamellín
+-77.0,18.0,2000,1,Kingston
+-77.0,34.0,2000,2,North Topsail Beach
+-77.0,37.0,2020,1,Hopewell
+-77.0,38.0,2010,1,Byrd Theatre
+-77.0,38.0,2020,2,Byrd Theatre
+-77.0,39.0,1970,11,Baltimore
+-77.0,39.0,1980,17,Baltimore
+-77.0,39.0,1990,33,Baltimore
+-77.0,39.0,2000,39,Baltimore
+-77.0,39.0,2010,22,Baltimore
+-77.0,39.0,2020,5,Baltimore
+-77.0,40.0,1980,1,Camp Hill
+-77.0,40.0,2000,1,Camp Hill
+-77.0,48.0,2000,2,Kitcisakik
+-77.0,48.0,2010,3,Kitcisakik
+-76.0,-12.0,2010,1,Huancaya District
+-76.0,6.0,2020,1,Medellín
+-76.0,10.0,2010,1,Cartagena
+-76.0,18.0,1980,1,Port Antonio
+-76.0,18.0,2020,1,Port Antonio
+-76.0,36.0,2000,1,Coast Guard Air Station Elizabeth City
+-76.0,37.0,2010,1,Hampton Roads
+-76.0,39.0,1980,3,Delaware
+-76.0,39.0,1990,2,Delaware
+-76.0,39.0,2000,5,Delaware
+-76.0,40.0,2000,1,Chester Springs
+-76.0,40.0,2010,3,Chester Springs
+-76.0,43.0,2020,1,Syracuse
+-76.0,45.0,1990,5,Ottawa
+-76.0,45.0,2000,7,Ottawa
+-76.0,45.0,2010,13,Ottawa
+-76.0,45.0,2020,3,Ottawa
+-75.0,-15.0,1980,1,Nasca Province
+-75.0,-13.0,1980,1,Huancavelica Department
+-75.0,36.0,2000,1,Rodanthe
+-75.0,40.0,1970,4,Philadelphia
+-75.0,40.0,1980,8,Philadelphia
+-75.0,40.0,1990,16,Philadelphia
+-75.0,40.0,2000,25,Philadelphia
+-75.0,40.0,2010,19,Philadelphia
+-75.0,40.0,2020,1,Philadelphia
+-75.0,41.0,1980,1,Flemington
+-75.0,41.0,2000,1,Flemington
+-75.0,42.0,2000,1,Parksville
+-75.0,43.0,1980,2,New York
+-75.0,43.0,1990,1,New York
+-75.0,43.0,2000,3,New York
+-75.0,43.0,2010,2,New York
+-75.0,45.0,1970,1,Cornwall
+-75.0,45.0,2010,1,Cornwall
+-75.0,46.0,1970,1,Laurentides
+-75.0,46.0,2010,1,Laurentides
+-75.0,46.0,2020,4,Laurentides
+-74.0,-13.0,2010,1,Ayacucho Department
+-74.0,5.0,2010,3,Bogotá
+-74.0,5.0,2020,2,Bogotá
+-74.0,11.0,2010,1,Tayrona National Park
+-74.0,40.0,1970,16,New Jersey
+-74.0,40.0,1980,58,New Jersey
+-74.0,40.0,1990,104,New Jersey
+-74.0,40.0,2000,149,New Jersey
+-74.0,40.0,2010,30,New Jersey
+-74.0,40.0,2020,4,New Jersey
+-74.0,41.0,1970,103,New York City
+-74.0,41.0,1980,185,New York City
+-74.0,41.0,1990,205,New York City
+-74.0,41.0,2000,342,New York City
+-74.0,41.0,2010,396,New York City
+-74.0,41.0,2020,24,New York City
+-74.0,42.0,1970,4,Woodstock
+-74.0,42.0,1980,1,Woodstock
+-74.0,42.0,2010,3,Woodstock
+-74.0,42.0,2020,3,Woodstock
+-74.0,45.0,1980,1,Châteauguay
+-74.0,45.0,2010,9,Châteauguay
+-74.0,45.0,2020,2,Châteauguay
+-74.0,46.0,1970,20,Montreal
+-74.0,46.0,1980,28,Montreal
+-74.0,46.0,1990,43,Montreal
+-74.0,46.0,2000,101,Montreal
+-74.0,46.0,2010,87,Montreal
+-74.0,46.0,2020,21,Montreal
+-74.0,47.0,2000,1,Manawan
+-73.0,-13.0,1980,1,Machu Picchu
+-73.0,41.0,1970,2,Long Island
+-73.0,41.0,1980,3,Long Island
+-73.0,41.0,1990,10,Long Island
+-73.0,41.0,2000,9,Long Island
+-73.0,41.0,2010,19,Long Island
+-73.0,42.0,1970,4,Connecticut
+-73.0,42.0,1980,3,Connecticut
+-73.0,42.0,1990,15,Connecticut
+-73.0,42.0,2000,33,Connecticut
+-73.0,42.0,2010,20,Connecticut
+-73.0,42.0,2020,1,Connecticut
+-73.0,43.0,2010,1,Deerfield
+-73.0,43.0,2020,1,Deerfield
+-73.0,45.0,2000,1,Saint-Jean-sur-Richelieu
+-73.0,45.0,2010,3,Saint-Jean-sur-Richelieu
+-73.0,45.0,2020,9,Saint-Jean-sur-Richelieu
+-73.0,46.0,1970,2,Longueuil
+-73.0,46.0,2000,3,Longueuil
+-73.0,46.0,2010,4,Longueuil
+-73.0,46.0,2020,1,Longueuil
+-73.0,49.0,2010,1,La Doré
+-72.0,-14.0,1970,1,Cusco
+-72.0,-14.0,1980,1,Cusco
+-72.0,-14.0,2020,1,Cusco
+-72.0,-13.0,1970,2,Cusco Department
+-72.0,-13.0,2020,1,Cusco Department
+-72.0,19.0,2000,1,Port-au-Prince
+-72.0,19.0,2010,2,Port-au-Prince
+-72.0,41.0,1970,1,Greenport
+-72.0,41.0,1990,1,Greenport
+-72.0,42.0,1970,1,Massachusetts
+-72.0,42.0,1980,1,Massachusetts
+-72.0,42.0,2000,3,Massachusetts
+-72.0,42.0,2010,2,Massachusetts
+-72.0,42.0,2020,1,Massachusetts
+-72.0,44.0,1980,2,New Hampshire
+-72.0,44.0,1990,5,New Hampshire
+-72.0,44.0,2000,7,New Hampshire
+-72.0,44.0,2010,5,New Hampshire
+-72.0,45.0,1980,1,Lennoxville
+-72.0,45.0,2010,1,Lennoxville
+-72.0,47.0,1970,3,Portneuf
+-72.0,47.0,2010,3,Portneuf
+-72.0,49.0,2010,1,Saint-Félicien
+-72.0,52.0,1990,2,Quebec
+-72.0,52.0,2000,2,Quebec
+-72.0,52.0,2010,5,Quebec
+-72.0,52.0,2020,11,Quebec
+-71.0,-41.0,2010,2,Bariloche
+-71.0,-38.0,2020,1,Caviahue - Copahue Municipality
+-71.0,-33.0,2000,2,Santiago
+-71.0,-33.0,2010,1,Santiago
+-71.0,-14.0,2020,1,Canchis Province
+-71.0,10.0,1970,1,Cabimas
+-71.0,10.0,2010,1,Cabimas
+-71.0,41.0,1970,1,Newport
+-71.0,41.0,2000,2,Newport
+-71.0,41.0,2010,1,Newport
+-71.0,42.0,1990,1,Boston
+-71.0,42.0,2000,5,Boston
+-71.0,42.0,2010,14,Boston
+-71.0,42.0,2020,10,Boston
+-71.0,43.0,2010,3,Ipswich
+-71.0,43.0,2020,1,Ipswich
+-71.0,46.0,1980,1,Thetford Mines
+-71.0,46.0,2010,1,Thetford Mines
+-71.0,47.0,1970,2,Quebec City
+-71.0,47.0,2000,2,Quebec City
+-71.0,47.0,2010,4,Quebec City
+-71.0,47.0,2020,3,Quebec City
+-71.0,48.0,1970,1,Saguenay
+-71.0,48.0,2020,1,Saguenay
+-70.0,-54.0,2010,1,Tierra del Fuego
+-70.0,-20.0,2010,1,Humberstone and Santa Laura Saltpeter Works
+-70.0,-17.0,2010,1,Andes
+-70.0,-16.0,2020,1,Puno
+-70.0,-15.0,2000,1,Puno Department
+-70.0,18.0,2000,1,Santo Domingo
+-70.0,18.0,2020,2,Santo Domingo
+-70.0,41.0,2010,1,Nantucket
+-70.0,42.0,2010,4,Cape Cod
+-70.0,42.0,2020,1,Cape Cod
+-70.0,44.0,1990,1,Old Orchard Beach
+-70.0,48.0,1980,1,La Malbaie
+-70.0,48.0,2010,2,La Malbaie
+-70.0,48.0,2020,1,La Malbaie
+-69.0,-33.0,2020,5,Las Heras
+-69.0,44.0,1990,1,Belfast
+-69.0,46.0,1970,1,Maine
+-69.0,46.0,1980,3,Maine
+-69.0,46.0,1990,14,Maine
+-69.0,46.0,2000,7,Maine
+-69.0,46.0,2010,4,Maine
+-69.0,48.0,2010,2,Bas-Saint-Laurent
+-68.0,-55.0,1990,1,Les Eclaireurs Lighthouse
+-68.0,-46.0,1990,1,Comodoro Rivadavia
+-68.0,-20.0,2010,1,Salar de Uyuni
+-68.0,49.0,2010,2,Baie-Comeau
+-67.0,-22.0,2010,1,Andes
+-67.0,11.0,2020,1,Caracas
+-67.0,18.0,1990,1,Arecibo Radio Telescope
+-66.0,-24.0,2020,1,Jujuy Province
+-66.0,-17.0,2010,1,Cochabamba Department
+-66.0,18.0,1990,2,Puerto Rico
+-66.0,18.0,2000,2,Puerto Rico
+-66.0,18.0,2010,6,Puerto Rico
+-66.0,18.0,2020,2,Puerto Rico
+-66.0,47.0,1970,2,New Brunswick
+-66.0,47.0,2000,2,New Brunswick
+-66.0,48.0,2010,1,Carleton-sur-Mer
+-65.0,-32.0,2000,2,Villa General Belgrano
+-65.0,-27.0,2010,1,San Miguel de Tucumán
+-65.0,-25.0,2000,1,La Ciénaga
+-65.0,-25.0,2020,1,La Ciénaga
+-65.0,-4.0,1990,2,Amazonas
+-65.0,18.0,1970,1,United States Virgin Islands
+-65.0,18.0,1980,2,United States Virgin Islands
+-65.0,18.0,1990,7,United States Virgin Islands
+-65.0,18.0,2000,2,United States Virgin Islands
+-65.0,18.0,2010,2,United States Virgin Islands
+-64.0,-42.0,2010,1,Valdes Peninsula
+-64.0,-32.0,2000,1,Córdoba Province
+-64.0,-31.0,2000,1,Córdoba
+-64.0,-31.0,2020,4,Córdoba
+-64.0,45.0,2000,1,Halifax
+-63.0,-36.0,2020,1,Trenque Lauquen
+-63.0,-32.0,2020,1,Villa María
+-63.0,6.0,2010,1,Angel Falls
+-63.0,18.0,1990,1,Anguilla
+-63.0,45.0,1970,4,Nova Scotia
+-63.0,45.0,1980,6,Nova Scotia
+-63.0,45.0,1990,14,Nova Scotia
+-63.0,45.0,2000,20,Nova Scotia
+-63.0,45.0,2010,17,Nova Scotia
+-63.0,45.0,2020,1,Nova Scotia
+-62.0,-39.0,2020,1,Bahía Blanca
+-62.0,-33.0,2010,1,Marcos Juárez
+-62.0,-33.0,2020,1,Marcos Juárez
+-62.0,47.0,2020,1,Magdalen Islands
+-61.0,13.0,2000,2,Saint Vincent
+-61.0,15.0,1980,1,Fort-de-France
+-61.0,15.0,2000,1,Fort-de-France
+-60.0,-35.0,2000,1,Suipacha
+-60.0,-32.0,2020,1,Libertador San Martín
+-60.0,-3.0,1990,1,Amazon rainforest
+-60.0,-3.0,2000,1,Amazon rainforest
+-60.0,-3.0,2010,1,Amazon rainforest
+-60.0,-3.0,2020,1,Amazon rainforest
+-60.0,13.0,1970,2,Bathsheba
+-60.0,53.0,2000,1,Newfoundland and Labrador
+-59.0,-35.0,2010,3,Fuerte Apache
+-59.0,-35.0,2020,2,Fuerte Apache
+-59.0,-34.0,2010,1,"Villa Alsina, Baradero"
+-58.0,-38.0,1980,5,Mar del Plata
+-58.0,-38.0,1990,1,Mar del Plata
+-58.0,-38.0,2020,1,Mar del Plata
+-58.0,-35.0,1970,5,Buenos Aires
+-58.0,-35.0,1980,5,Buenos Aires
+-58.0,-35.0,1990,12,Buenos Aires
+-58.0,-35.0,2000,25,Buenos Aires
+-58.0,-35.0,2010,21,Buenos Aires
+-58.0,-35.0,2020,14,Buenos Aires
+-58.0,-34.0,2000,2,Colonia del Sacramento
+-58.0,-32.0,2020,1,Colón
+-58.0,-26.0,2020,1,Formosa
+-57.0,-64.0,2000,2,Marambio Station
+-57.0,-37.0,2020,2,Mar Azul
+-56.0,-35.0,2020,1,Montevideo
+-56.0,49.0,1970,1,Newfoundland
+-56.0,49.0,2010,1,Newfoundland
+-55.0,-35.0,2000,2,Piriápolis
+-55.0,-27.0,2010,1,Misiones Province
+-55.0,-27.0,2020,2,Misiones Province
+-55.0,-26.0,2000,2,Foz do Iguaçu
+-55.0,-26.0,2010,1,Foz do Iguaçu
+-54.0,-26.0,1990,1,Iguaçu Falls
+-53.0,-30.0,1980,1,Rio Grande do Sul
+-53.0,48.0,2000,1,St. John's
+-53.0,48.0,2010,1,St. John's
+-53.0,48.0,2020,1,St. John's
+-51.0,-29.0,2020,1,Gramado
+-49.0,-25.0,2010,1,Curitiba
+-48.0,-22.0,1970,1,São Paulo
+-48.0,-22.0,2000,1,São Paulo
+-48.0,-16.0,1970,1,Federal District
+-48.0,-16.0,1980,3,Federal District
+-48.0,-16.0,1990,2,Federal District
+-48.0,-16.0,2000,4,Federal District
+-48.0,-16.0,2010,3,Federal District
+-47.0,-24.0,1970,1,São Paulo
+-47.0,-24.0,1980,2,São Paulo
+-47.0,-24.0,2000,16,São Paulo
+-47.0,-24.0,2010,10,São Paulo
+-47.0,-24.0,2020,1,São Paulo
+-47.0,-23.0,2010,2,Paulínia
+-47.0,-23.0,2020,1,Paulínia
+-46.0,-23.0,2020,1,Joanópolis
+-45.0,-23.0,1970,5,Paraty
+-45.0,-23.0,1980,2,Paraty
+-45.0,-23.0,1990,1,Paraty
+-45.0,-23.0,2000,2,Paraty
+-43.0,-23.0,1970,8,Rio de Janeiro
+-43.0,-23.0,1980,22,Rio de Janeiro
+-43.0,-23.0,1990,9,Rio de Janeiro
+-43.0,-23.0,2000,45,Rio de Janeiro
+-43.0,-23.0,2010,52,Rio de Janeiro
+-43.0,-22.0,2000,1,Rio de Janeiro
+-43.0,-2.0,2000,1,Lençóis Maranhenses National Park
+-41.0,-20.0,1970,1,São Roque do Canaã
+-39.0,-5.0,1990,1,Ceará
+-39.0,-4.0,2000,3,Fortaleza
+-39.0,-4.0,2010,1,Fortaleza
+-38.0,-13.0,1980,1,Salvador
+-38.0,-5.0,2000,1,Jaguaruana
+-36.0,-7.0,2010,1,Campina Grande
+-35.0,-8.0,2000,2,Recife
+-30.0,0.0,1980,1,Atlantic Ocean
+-23.0,66.0,2010,1,Ísafjörður
+-22.0,64.0,1980,1,Hafnarfjörður
+-22.0,64.0,1990,1,Hafnarfjörður
+-22.0,64.0,2010,1,Hafnarfjörður
+-22.0,64.0,2020,3,Hafnarfjörður
+-22.0,66.0,2010,1,Westfjords
+-19.0,63.0,2010,4,Mýrdalssandur
+-18.0,65.0,2010,2,Iceland
+-17.0,15.0,2000,1,Thiès
+-17.0,15.0,2020,2,Thiès
+-17.0,28.0,2010,7,Tenerife
+-17.0,28.0,2020,4,Tenerife
+-17.0,33.0,2000,1,Madeira
+-17.0,64.0,2000,1,Vatnajökull
+-16.0,28.0,1970,8,Canary Islands
+-16.0,28.0,1980,7,Canary Islands
+-16.0,28.0,1990,1,Canary Islands
+-16.0,28.0,2000,8,Canary Islands
+-16.0,28.0,2010,19,Canary Islands
+-16.0,66.0,2010,2,Dettifoss
+-15.0,28.0,2010,1,Las Palmas de Gran Canaria
+-14.0,28.0,2010,5,Fuerteventura
+-14.0,28.0,2020,1,Fuerteventura
+-14.0,29.0,2010,3,Lanzarote
+-14.0,65.0,2010,1,Hesteyri
+-11.0,52.0,2010,1,Skellig Michael
+-10.0,30.0,2010,1,Agadir
+-10.0,31.0,2020,1,Imsouane
+-10.0,32.0,1990,1,Essaouira
+-10.0,32.0,2010,1,Essaouira
+-10.0,52.0,2000,1,County Kerry
+-10.0,52.0,2010,1,County Kerry
+-10.0,53.0,1990,2,Aran Islands
+-10.0,53.0,2010,1,Aran Islands
+-10.0,53.0,2020,1,Aran Islands
+-10.0,54.0,2020,1,Achill Island
+-9.0,33.0,2000,2,Oualidia
+-9.0,38.0,2010,1,Sines
+-9.0,39.0,1970,1,Lisbon
+-9.0,39.0,1980,4,Lisbon
+-9.0,39.0,1990,13,Lisbon
+-9.0,39.0,2000,36,Lisbon
+-9.0,39.0,2010,28,Lisbon
+-9.0,41.0,1980,1,Porto
+-9.0,41.0,1990,3,Porto
+-9.0,41.0,2000,9,Porto
+-9.0,41.0,2010,4,Porto
+-9.0,41.0,2020,2,Porto
+-9.0,42.0,1990,1,Viana do Castelo
+-9.0,42.0,2010,1,Viana do Castelo
+-9.0,52.0,2000,2,County Cork
+-9.0,52.0,2010,1,County Cork
+-9.0,53.0,1970,1,Galway
+-9.0,53.0,2000,1,Galway
+-9.0,54.0,2010,1,County Mayo
+-8.0,31.0,2010,1,Agafay Desert
+-8.0,32.0,2000,3,Marrakech
+-8.0,32.0,2010,3,Marrakech
+-8.0,34.0,2010,9,Casablanca
+-8.0,34.0,2020,2,Casablanca
+-8.0,37.0,2000,1,Algarve
+-8.0,38.0,2010,1,Alentejo region
+-8.0,39.0,2010,1,Alentejo region
+-8.0,41.0,2000,1,Guimarães
+-8.0,41.0,2010,1,Guimarães
+-8.0,41.0,2020,1,Guimarães
+-8.0,42.0,1980,2,Ourense
+-8.0,42.0,1990,1,Ourense
+-8.0,42.0,2020,1,Ourense
+-8.0,43.0,1980,3,Galicia
+-8.0,43.0,1990,1,Galicia
+-8.0,43.0,2000,18,Galicia
+-8.0,43.0,2010,7,Galicia
+-8.0,52.0,2020,1,Cahir Castle
+-8.0,53.0,2010,2,Charleville Castle
+-8.0,53.0,2020,1,Charleville Castle
+-8.0,54.0,2000,1,Leitrim
+-8.0,55.0,1990,1,Donegal
+-7.0,17.0,2010,1,Oualata
+-7.0,31.0,2010,1,Ouarzazate
+-7.0,31.0,2020,1,Ouarzazate
+-7.0,34.0,2010,4,Rabat
+-7.0,34.0,2020,2,Rabat
+-7.0,37.0,1980,1,Punta Umbría
+-7.0,37.0,2000,1,Punta Umbría
+-7.0,39.0,2020,2,Portalegre
+-7.0,40.0,1980,1,Alcántara dam
+-7.0,41.0,2000,1,Almeida
+-7.0,41.0,2010,3,Almeida
+-7.0,52.0,1970,1,County Wexford
+-7.0,52.0,1990,1,County Wexford
+-7.0,53.0,1970,2,County Kildare
+-7.0,53.0,1990,1,County Kildare
+-7.0,53.0,2010,1,County Kildare
+-7.0,54.0,1990,1,Clones
+-7.0,55.0,2000,1,Northern Ireland
+-7.0,55.0,2010,2,Northern Ireland
+-7.0,57.0,1990,1,Barra
+-7.0,62.0,2010,2,Faroe Islands
+-7.0,62.0,2020,1,Faroe Islands
+-6.0,10.0,1970,1,Niofoin
+-6.0,35.0,2000,1,Asilah
+-6.0,36.0,1990,1,Tangier
+-6.0,36.0,2000,2,Tangier
+-6.0,36.0,2010,6,Tangier
+-6.0,37.0,1970,2,Seville
+-6.0,37.0,1980,2,Seville
+-6.0,37.0,1990,2,Seville
+-6.0,37.0,2000,7,Seville
+-6.0,37.0,2010,5,Seville
+-6.0,38.0,2010,1,Higuera de la Sierra
+-6.0,39.0,1970,1,Cáceres
+-6.0,41.0,2000,2,Salamanca
+-6.0,41.0,2010,1,Salamanca
+-6.0,42.0,2000,1,Concordat prison
+-6.0,43.0,1970,1,Asturias
+-6.0,43.0,2000,2,Asturias
+-6.0,43.0,2010,1,Asturias
+-6.0,43.0,2020,1,Asturias
+-6.0,44.0,2000,1,Candás
+-6.0,44.0,2010,1,Candás
+-6.0,50.0,1970,1,St Buryan
+-6.0,52.0,1990,1,Curracloe
+-6.0,53.0,1970,6,Dublin
+-6.0,53.0,1990,8,Dublin
+-6.0,53.0,2000,3,Dublin
+-6.0,53.0,2010,6,Dublin
+-6.0,53.0,2020,2,Dublin
+-6.0,54.0,1990,1,Clogherhead
+-6.0,54.0,2000,1,Clogherhead
+-6.0,55.0,2000,4,Belfast
+-6.0,55.0,2020,4,Belfast
+-6.0,56.0,1990,1,Isle of Mull
+-6.0,57.0,1990,2,Isle of Skye
+-6.0,57.0,2010,2,Isle of Skye
+-6.0,58.0,2010,1,Quiraing
+-5.0,33.0,2010,2,Tioumliline
+-5.0,34.0,2010,1,Fez
+-5.0,36.0,1970,1,Gibraltar
+-5.0,36.0,1980,3,Gibraltar
+-5.0,36.0,1990,1,Gibraltar
+-5.0,37.0,1980,5,Estepa
+-5.0,37.0,2010,2,Estepa
+-5.0,38.0,1970,1,Córdoba
+-5.0,38.0,2000,1,Córdoba
+-5.0,38.0,2010,1,Córdoba
+-5.0,38.0,2020,1,Córdoba
+-5.0,42.0,1980,1,Simancas
+-5.0,43.0,1970,1,Colunga
+-5.0,44.0,1970,1,Lastres
+-5.0,48.0,1970,1,Audierne
+-5.0,48.0,1990,2,Audierne
+-5.0,48.0,2000,2,Audierne
+-5.0,48.0,2010,4,Audierne
+-5.0,49.0,2000,3,Landunvez
+-5.0,49.0,2010,3,Landunvez
+-5.0,50.0,1990,2,Falmouth
+-5.0,50.0,2000,1,Falmouth
+-5.0,50.0,2010,2,Falmouth
+-5.0,51.0,2020,1,Hartland Quay
+-5.0,52.0,2010,1,Pembrokeshire
+-5.0,53.0,2010,1,South Stack Lighthouse
+-5.0,54.0,1990,3,Isle of Man
+-5.0,54.0,2000,26,Isle of Man
+-5.0,54.0,2010,6,Isle of Man
+-5.0,55.0,1990,1,Straiton
+-5.0,56.0,2010,1,Arrochar
+-5.0,57.0,1970,1,Scotland
+-5.0,57.0,1980,1,Scotland
+-5.0,57.0,1990,4,Scotland
+-5.0,57.0,2000,3,Scotland
+-5.0,57.0,2010,7,Scotland
+-5.0,57.0,2020,1,Scotland
+-5.0,58.0,2010,2,Highland
+-4.0,31.0,2010,3,Erfoud
+-4.0,37.0,1970,2,Colmenar
+-4.0,37.0,2000,2,Colmenar
+-4.0,38.0,2000,1,Jaén
+-4.0,39.0,2000,1,Viso del Marqués
+-4.0,40.0,1970,48,Madrid
+-4.0,40.0,1980,25,Madrid
+-4.0,40.0,1990,31,Madrid
+-4.0,40.0,2000,77,Madrid
+-4.0,40.0,2010,29,Madrid
+-4.0,40.0,2020,13,Madrid
+-4.0,41.0,1970,6,Talamanca de Jarama
+-4.0,41.0,1980,2,Talamanca de Jarama
+-4.0,41.0,2000,4,Talamanca de Jarama
+-4.0,41.0,2010,1,Talamanca de Jarama
+-4.0,42.0,1980,1,Burgos
+-4.0,42.0,2000,1,Burgos
+-4.0,43.0,1970,2,Aguilar de Campoo
+-4.0,43.0,1980,1,Aguilar de Campoo
+-4.0,43.0,2000,3,Aguilar de Campoo
+-4.0,48.0,1970,12,Quimper
+-4.0,48.0,1980,12,Quimper
+-4.0,48.0,1990,4,Quimper
+-4.0,48.0,2000,6,Quimper
+-4.0,48.0,2010,14,Quimper
+-4.0,48.0,2020,1,Quimper
+-4.0,49.0,1970,2,Morlaix
+-4.0,49.0,1980,2,Morlaix
+-4.0,49.0,2000,2,Morlaix
+-4.0,49.0,2010,1,Morlaix
+-4.0,50.0,1970,1,Millbrook
+-4.0,50.0,2000,2,Millbrook
+-4.0,51.0,1990,1,Devon
+-4.0,51.0,2010,2,Devon
+-4.0,52.0,2000,1,Wales
+-4.0,52.0,2010,7,Wales
+-4.0,52.0,2020,1,Wales
+-4.0,53.0,1990,1,Malltraeth Bay
+-4.0,53.0,2000,7,Malltraeth Bay
+-4.0,53.0,2010,3,Malltraeth Bay
+-4.0,56.0,1970,1,Glasgow
+-4.0,56.0,1980,2,Glasgow
+-4.0,56.0,1990,4,Glasgow
+-4.0,56.0,2010,7,Glasgow
+-4.0,56.0,2020,1,Glasgow
+-4.0,57.0,1970,1,Ardverikie House
+-4.0,57.0,2010,1,Ardverikie House
+-4.0,57.0,2020,8,Ardverikie House
+-4.0,58.0,1970,1,Dunrobin Castle
+-3.0,17.0,2010,2,Timbuktu
+-3.0,35.0,1990,2,Melilla
+-3.0,35.0,2010,2,Melilla
+-3.0,35.0,2020,2,Melilla
+-3.0,37.0,1970,1,Guadix
+-3.0,37.0,1980,1,Guadix
+-3.0,38.0,2000,4,Úbeda
+-3.0,39.0,2020,1,Castellar de Santiago
+-3.0,40.0,1970,2,Alcalá de Henares
+-3.0,40.0,1980,1,Alcalá de Henares
+-3.0,40.0,2000,3,Alcalá de Henares
+-3.0,40.0,2010,2,Alcalá de Henares
+-3.0,43.0,1980,5,Bilbao
+-3.0,43.0,1990,3,Bilbao
+-3.0,43.0,2000,20,Bilbao
+-3.0,43.0,2010,23,Bilbao
+-3.0,43.0,2020,4,Bilbao
+-3.0,47.0,1970,1,Belle Île
+-3.0,47.0,2020,2,Belle Île
+-3.0,48.0,1980,2,Brittany
+-3.0,48.0,1990,1,Brittany
+-3.0,48.0,2000,1,Brittany
+-3.0,48.0,2010,8,Brittany
+-3.0,48.0,2020,4,Brittany
+-3.0,49.0,2000,5,Lézardrieux
+-3.0,49.0,2010,3,Lézardrieux
+-3.0,49.0,2020,5,Lézardrieux
+-3.0,51.0,1970,1,Cardiff
+-3.0,51.0,1990,4,Cardiff
+-3.0,51.0,2000,2,Cardiff
+-3.0,51.0,2010,7,Cardiff
+-3.0,51.0,2020,2,Cardiff
+-3.0,52.0,1980,1,Puzzlewood
+-3.0,52.0,2010,2,Puzzlewood
+-3.0,53.0,1990,4,Liverpool
+-3.0,53.0,2000,1,Liverpool
+-3.0,53.0,2010,4,Liverpool
+-3.0,53.0,2020,2,Liverpool
+-3.0,54.0,2000,1,Lake District
+-3.0,54.0,2010,1,Lake District
+-3.0,55.0,1970,1,Ennerdale Water
+-3.0,55.0,2000,1,Ennerdale Water
+-3.0,56.0,1980,2,Edinburgh
+-3.0,56.0,1990,16,Edinburgh
+-3.0,56.0,2000,19,Edinburgh
+-3.0,56.0,2010,16,Edinburgh
+-2.0,12.0,2010,1,Ouagadougou
+-2.0,35.0,2010,1,Oujda
+-2.0,37.0,1970,34,Almería
+-2.0,37.0,1980,24,Almería
+-2.0,37.0,1990,9,Almería
+-2.0,37.0,2000,18,Almería
+-2.0,37.0,2010,13,Almería
+-2.0,37.0,2020,3,Almería
+-2.0,38.0,2010,2,Orce
+-2.0,40.0,1980,2,Cuenca
+-2.0,41.0,1980,1,Molina de Aragón Castle
+-2.0,42.0,1990,1,Bardenas Reales
+-2.0,43.0,1970,5,San Sebastián
+-2.0,43.0,1980,9,San Sebastián
+-2.0,43.0,1990,10,San Sebastián
+-2.0,43.0,2000,30,San Sebastián
+-2.0,43.0,2010,39,San Sebastián
+-2.0,43.0,2020,7,San Sebastián
+-2.0,47.0,1970,3,Nantes
+-2.0,47.0,1980,7,Nantes
+-2.0,47.0,1990,4,Nantes
+-2.0,47.0,2000,8,Nantes
+-2.0,47.0,2010,9,Nantes
+-2.0,48.0,1990,1,Paimpont forest
+-2.0,48.0,2000,1,Paimpont forest
+-2.0,48.0,2010,5,Paimpont forest
+-2.0,48.0,2020,2,Paimpont forest
+-2.0,49.0,1970,1,Saint-Lunaire
+-2.0,49.0,1990,4,Saint-Lunaire
+-2.0,49.0,2000,2,Saint-Lunaire
+-2.0,49.0,2010,3,Saint-Lunaire
+-2.0,49.0,2020,2,Saint-Lunaire
+-2.0,50.0,1980,1,La Hague
+-2.0,50.0,2000,1,La Hague
+-2.0,50.0,2010,1,La Hague
+-2.0,51.0,1970,5,Corsham Court
+-2.0,51.0,1980,1,Corsham Court
+-2.0,51.0,1990,5,Corsham Court
+-2.0,51.0,2000,2,Corsham Court
+-2.0,51.0,2010,7,Corsham Court
+-2.0,52.0,1970,3,Gloucester Cathedral
+-2.0,52.0,1990,2,Gloucester Cathedral
+-2.0,52.0,2000,5,Gloucester Cathedral
+-2.0,52.0,2010,2,Gloucester Cathedral
+-2.0,52.0,2020,2,Gloucester Cathedral
+-2.0,53.0,1990,2,Manchester
+-2.0,53.0,2000,1,Manchester
+-2.0,53.0,2010,5,Manchester
+-2.0,53.0,2020,3,Manchester
+-2.0,54.0,1990,2,Oldham
+-2.0,54.0,2010,6,Oldham
+-2.0,55.0,1970,1,Newcastle upon Tyne
+-2.0,55.0,1990,2,Newcastle upon Tyne
+-2.0,55.0,2000,2,Newcastle upon Tyne
+-2.0,55.0,2010,2,Newcastle upon Tyne
+-2.0,55.0,2020,1,Newcastle upon Tyne
+-2.0,56.0,1970,1,Bamburgh Castle
+-2.0,56.0,1980,1,Bamburgh Castle
+-2.0,56.0,2010,1,Bamburgh Castle
+-1.0,38.0,2000,1,Cartagena
+-1.0,38.0,2010,1,Cartagena
+-1.0,38.0,2020,1,Cartagena
+-1.0,39.0,2010,1,Buñol
+-1.0,40.0,2000,1,Valencian Community
+-1.0,40.0,2010,2,Valencian Community
+-1.0,40.0,2020,1,Valencian Community
+-1.0,41.0,2010,3,Aragon
+-1.0,41.0,2020,4,Aragon
+-1.0,42.0,2010,1,Leciñena
+-1.0,42.0,2020,1,Leciñena
+-1.0,43.0,1970,1,Bayonne
+-1.0,43.0,1990,1,Bayonne
+-1.0,43.0,2000,2,Bayonne
+-1.0,43.0,2010,3,Bayonne
+-1.0,44.0,1990,1,Biscarrosse
+-1.0,44.0,2020,1,Biscarrosse
+-1.0,45.0,1980,1,Bordeaux
+-1.0,45.0,1990,1,Bordeaux
+-1.0,45.0,2000,1,Bordeaux
+-1.0,45.0,2010,2,Bordeaux
+-1.0,45.0,2020,1,Bordeaux
+-1.0,46.0,1980,2,La Rochelle
+-1.0,46.0,2000,1,La Rochelle
+-1.0,46.0,2010,2,La Rochelle
+-1.0,47.0,1970,1,Angers
+-1.0,47.0,2000,2,Angers
+-1.0,47.0,2010,3,Angers
+-1.0,49.0,1980,1,Hambye
+-1.0,49.0,1990,1,Hambye
+-1.0,49.0,2010,7,Hambye
+-1.0,49.0,2020,2,Hambye
+-1.0,51.0,1970,8,Hankley Common
+-1.0,51.0,1980,2,Hankley Common
+-1.0,51.0,1990,2,Hankley Common
+-1.0,51.0,2000,4,Hankley Common
+-1.0,51.0,2010,37,Hankley Common
+-1.0,51.0,2020,3,Hankley Common
+-1.0,52.0,1970,103,Pinewood Studios
+-1.0,52.0,1980,59,Pinewood Studios
+-1.0,52.0,1990,65,Pinewood Studios
+-1.0,52.0,2000,78,Pinewood Studios
+-1.0,52.0,2010,63,Pinewood Studios
+-1.0,52.0,2020,6,Pinewood Studios
+-1.0,53.0,1970,2,England
+-1.0,53.0,1980,2,England
+-1.0,53.0,1990,5,England
+-1.0,53.0,2000,9,England
+-1.0,53.0,2010,11,England
+-1.0,53.0,2020,2,England
+-1.0,54.0,1970,1,Castle Howard
+-1.0,54.0,1980,1,Castle Howard
+-1.0,54.0,2000,3,Castle Howard
+-1.0,54.0,2010,2,Castle Howard
+-1.0,54.0,2020,1,Castle Howard
+-0.0,38.0,2010,3,Alicante
+-0.0,38.0,2020,1,Alicante
+-0.0,39.0,1980,3,Valencia
+-0.0,39.0,2000,1,Valencia
+-0.0,39.0,2010,7,Valencia
+-0.0,39.0,2020,4,Valencia
+-0.0,40.0,2000,1,Benicàssim
+-0.0,40.0,2020,5,Benicàssim
+-0.0,41.0,1990,1,La Granja d'Escarp
+-0.0,41.0,2020,4,La Granja d'Escarp
+-0.0,42.0,2010,7,Sariñena
+-0.0,42.0,2020,2,Sariñena
+-0.0,43.0,1990,3,Peyresourde - Balestas Airport
+-0.0,43.0,2000,2,Peyresourde - Balestas Airport
+-0.0,43.0,2010,10,Peyresourde - Balestas Airport
+-0.0,44.0,1990,2,Vic-Fezensac
+-0.0,44.0,2000,1,Vic-Fezensac
+-0.0,44.0,2020,1,Vic-Fezensac
+-0.0,46.0,1970,2,Poitou-Charentes
+-0.0,46.0,2020,1,Poitou-Charentes
+-0.0,47.0,2000,1,Royal abbey of Fontevraud
+-0.0,47.0,2010,1,Royal abbey of Fontevraud
+-0.0,47.0,2020,4,Royal abbey of Fontevraud
+-0.0,48.0,1990,2,Le Mans
+-0.0,48.0,2000,1,Le Mans
+-0.0,48.0,2010,1,Le Mans
+-0.0,48.0,2020,3,Le Mans
+-0.0,49.0,1970,4,Normandy
+-0.0,49.0,1980,4,Normandy
+-0.0,49.0,1990,2,Normandy
+-0.0,49.0,2000,4,Normandy
+-0.0,49.0,2010,11,Normandy
+-0.0,49.0,2020,3,Normandy
+-0.0,50.0,2010,2,Gonfreville-l'Orcher
+-0.0,50.0,2020,1,Gonfreville-l'Orcher
+-0.0,51.0,1970,7,Surrey
+-0.0,51.0,1980,11,Surrey
+-0.0,51.0,1990,4,Surrey
+-0.0,51.0,2000,13,Surrey
+-0.0,51.0,2010,52,Surrey
+-0.0,51.0,2020,4,Surrey
+-0.0,52.0,1970,44,London
+-0.0,52.0,1980,50,London
+-0.0,52.0,1990,56,London
+-0.0,52.0,2000,147,London
+-0.0,52.0,2010,287,London
+-0.0,52.0,2020,25,London
+-0.0,53.0,2000,3,Burghley House
+-0.0,53.0,2010,3,Burghley House
+-0.0,54.0,2000,1,Scarborough
+1.0,39.0,1980,2,Ibiza
+1.0,39.0,1990,1,Ibiza
+1.0,39.0,2000,5,Ibiza
+1.0,39.0,2010,1,Ibiza
+1.0,39.0,2020,1,Ibiza
+1.0,41.0,2000,1,Reus
+1.0,41.0,2010,2,Reus
+1.0,41.0,2020,5,Reus
+1.0,42.0,2020,6,Lleida
+1.0,43.0,1970,1,Samatan
+1.0,43.0,2010,4,Samatan
+1.0,44.0,1970,3,Toulouse
+1.0,44.0,1990,3,Toulouse
+1.0,44.0,2000,7,Toulouse
+1.0,44.0,2010,4,Toulouse
+1.0,44.0,2020,1,Toulouse
+1.0,45.0,1990,3,Château de Beynac
+1.0,45.0,2000,1,Château de Beynac
+1.0,45.0,2020,1,Château de Beynac
+1.0,46.0,2000,1,Montmorillon
+1.0,47.0,1970,3,Château du Gué-Péan
+1.0,47.0,2010,1,Château du Gué-Péan
+1.0,47.0,2020,1,Château du Gué-Péan
+1.0,48.0,1990,1,Chartres
+1.0,48.0,2000,8,Chartres
+1.0,48.0,2010,3,Chartres
+1.0,49.0,1970,3,Dreux
+1.0,49.0,1990,9,Dreux
+1.0,49.0,2000,1,Dreux
+1.0,49.0,2010,2,Dreux
+1.0,49.0,2020,1,Dreux
+1.0,50.0,2010,2,Dieppe
+1.0,50.0,2020,1,Dieppe
+1.0,51.0,1970,5,Kent
+1.0,51.0,1990,2,Kent
+1.0,51.0,2010,6,Kent
+1.0,51.0,2020,4,Kent
+1.0,52.0,1970,3,Elveden Hall
+1.0,52.0,2010,5,Elveden Hall
+1.0,52.0,2020,1,Elveden Hall
+1.0,53.0,2010,2,Norwich
+1.0,53.0,2020,1,Norwich
+2.0,14.0,2020,1,Niamey
+2.0,40.0,2010,1,Camp de Mar
+2.0,41.0,1970,9,Barcelona
+2.0,41.0,1980,5,Barcelona
+2.0,41.0,1990,13,Barcelona
+2.0,41.0,2000,45,Barcelona
+2.0,41.0,2010,66,Barcelona
+2.0,41.0,2020,30,Barcelona
+2.0,42.0,1980,1,Terrassa
+2.0,42.0,2000,15,Terrassa
+2.0,42.0,2010,27,Terrassa
+2.0,42.0,2020,11,Terrassa
+2.0,43.0,1970,3,Carcassonne
+2.0,43.0,1980,2,Carcassonne
+2.0,43.0,1990,3,Carcassonne
+2.0,43.0,2010,2,Carcassonne
+2.0,43.0,2020,2,Carcassonne
+2.0,44.0,2010,1,Occitania
+2.0,45.0,1970,1,Aurillac
+2.0,45.0,2000,3,Aurillac
+2.0,45.0,2010,2,Aurillac
+2.0,45.0,2020,2,Aurillac
+2.0,46.0,1990,2,Limousin
+2.0,46.0,2000,2,Limousin
+2.0,46.0,2010,1,Limousin
+2.0,47.0,1970,1,Argenton-sur-Creuse
+2.0,47.0,2000,1,Argenton-sur-Creuse
+2.0,48.0,1970,4,Château de Chambord
+2.0,48.0,1990,1,Château de Chambord
+2.0,48.0,2000,4,Château de Chambord
+2.0,48.0,2010,5,Château de Chambord
+2.0,49.0,1970,97,Paris
+2.0,49.0,1980,86,Paris
+2.0,49.0,1990,85,Paris
+2.0,49.0,2000,221,Paris
+2.0,49.0,2010,425,Paris
+2.0,49.0,2020,46,Paris
+2.0,50.0,2010,1,Berck
+2.0,50.0,2020,1,Berck
+2.0,51.0,2000,1,Dunkirk
+2.0,51.0,2010,5,Dunkirk
+2.0,51.0,2020,3,Dunkirk
+3.0,6.0,2010,3,Lagos
+3.0,7.0,2010,2,Ikeja
+3.0,34.0,1970,1,Laghouat
+3.0,37.0,1970,1,Algiers
+3.0,40.0,1970,2,Mallorca
+3.0,40.0,1980,5,Mallorca
+3.0,40.0,1990,4,Mallorca
+3.0,40.0,2000,13,Mallorca
+3.0,40.0,2010,8,Mallorca
+3.0,40.0,2020,1,Mallorca
+3.0,42.0,1970,12,Girona
+3.0,42.0,1980,1,Girona
+3.0,42.0,1990,29,Girona
+3.0,42.0,2000,18,Girona
+3.0,42.0,2010,28,Girona
+3.0,42.0,2020,5,Girona
+3.0,43.0,1970,16,Port-Vendres
+3.0,43.0,1980,9,Port-Vendres
+3.0,43.0,2000,4,Port-Vendres
+3.0,43.0,2010,14,Port-Vendres
+3.0,43.0,2020,3,Port-Vendres
+3.0,44.0,1970,1,Millau Viaduct
+3.0,44.0,2000,1,Millau Viaduct
+3.0,44.0,2010,1,Millau Viaduct
+3.0,44.0,2020,1,Millau Viaduct
+3.0,45.0,1970,1,Brioude
+3.0,45.0,1990,4,Brioude
+3.0,45.0,2000,6,Brioude
+3.0,45.0,2010,3,Brioude
+3.0,45.0,2020,2,Brioude
+3.0,46.0,1970,4,Clermont-Ferrand
+3.0,46.0,1980,1,Clermont-Ferrand
+3.0,46.0,1990,5,Clermont-Ferrand
+3.0,46.0,2000,15,Clermont-Ferrand
+3.0,46.0,2010,5,Clermont-Ferrand
+3.0,46.0,2020,3,Clermont-Ferrand
+3.0,47.0,1970,1,Moulins
+3.0,47.0,2010,1,Moulins
+3.0,48.0,1970,2,Palace of Fontainebleau
+3.0,48.0,1980,1,Palace of Fontainebleau
+3.0,48.0,1990,1,Palace of Fontainebleau
+3.0,48.0,2000,1,Palace of Fontainebleau
+3.0,48.0,2010,6,Palace of Fontainebleau
+3.0,48.0,2020,1,Palace of Fontainebleau
+3.0,49.0,1970,4,Vaux-le-Vicomte
+3.0,49.0,1980,7,Vaux-le-Vicomte
+3.0,49.0,1990,10,Vaux-le-Vicomte
+3.0,49.0,2000,8,Vaux-le-Vicomte
+3.0,49.0,2010,22,Vaux-le-Vicomte
+3.0,49.0,2020,2,Vaux-le-Vicomte
+3.0,50.0,2000,3,Lens
+3.0,50.0,2010,4,Lens
+3.0,50.0,2020,1,Lens
+3.0,51.0,1970,2,Bruges
+3.0,51.0,1980,2,Bruges
+3.0,51.0,1990,1,Bruges
+3.0,51.0,2000,5,Bruges
+3.0,51.0,2010,4,Bruges
+3.0,51.0,2020,1,Bruges
+3.0,55.0,1980,1,North Sea
+4.0,7.0,2010,1,Ibadan
+4.0,7.0,2020,1,Ibadan
+4.0,32.0,1970,1,Ghardaia
+4.0,36.0,1970,1,Sour El-Ghozlane
+4.0,40.0,1970,1,Menorca
+4.0,40.0,2010,2,Menorca
+4.0,40.0,2020,1,Menorca
+4.0,43.0,2010,3,Sète
+4.0,44.0,1970,9,Alès
+4.0,44.0,1980,1,Alès
+4.0,44.0,1990,3,Alès
+4.0,44.0,2000,1,Alès
+4.0,44.0,2010,15,Alès
+4.0,44.0,2020,3,Alès
+4.0,45.0,1970,1,Saint-Étienne
+4.0,45.0,1980,1,Saint-Étienne
+4.0,45.0,1990,4,Saint-Étienne
+4.0,45.0,2000,4,Saint-Étienne
+4.0,45.0,2010,4,Saint-Étienne
+4.0,45.0,2020,1,Saint-Étienne
+4.0,46.0,1970,4,Loire
+4.0,46.0,1990,1,Loire
+4.0,46.0,2000,4,Loire
+4.0,46.0,2010,3,Loire
+4.0,47.0,2020,4,Avallon
+4.0,48.0,1980,2,Aube
+4.0,48.0,2000,3,Aube
+4.0,48.0,2010,2,Aube
+4.0,50.0,1990,1,Zoo de Maubeuge
+4.0,50.0,2000,3,Zoo de Maubeuge
+4.0,51.0,1990,2,Brussels
+4.0,51.0,2000,9,Brussels
+4.0,51.0,2010,11,Brussels
+4.0,51.0,2020,6,Brussels
+4.0,52.0,1990,4,Rotterdam
+4.0,52.0,2000,1,Rotterdam
+4.0,52.0,2010,9,Rotterdam
+4.0,52.0,2020,2,Rotterdam
+4.0,56.0,1980,1,North Sea
+5.0,7.0,2020,1,Ile Ife
+5.0,8.0,2010,1,Ekiti State
+5.0,37.0,2010,1,Ouzellaguen
+5.0,43.0,1970,9,Marseille
+5.0,43.0,1980,11,Marseille
+5.0,43.0,1990,11,Marseille
+5.0,43.0,2000,29,Marseille
+5.0,43.0,2010,14,Marseille
+5.0,43.0,2020,3,Marseille
+5.0,44.0,1970,5,Aix-en-Provence
+5.0,44.0,1980,6,Aix-en-Provence
+5.0,44.0,1990,6,Aix-en-Provence
+5.0,44.0,2000,14,Aix-en-Provence
+5.0,44.0,2010,6,Aix-en-Provence
+5.0,45.0,2000,6,Saint-Martin-en-Vercors
+5.0,45.0,2010,4,Saint-Martin-en-Vercors
+5.0,46.0,1970,9,Lyon
+5.0,46.0,1980,8,Lyon
+5.0,46.0,1990,11,Lyon
+5.0,46.0,2000,21,Lyon
+5.0,46.0,2010,29,Lyon
+5.0,46.0,2020,19,Lyon
+5.0,47.0,2010,2,Stade Gaston Gérard
+5.0,47.0,2020,4,Stade Gaston Gérard
+5.0,48.0,1970,1,Charles de Gaulle Memorial
+5.0,49.0,2010,1,Marville
+5.0,50.0,2000,1,Namur
+5.0,50.0,2010,4,Namur
+5.0,51.0,1980,1,Royal Museum for Central Africa
+5.0,51.0,2000,1,Royal Museum for Central Africa
+5.0,51.0,2010,4,Royal Museum for Central Africa
+5.0,51.0,2020,1,Royal Museum for Central Africa
+5.0,52.0,1970,9,Amsterdam
+5.0,52.0,1980,8,Amsterdam
+5.0,52.0,1990,7,Amsterdam
+5.0,52.0,2000,13,Amsterdam
+5.0,52.0,2010,24,Amsterdam
+5.0,52.0,2020,5,Amsterdam
+5.0,53.0,2000,1,Spierdijk
+5.0,53.0,2010,2,Spierdijk
+5.0,60.0,1990,1,Bergen
+5.0,60.0,2000,2,Bergen
+5.0,60.0,2010,3,Bergen
+5.0,61.0,2010,1,Sognefjord
+5.0,62.0,2020,2,Stad
+6.0,43.0,1970,1,Toulon
+6.0,43.0,1980,3,Toulon
+6.0,43.0,1990,1,Toulon
+6.0,43.0,2010,2,Toulon
+6.0,43.0,2020,3,Toulon
+6.0,44.0,1970,1,Mirabeau
+6.0,44.0,1980,2,Mirabeau
+6.0,44.0,2010,4,Mirabeau
+6.0,45.0,1970,2,Grenoble
+6.0,45.0,2000,6,Grenoble
+6.0,45.0,2010,5,Grenoble
+6.0,45.0,2020,8,Grenoble
+6.0,46.0,1970,7,Geneva
+6.0,46.0,1980,4,Geneva
+6.0,46.0,1990,9,Geneva
+6.0,46.0,2000,17,Geneva
+6.0,46.0,2010,10,Geneva
+6.0,46.0,2020,1,Geneva
+6.0,47.0,1970,2,Jura
+6.0,47.0,1980,1,Jura
+6.0,47.0,1990,1,Jura
+6.0,47.0,2000,1,Jura
+6.0,49.0,1990,1,Saint Epvre Basilica
+6.0,49.0,2000,1,Saint Epvre Basilica
+6.0,49.0,2010,1,Saint Epvre Basilica
+6.0,49.0,2020,1,Saint Epvre Basilica
+6.0,50.0,2000,5,Kehlen
+6.0,50.0,2010,2,Kehlen
+6.0,50.0,2020,3,Kehlen
+6.0,51.0,1970,2,Liège
+6.0,51.0,1980,1,Liège
+6.0,51.0,1990,2,Liège
+6.0,51.0,2000,16,Liège
+6.0,51.0,2010,15,Liège
+6.0,51.0,2020,1,Liège
+6.0,52.0,2010,2,Groessen
+6.0,52.0,2020,3,Groessen
+6.0,53.0,1990,3,Friesland
+6.0,53.0,2010,7,Friesland
+6.0,59.0,2010,1,Lysefjord
+6.0,60.0,2010,1,Hardangerfjord
+6.0,60.0,2020,1,Hardangerfjord
+7.0,6.0,2010,2,Asaba
+7.0,43.0,1970,9,Saint-Tropez
+7.0,43.0,1980,5,Saint-Tropez
+7.0,43.0,2000,1,Saint-Tropez
+7.0,43.0,2010,2,Saint-Tropez
+7.0,43.0,2020,1,Saint-Tropez
+7.0,44.0,1970,14,Nice
+7.0,44.0,1980,7,Nice
+7.0,44.0,1990,10,Nice
+7.0,44.0,2000,21,Nice
+7.0,44.0,2010,16,Nice
+7.0,44.0,2020,3,Nice
+7.0,45.0,1970,1,Val-d'Isère
+7.0,45.0,2000,1,Val-d'Isère
+7.0,45.0,2010,1,Val-d'Isère
+7.0,46.0,1970,1,Aosta Valley
+7.0,46.0,1980,4,Aosta Valley
+7.0,46.0,2000,1,Aosta Valley
+7.0,46.0,2010,12,Aosta Valley
+7.0,47.0,1970,3,Lausanne
+7.0,47.0,1980,3,Lausanne
+7.0,47.0,2000,4,Lausanne
+7.0,47.0,2010,9,Lausanne
+7.0,48.0,1990,1,Mulhouse
+7.0,48.0,2010,1,Mulhouse
+7.0,48.0,2020,4,Mulhouse
+7.0,49.0,2000,2,Canal des houillères de la Sarre
+7.0,50.0,2010,1,Nürburgring
+7.0,51.0,1970,2,Cologne
+7.0,51.0,1990,9,Cologne
+7.0,51.0,2000,40,Cologne
+7.0,51.0,2010,24,Cologne
+7.0,51.0,2020,3,Cologne
+7.0,52.0,1970,1,Stadtlohn
+7.0,52.0,2000,1,Stadtlohn
+7.0,52.0,2010,1,Stadtlohn
+7.0,53.0,2010,3,University of Groningen
+7.0,58.0,2000,1,Audnedal Municipality
+7.0,58.0,2010,1,Audnedal Municipality
+7.0,61.0,2010,3,"Sogndal Airport, Haukåsen"
+7.0,62.0,2010,1,Valldalen
+7.0,63.0,2020,1,Atlantic Ocean Road
+8.0,34.0,1980,1,Tozeur
+8.0,41.0,1970,1,Alghero
+8.0,41.0,2010,1,Alghero
+8.0,44.0,1970,3,Imperia
+8.0,44.0,2000,1,Imperia
+8.0,45.0,1970,3,Turin
+8.0,45.0,1980,2,Turin
+8.0,45.0,2000,1,Turin
+8.0,45.0,2010,4,Turin
+8.0,45.0,2020,1,Turin
+8.0,46.0,2010,2,Fort Bard
+8.0,47.0,1970,3,Canton of Berne
+8.0,47.0,1980,2,Canton of Berne
+8.0,47.0,2000,5,Canton of Berne
+8.0,47.0,2010,2,Canton of Berne
+8.0,48.0,1970,1,Gengenbach
+8.0,48.0,2010,1,Gengenbach
+8.0,48.0,2020,1,Gengenbach
+8.0,49.0,1970,1,Gernsbach
+8.0,49.0,2010,6,Gernsbach
+8.0,49.0,2020,1,Gernsbach
+8.0,50.0,1980,1,Eberbach Abbey
+8.0,50.0,2010,1,Eberbach Abbey
+8.0,50.0,2020,1,Eberbach Abbey
+8.0,51.0,2010,2,North Rhine-Westphalia
+8.0,52.0,1990,1,Dortmund Airport
+8.0,52.0,2010,1,Dortmund Airport
+8.0,52.0,2020,1,Dortmund Airport
+8.0,54.0,2010,1,Heligoland
+8.0,55.0,2010,1,Sylt
+8.0,56.0,2010,3,Skallingen
+8.0,58.0,2010,1,Kristiansand
+8.0,61.0,1980,1,Finse
+9.0,3.0,1980,1,Luba
+9.0,4.0,1980,2,Bimbia
+9.0,40.0,1970,2,Sardinia
+9.0,40.0,1990,1,Sardinia
+9.0,40.0,2000,1,Sardinia
+9.0,40.0,2010,1,Sardinia
+9.0,41.0,2010,1,Sassari
+9.0,42.0,1970,1,Corsica
+9.0,42.0,1990,2,Corsica
+9.0,42.0,2000,1,Corsica
+9.0,42.0,2010,2,Corsica
+9.0,43.0,2000,1,Speloncato
+9.0,44.0,2000,1,Genoa
+9.0,45.0,1970,19,Milan
+9.0,45.0,1980,19,Milan
+9.0,45.0,1990,2,Milan
+9.0,45.0,2000,10,Milan
+9.0,45.0,2010,12,Milan
+9.0,45.0,2020,1,Milan
+9.0,46.0,1970,12,Lake Como
+9.0,46.0,1980,11,Lake Como
+9.0,46.0,1990,24,Lake Como
+9.0,46.0,2000,39,Lake Como
+9.0,46.0,2010,20,Lake Como
+9.0,46.0,2020,7,Lake Como
+9.0,47.0,1970,2,Zurich
+9.0,47.0,1980,6,Zurich
+9.0,47.0,1990,3,Zurich
+9.0,47.0,2000,9,Zurich
+9.0,47.0,2010,13,Zurich
+9.0,47.0,2020,7,Zurich
+9.0,48.0,1980,2,Rheinau
+9.0,48.0,2000,1,Rheinau
+9.0,48.0,2010,1,Rheinau
+9.0,49.0,1970,2,Stuttgart
+9.0,49.0,1980,1,Stuttgart
+9.0,49.0,1990,1,Stuttgart
+9.0,49.0,2000,1,Stuttgart
+9.0,49.0,2010,4,Stuttgart
+9.0,49.0,2020,1,Stuttgart
+9.0,50.0,2010,1,Kallstadt
+9.0,50.0,2020,1,Kallstadt
+9.0,51.0,1980,1,Neue Galerie
+9.0,51.0,2010,1,Neue Galerie
+9.0,51.0,2020,1,Neue Galerie
+9.0,53.0,1970,1,Worpswede
+9.0,53.0,2000,1,Worpswede
+9.0,55.0,2000,1,Højer
+9.0,56.0,2000,3,Hjerl Heath
+9.0,56.0,2010,2,Hjerl Heath
+9.0,57.0,2010,2,Aggersborg Parish
+9.0,63.0,2000,1,Surnadal Municipality
+10.0,4.0,2020,1,Douala
+10.0,33.0,2010,1,Guermessa
+10.0,36.0,1980,1,Kairouan
+10.0,43.0,1990,1,Castiglioncello
+10.0,44.0,1980,1,Tirrenia
+10.0,44.0,2000,2,Tirrenia
+10.0,44.0,2010,1,Tirrenia
+10.0,45.0,1980,3,Piazza della Vittoria
+10.0,45.0,1990,1,Piazza della Vittoria
+10.0,45.0,2010,1,Piazza della Vittoria
+10.0,46.0,1970,1,Hotel Waldhaus (Sils)
+10.0,46.0,2000,2,Hotel Waldhaus (Sils)
+10.0,46.0,2010,6,Hotel Waldhaus (Sils)
+10.0,47.0,2000,1,Lai da Marmorera
+10.0,47.0,2010,3,Lai da Marmorera
+10.0,48.0,1970,1,Library of Kloster Ottobeuren
+10.0,48.0,2010,2,Library of Kloster Ottobeuren
+10.0,49.0,1970,1,Dinkelsbühl
+10.0,49.0,2010,1,Dinkelsbühl
+10.0,50.0,2010,2,Würzburg Residence
+10.0,52.0,2000,1,Hanover
+10.0,52.0,2010,1,Hanover
+10.0,54.0,1970,1,Hamburg
+10.0,54.0,1980,1,Hamburg
+10.0,54.0,1990,1,Hamburg
+10.0,54.0,2000,4,Hamburg
+10.0,54.0,2010,4,Hamburg
+10.0,55.0,2000,3,Faaborg
+10.0,55.0,2010,7,Faaborg
+10.0,55.0,2020,1,Faaborg
+10.0,56.0,1970,1,Gudenå
+10.0,56.0,2010,3,Gudenå
+10.0,56.0,2020,2,Gudenå
+10.0,57.0,2010,2,Nibe
+10.0,59.0,1990,1,Østerøya
+10.0,63.0,2010,3,Nidaros Cathedral
+11.0,36.0,1970,1,Monastir
+11.0,43.0,1990,1,Tuscany
+11.0,43.0,2000,2,Tuscany
+11.0,43.0,2020,3,Tuscany
+11.0,44.0,1970,6,Florence
+11.0,44.0,1980,6,Florence
+11.0,44.0,1990,5,Florence
+11.0,44.0,2000,11,Florence
+11.0,44.0,2010,16,Florence
+11.0,45.0,1970,1,Villa Riesenfeld
+11.0,45.0,1990,1,Villa Riesenfeld
+11.0,45.0,2010,1,Villa Riesenfeld
+11.0,46.0,1970,1,Salò
+11.0,46.0,2010,3,Salò
+11.0,47.0,2000,2,Schnals Valley
+11.0,47.0,2010,3,Schnals Valley
+11.0,47.0,2020,2,Schnals Valley
+11.0,48.0,1980,2,Garmisch-Partenkirchen
+11.0,48.0,2000,4,Garmisch-Partenkirchen
+11.0,48.0,2010,6,Garmisch-Partenkirchen
+11.0,49.0,1970,3,Bavaria
+11.0,49.0,1980,1,Bavaria
+11.0,49.0,1990,2,Bavaria
+11.0,49.0,2000,4,Bavaria
+11.0,49.0,2010,15,Bavaria
+11.0,50.0,1970,2,Bamberg
+11.0,50.0,1980,1,Bamberg
+11.0,50.0,2010,2,Bamberg
+11.0,51.0,1980,1,Erfurt
+11.0,51.0,1990,4,Erfurt
+11.0,51.0,2010,2,Erfurt
+11.0,51.0,2020,2,Erfurt
+11.0,52.0,1970,10,Quedlinburg
+11.0,52.0,1980,2,Quedlinburg
+11.0,52.0,2000,4,Quedlinburg
+11.0,52.0,2010,5,Quedlinburg
+11.0,54.0,2010,1,Fehmarn
+11.0,55.0,2010,4,Rudkøbing
+11.0,55.0,2020,2,Rudkøbing
+11.0,56.0,2010,2,Syddjurs Municipality
+11.0,58.0,1980,1,Mollösund
+11.0,60.0,1970,1,Oslo
+11.0,60.0,1980,2,Oslo
+11.0,60.0,1990,2,Oslo
+11.0,60.0,2000,3,Oslo
+11.0,60.0,2010,4,Oslo
+11.0,60.0,2020,3,Oslo
+12.0,42.0,1970,50,Rome
+12.0,42.0,1980,38,Rome
+12.0,42.0,1990,23,Rome
+12.0,42.0,2000,24,Rome
+12.0,42.0,2010,36,Rome
+12.0,42.0,2020,5,Rome
+12.0,43.0,1970,1,Perugia
+12.0,43.0,1980,2,Perugia
+12.0,43.0,1990,1,Perugia
+12.0,43.0,2000,1,Perugia
+12.0,43.0,2010,1,Perugia
+12.0,44.0,2000,1,Cesena
+12.0,44.0,2010,1,Cesena
+12.0,44.0,2020,1,Cesena
+12.0,45.0,1970,17,Venice
+12.0,45.0,1980,10,Venice
+12.0,45.0,1990,11,Venice
+12.0,45.0,2000,16,Venice
+12.0,45.0,2010,9,Venice
+12.0,45.0,2020,4,Venice
+12.0,46.0,2000,7,Olympic Theatre
+12.0,47.0,1980,1,Taufers Castle
+12.0,47.0,2000,2,Taufers Castle
+12.0,47.0,2010,3,Taufers Castle
+12.0,48.0,1970,11,Munich
+12.0,48.0,1980,5,Munich
+12.0,48.0,1990,2,Munich
+12.0,48.0,2000,9,Munich
+12.0,48.0,2010,12,Munich
+12.0,48.0,2020,1,Munich
+12.0,50.0,1990,1,Františkovy Lázně
+12.0,51.0,1970,1,Leipzig
+12.0,51.0,1980,4,Leipzig
+12.0,51.0,2000,18,Leipzig
+12.0,51.0,2010,17,Leipzig
+12.0,51.0,2020,4,Leipzig
+12.0,52.0,1970,2,Magdeburg
+12.0,52.0,2000,1,Magdeburg
+12.0,52.0,2010,1,Magdeburg
+12.0,53.0,2010,1,Möllenbeck
+12.0,54.0,2010,1,Ahrenshoop
+12.0,54.0,2020,1,Ahrenshoop
+12.0,55.0,1980,1,Nysted Wind Farm
+12.0,55.0,2020,1,Nysted Wind Farm
+12.0,56.0,1970,1,Fredensborg
+12.0,56.0,1990,3,Fredensborg
+12.0,56.0,2000,5,Fredensborg
+12.0,56.0,2010,3,Fredensborg
+12.0,57.0,2000,1,Tjolöholm Castle
+12.0,57.0,2010,1,Tjolöholm Castle
+12.0,58.0,1980,2,Gothenburg
+12.0,58.0,2000,11,Gothenburg
+12.0,58.0,2010,34,Gothenburg
+12.0,58.0,2020,5,Gothenburg
+12.0,59.0,1980,1,Mellerud
+12.0,59.0,2000,5,Mellerud
+13.0,38.0,1970,2,Palermo
+13.0,38.0,1980,2,Palermo
+13.0,38.0,1990,13,Palermo
+13.0,38.0,2000,11,Palermo
+13.0,38.0,2010,4,Palermo
+13.0,41.0,2010,1,Fondi
+13.0,42.0,1970,1,Cinecittà
+13.0,42.0,1980,1,Cinecittà
+13.0,42.0,1990,2,Cinecittà
+13.0,42.0,2000,1,Cinecittà
+13.0,42.0,2010,3,Cinecittà
+13.0,42.0,2020,2,Cinecittà
+13.0,43.0,1970,1,Osimo
+13.0,43.0,1980,1,Osimo
+13.0,43.0,1990,1,Osimo
+13.0,43.0,2010,1,Osimo
+13.0,44.0,2020,1,Riccione
+13.0,46.0,1980,2,Art Aia-Creatives / In / Residence
+13.0,46.0,2020,1,Art Aia-Creatives / In / Residence
+13.0,47.0,2010,2,Central Eastern Alps
+13.0,48.0,1980,1,Burghausen
+13.0,48.0,2000,1,Burghausen
+13.0,48.0,2010,3,Burghausen
+13.0,49.0,1970,3,Švihov Castle
+13.0,49.0,2000,3,Švihov Castle
+13.0,49.0,2010,2,Švihov Castle
+13.0,50.0,2000,6,Karlovy Vary
+13.0,50.0,2010,2,Karlovy Vary
+13.0,50.0,2020,4,Karlovy Vary
+13.0,51.0,1980,2,Chemnitz
+13.0,52.0,1970,4,Potsdam
+13.0,52.0,1980,5,Potsdam
+13.0,52.0,1990,2,Potsdam
+13.0,52.0,2000,9,Potsdam
+13.0,52.0,2010,11,Potsdam
+13.0,52.0,2020,3,Potsdam
+13.0,53.0,1970,6,Berlin
+13.0,53.0,1980,19,Berlin
+13.0,53.0,1990,16,Berlin
+13.0,53.0,2000,54,Berlin
+13.0,53.0,2010,73,Berlin
+13.0,53.0,2020,8,Berlin
+13.0,54.0,2010,1,Greifswald
+13.0,55.0,1970,1,Hököpinge
+13.0,56.0,1970,5,Copenhagen
+13.0,56.0,1980,4,Copenhagen
+13.0,56.0,1990,7,Copenhagen
+13.0,56.0,2000,6,Copenhagen
+13.0,56.0,2010,4,Copenhagen
+13.0,58.0,1980,1,Ulricehamn Municipality
+13.0,58.0,1990,2,Ulricehamn Municipality
+13.0,58.0,2020,1,Ulricehamn Municipality
+13.0,63.0,1980,1,Åre
+13.0,63.0,2010,5,Åre
+14.0,36.0,1980,1,Gozo
+14.0,36.0,2010,1,Gozo
+14.0,37.0,1970,2,Agrigento
+14.0,38.0,1970,9,Sicily
+14.0,38.0,1980,5,Sicily
+14.0,38.0,1990,8,Sicily
+14.0,38.0,2000,11,Sicily
+14.0,38.0,2010,7,Sicily
+14.0,38.0,2020,1,Sicily
+14.0,41.0,1990,2,Naples
+14.0,41.0,2000,4,Naples
+14.0,41.0,2010,5,Naples
+14.0,41.0,2020,6,Naples
+14.0,42.0,1970,1,Abruzzo
+14.0,42.0,1980,2,Abruzzo
+14.0,42.0,2010,1,Abruzzo
+14.0,43.0,2010,2,Recanati
+14.0,45.0,1980,1,Grožnjan
+14.0,45.0,1990,2,Grožnjan
+14.0,45.0,2000,1,Grožnjan
+14.0,45.0,2010,1,Grožnjan
+14.0,46.0,1970,9,Piran
+14.0,46.0,1980,11,Piran
+14.0,46.0,1990,8,Piran
+14.0,46.0,2000,9,Piran
+14.0,46.0,2010,5,Piran
+14.0,48.0,2010,1,Altaussee
+14.0,49.0,1970,2,Zvíkov Castle
+14.0,49.0,1980,11,Zvíkov Castle
+14.0,49.0,1990,12,Zvíkov Castle
+14.0,49.0,2000,5,Zvíkov Castle
+14.0,49.0,2010,2,Zvíkov Castle
+14.0,50.0,1970,22,Prague
+14.0,50.0,1980,23,Prague
+14.0,50.0,1990,27,Prague
+14.0,50.0,2000,67,Prague
+14.0,50.0,2010,33,Prague
+14.0,50.0,2020,19,Prague
+14.0,51.0,1970,5,Dresden
+14.0,51.0,1990,1,Dresden
+14.0,51.0,2000,3,Dresden
+14.0,51.0,2010,3,Dresden
+14.0,51.0,2020,4,Dresden
+14.0,52.0,2000,2,Aerodynamic Park
+14.0,53.0,2000,1,Berlin-Hohenschönhausen Memorial
+14.0,53.0,2010,2,Berlin-Hohenschönhausen Memorial
+14.0,53.0,2020,2,Berlin-Hohenschönhausen Memorial
+14.0,54.0,1980,3,Pasewalk
+14.0,55.0,2000,1,Ystad
+14.0,55.0,2010,3,Ystad
+14.0,56.0,1970,2,Tomelilla
+14.0,56.0,1980,2,Tomelilla
+14.0,56.0,2020,2,Tomelilla
+14.0,58.0,1980,1,Skara Sommarland
+14.0,62.0,1980,1,Härjedalen
+14.0,63.0,1980,1,Storsjön
+14.0,64.0,1980,1,Jämtland
+14.0,65.0,1980,2,Gäddede
+15.0,36.0,2010,2,Valletta
+15.0,37.0,1970,1,Syracuse
+15.0,37.0,1980,1,Syracuse
+15.0,37.0,1990,6,Syracuse
+15.0,37.0,2000,3,Syracuse
+15.0,37.0,2010,1,Syracuse
+15.0,38.0,1970,7,Catania
+15.0,38.0,1990,2,Catania
+15.0,38.0,2000,8,Catania
+15.0,38.0,2010,1,Catania
+15.0,38.0,2020,1,Catania
+15.0,41.0,2010,1,Amalfi
+15.0,41.0,2020,2,Amalfi
+15.0,42.0,1970,1,Molise
+15.0,42.0,2000,1,Molise
+15.0,42.0,2010,2,Molise
+15.0,43.0,2010,1,Adriatic Sea
+15.0,45.0,1990,1,Krk
+15.0,45.0,2000,2,Krk
+15.0,45.0,2010,8,Krk
+15.0,46.0,1970,3,Ljubljana
+15.0,46.0,1980,18,Ljubljana
+15.0,46.0,1990,8,Ljubljana
+15.0,46.0,2010,5,Ljubljana
+15.0,46.0,2020,1,Ljubljana
+15.0,47.0,1980,1,Graz
+15.0,47.0,2000,1,Graz
+15.0,48.0,2010,2,Aflenz Kurort
+15.0,49.0,1970,4,Telč
+15.0,49.0,1980,1,Telč
+15.0,49.0,1990,5,Telč
+15.0,49.0,2000,3,Telč
+15.0,49.0,2010,1,Telč
+15.0,49.0,2020,1,Telč
+15.0,50.0,1970,10,Kutná Hora
+15.0,50.0,1980,8,Kutná Hora
+15.0,50.0,1990,5,Kutná Hora
+15.0,50.0,2000,12,Kutná Hora
+15.0,50.0,2010,3,Kutná Hora
+15.0,50.0,2020,1,Kutná Hora
+15.0,51.0,1970,8,Sychrov Castle
+15.0,51.0,1980,12,Sychrov Castle
+15.0,51.0,1990,6,Sychrov Castle
+15.0,51.0,2000,7,Sychrov Castle
+15.0,51.0,2010,2,Sychrov Castle
+15.0,51.0,2020,3,Sychrov Castle
+15.0,52.0,1980,1,Świecko-Frankfurt border crossing
+15.0,54.0,1970,1,Pobierowo
+15.0,54.0,2010,2,Pobierowo
+15.0,57.0,1990,1,Oxmuseet
+15.0,59.0,2000,1,Askersund Municipality
+15.0,59.0,2020,1,Askersund Municipality
+15.0,61.0,1970,1,Dalarna
+15.0,61.0,2000,1,Dalarna
+15.0,61.0,2020,1,Dalarna
+15.0,63.0,2010,2,Jamtli
+15.0,64.0,1970,1,Ströms vattudal
+15.0,64.0,1980,1,Ströms vattudal
+15.0,66.0,2010,2,Hemavan
+16.0,39.0,2010,3,Calabria
+16.0,40.0,1970,5,Basilicata
+16.0,40.0,1980,3,Basilicata
+16.0,40.0,1990,4,Basilicata
+16.0,40.0,2000,11,Basilicata
+16.0,40.0,2010,8,Basilicata
+16.0,41.0,1970,1,Trani
+16.0,41.0,1990,1,Trani
+16.0,44.0,1970,1,Sustipanac
+16.0,44.0,2010,1,Sustipanac
+16.0,45.0,2010,3,Kupa
+16.0,46.0,1970,6,Zagreb
+16.0,46.0,1990,1,Zagreb
+16.0,46.0,2010,9,Zagreb
+16.0,46.0,2020,1,Zagreb
+16.0,47.0,2010,1,Prekmurje
+16.0,48.0,1970,6,Vienna
+16.0,48.0,1980,8,Vienna
+16.0,48.0,1990,9,Vienna
+16.0,48.0,2000,10,Vienna
+16.0,48.0,2010,16,Vienna
+16.0,48.0,2020,5,Vienna
+16.0,49.0,1970,2,Pernštejn Castle
+16.0,49.0,1980,4,Pernštejn Castle
+16.0,49.0,1990,5,Pernštejn Castle
+16.0,49.0,2000,1,Pernštejn Castle
+16.0,49.0,2010,3,Pernštejn Castle
+16.0,50.0,1970,5,Veselý Kopec
+16.0,50.0,1990,6,Veselý Kopec
+16.0,50.0,2000,1,Veselý Kopec
+16.0,50.0,2010,1,Veselý Kopec
+16.0,50.0,2020,3,Veselý Kopec
+16.0,51.0,1970,3,Wałbrzych
+16.0,51.0,1980,4,Wałbrzych
+16.0,51.0,2000,5,Wałbrzych
+16.0,51.0,2010,6,Wałbrzych
+16.0,51.0,2020,4,Wałbrzych
+16.0,53.0,2010,2,"Licheń, Lubusz Voivodeship"
+16.0,54.0,2020,4,Mielno
+16.0,56.0,2010,1,Karlskrona
+16.0,58.0,1970,3,Astrid Lindgren's World
+16.0,58.0,1980,1,Astrid Lindgren's World
+16.0,58.0,1990,2,Astrid Lindgren's World
+16.0,59.0,1980,2,Norrköping
+16.0,59.0,2010,1,Norrköping
+16.0,59.0,2020,1,Norrköping
+16.0,60.0,1970,1,Livsdal
+16.0,61.0,1980,1,Torsåker
+16.0,61.0,2010,1,Torsåker
+16.0,64.0,1980,1,Strömsund
+16.0,79.0,2020,1,Pyramiden
+17.0,39.0,1980,1,Crotone
+17.0,39.0,1990,1,Crotone
+17.0,39.0,2000,1,Crotone
+17.0,41.0,1970,23,Apulia
+17.0,41.0,1980,12,Apulia
+17.0,41.0,1990,18,Apulia
+17.0,41.0,2000,29,Apulia
+17.0,41.0,2010,23,Apulia
+17.0,41.0,2020,2,Apulia
+17.0,46.0,1970,2,Grginac
+17.0,47.0,1980,1,Kám
+17.0,48.0,1980,2,Bratislava
+17.0,48.0,2000,1,Bratislava
+17.0,48.0,2010,2,Bratislava
+17.0,48.0,2020,1,Bratislava
+17.0,49.0,1980,6,Býčí skála Cave
+17.0,49.0,1990,6,Býčí skála Cave
+17.0,49.0,2000,3,Býčí skála Cave
+17.0,49.0,2010,3,Býčí skála Cave
+17.0,49.0,2020,4,Býčí skála Cave
+17.0,50.0,1980,2,Nysa
+17.0,50.0,2010,1,Nysa
+17.0,50.0,2020,4,Nysa
+17.0,51.0,2000,1,Wrocław
+17.0,51.0,2010,4,Wrocław
+17.0,51.0,2020,4,Wrocław
+17.0,52.0,1980,3,Poznań
+17.0,52.0,1990,6,Poznań
+17.0,52.0,2000,2,Poznań
+17.0,52.0,2010,3,Poznań
+17.0,57.0,1990,2,Öland
+17.0,59.0,1980,2,Sparreholm
+17.0,60.0,1970,2,Sagån
+17.0,60.0,2010,1,Sagån
+17.0,61.0,2000,2,Segersta
+17.0,62.0,2010,2,Hudiksvall
+17.0,66.0,2000,1,Lapland
+17.0,69.0,2010,3,Berg Municipality
+18.0,-34.0,2000,3,Cape Town
+18.0,-34.0,2010,4,Cape Town
+18.0,-34.0,2020,4,Cape Town
+18.0,40.0,2010,2,Lecce
+18.0,41.0,2010,1,Brindisi
+18.0,43.0,1980,1,Dubrovnik
+18.0,43.0,2000,2,Dubrovnik
+18.0,43.0,2010,2,Dubrovnik
+18.0,43.0,2020,1,Dubrovnik
+18.0,44.0,2020,1,Sarajevo
+18.0,47.0,2000,1,Isztimér
+18.0,47.0,2010,1,Isztimér
+18.0,47.0,2020,1,Isztimér
+18.0,48.0,1980,1,Topoľčianky
+18.0,48.0,1990,1,Topoľčianky
+18.0,48.0,2000,1,Topoľčianky
+18.0,48.0,2020,1,Topoľčianky
+18.0,49.0,1980,3,Rožnov pod Radhoštěm
+18.0,49.0,1990,1,Rožnov pod Radhoštěm
+18.0,49.0,2020,5,Rožnov pod Radhoštěm
+18.0,50.0,1970,4,Příbor
+18.0,50.0,1980,4,Příbor
+18.0,50.0,1990,1,Příbor
+18.0,50.0,2000,4,Příbor
+18.0,50.0,2010,3,Příbor
+18.0,50.0,2020,1,Příbor
+18.0,51.0,2000,1,Niemodlin
+18.0,53.0,2000,3,Ostromecko
+18.0,54.0,2010,2,Q577985
+18.0,55.0,2010,6,Dębki
+18.0,57.0,1990,1,Tofta strand
+18.0,59.0,1970,20,Stockholm
+18.0,59.0,1980,44,Stockholm
+18.0,59.0,1990,27,Stockholm
+18.0,59.0,2000,5,Stockholm
+18.0,59.0,2010,36,Stockholm
+18.0,59.0,2020,1,Stockholm
+18.0,60.0,1970,1,Uppsala
+18.0,60.0,1980,8,Uppsala
+18.0,60.0,1990,2,Uppsala
+18.0,60.0,2010,2,Uppsala
+18.0,63.0,1970,1,Järsta
+18.0,63.0,1980,1,Järsta
+18.0,66.0,2000,1,Arjeplog
+18.0,69.0,2010,1,Senja
+19.0,47.0,1970,4,Budapest
+19.0,47.0,1980,10,Budapest
+19.0,47.0,1990,12,Budapest
+19.0,47.0,2000,28,Budapest
+19.0,47.0,2010,30,Budapest
+19.0,47.0,2020,10,Budapest
+19.0,48.0,1970,3,Castle of Eger
+19.0,48.0,1980,3,Castle of Eger
+19.0,48.0,2000,4,Castle of Eger
+19.0,48.0,2010,4,Castle of Eger
+19.0,49.0,1980,3,Q12766906
+19.0,49.0,2000,3,Q12766906
+19.0,50.0,1970,7,Zabrze
+19.0,50.0,1990,3,Zabrze
+19.0,50.0,2010,3,Zabrze
+19.0,50.0,2020,2,Zabrze
+19.0,52.0,1970,2,Łódź
+19.0,52.0,1980,5,Łódź
+19.0,52.0,1990,9,Łódź
+19.0,52.0,2000,9,Łódź
+19.0,52.0,2010,7,Łódź
+19.0,53.0,2000,1,"Głuchowo, Kuyavian-Pomeranian Voivodeship"
+19.0,54.0,1970,19,Gdańsk
+19.0,54.0,1980,21,Gdańsk
+19.0,54.0,1990,14,Gdańsk
+19.0,54.0,2000,28,Gdańsk
+19.0,54.0,2010,22,Gdańsk
+19.0,55.0,2010,2,Hel
+19.0,58.0,2000,4,Gotland
+19.0,58.0,2010,4,Gotland
+19.0,59.0,1970,1,Stockholm archipelago
+19.0,59.0,1980,1,Stockholm archipelago
+19.0,60.0,1980,1,Kapellskär
+19.0,66.0,2000,1,Arvidsjaur
+19.0,69.0,2010,1,Øverbygd Municipality
+20.0,40.0,1970,1,Corfu
+20.0,45.0,1970,2,Belgrade
+20.0,45.0,1980,1,Belgrade
+20.0,45.0,2010,2,Belgrade
+20.0,45.0,2020,1,Belgrade
+20.0,47.0,2000,2,Great Hungarian Plain
+20.0,47.0,2010,3,Great Hungarian Plain
+20.0,48.0,2020,1,Q16521997
+20.0,49.0,1970,1,Tatra Mountains
+20.0,49.0,1980,5,Tatra Mountains
+20.0,49.0,1990,1,Tatra Mountains
+20.0,49.0,2010,2,Tatra Mountains
+20.0,50.0,1970,9,Kraków
+20.0,50.0,1980,8,Kraków
+20.0,50.0,1990,6,Kraków
+20.0,50.0,2000,15,Kraków
+20.0,50.0,2010,13,Kraków
+20.0,51.0,1980,4,Church of the Transfiguration in Paradyż
+20.0,52.0,1970,1,Klęk
+20.0,52.0,1980,2,Klęk
+20.0,54.0,1990,1,Jeziorak
+20.0,60.0,1970,1,Åland
+20.0,60.0,1980,10,Åland
+20.0,60.0,2010,5,Åland
+20.0,64.0,1980,1,Umeå
+20.0,66.0,2000,2,Snesudden
+20.0,67.0,2010,1,Jokkmokk
+20.0,68.0,1990,2,Kiruna
+20.0,69.0,1990,2,Skibotn
+20.0,70.0,2010,1,Lyngen
+21.0,38.0,2020,1,Q1735552
+21.0,43.0,1970,4,Trepča Mines
+21.0,43.0,2010,1,Trepča Mines
+21.0,50.0,1980,1,Stary Sącz
+21.0,51.0,2010,2,Kielce
+21.0,52.0,1970,3,Warsaw
+21.0,52.0,1980,2,Warsaw
+21.0,52.0,1990,2,Warsaw
+21.0,52.0,2000,9,Warsaw
+21.0,52.0,2010,11,Warsaw
+21.0,52.0,2020,4,Warsaw
+21.0,54.0,2010,5,Widryny
+21.0,65.0,2010,3,Piteå
+21.0,66.0,1990,1,Älvsbyn
+21.0,66.0,2010,5,Älvsbyn
+21.0,68.0,2000,3,Icehotel in Jukkasjärvi
+21.0,69.0,1980,5,Ráisduottarháldi
+22.0,-31.0,1990,1,Cape Province
+22.0,40.0,1980,1,Meteora
+22.0,49.0,1980,1,Veľké Slemence
+22.0,49.0,2000,2,Veľké Slemence
+22.0,50.0,2010,4,Trzęsówka
+22.0,51.0,2000,1,Kazimierz Dolny
+22.0,51.0,2010,1,Kazimierz Dolny
+22.0,52.0,2010,1,Jeziorzany
+22.0,53.0,2010,2,Treblinka
+22.0,54.0,1970,1,Q2280019
+22.0,57.0,2000,1,Kurzeme Region
+22.0,58.0,1970,1,Kuressaare Castle
+22.0,58.0,2000,7,Kuressaare Castle
+22.0,58.0,2020,1,Kuressaare Castle
+22.0,59.0,1970,4,Hirmuste
+22.0,60.0,1980,3,Naantali
+22.0,60.0,1990,2,Naantali
+22.0,60.0,2000,5,Naantali
+22.0,60.0,2010,3,Naantali
+22.0,61.0,2000,2,Nakkila
+22.0,61.0,2010,7,Nakkila
+22.0,62.0,2000,1,Kankaanpää
+22.0,63.0,2000,1,Vaasa
+22.0,66.0,1990,1,Luleå
+22.0,66.0,2000,1,Luleå
+22.0,66.0,2010,8,Luleå
+22.0,68.0,1980,3,Könkämäeno
+22.0,69.0,1980,1,Tarju
+23.0,37.0,2020,2,Spetses
+23.0,38.0,1970,1,Q202337
+23.0,41.0,2010,1,Kongura
+23.0,42.0,2010,1,Sokolata
+23.0,43.0,1980,1,Sofia
+23.0,43.0,2010,5,Sofia
+23.0,43.0,2020,1,Sofia
+23.0,44.0,2010,4,Vidin
+23.0,47.0,2010,1,Răchițele
+23.0,48.0,2020,1,Zakarpattia Oblast
+23.0,49.0,2010,1,Bieszczady Mountains
+23.0,51.0,2000,1,Lublin Old Town
+23.0,51.0,2010,1,Lublin Old Town
+23.0,53.0,1980,1,Białystok
+23.0,53.0,2000,1,Białystok
+23.0,53.0,2010,2,Białystok
+23.0,57.0,2000,1,Cinevilla
+23.0,57.0,2010,1,Cinevilla
+23.0,58.0,2000,3,Kõrkvere
+23.0,59.0,1970,3,Hiiumaa
+23.0,59.0,2000,2,Hiiumaa
+23.0,60.0,1970,1,Hanko
+23.0,60.0,1980,2,Hanko
+23.0,60.0,1990,8,Hanko
+23.0,60.0,2000,2,Hanko
+23.0,60.0,2010,1,Hanko
+23.0,61.0,1980,2,Huittinen
+23.0,61.0,2010,1,Huittinen
+23.0,62.0,1980,2,Karvia
+23.0,62.0,2000,1,Karvia
+23.0,63.0,2000,8,Kauhava
+23.0,63.0,2010,2,Kauhava
+23.0,64.0,1990,1,Jakobstad
+23.0,66.0,2010,1,Överkalix
+23.0,69.0,2010,1,Kivilompolo
+24.0,37.0,2020,1,Kleftiko
+24.0,38.0,1970,2,Athens
+24.0,38.0,2010,2,Athens
+24.0,38.0,2020,4,Athens
+24.0,39.0,2000,1,Skopelos
+24.0,41.0,2010,1,Alibotoush
+24.0,42.0,2010,2,Orelyak
+24.0,46.0,2020,1,Rimetea
+24.0,47.0,2010,1,Cluj-Napoca
+24.0,49.0,2010,1,Synevyr
+24.0,50.0,2020,1,Sokal
+24.0,52.0,2000,1,Brest
+24.0,52.0,2010,2,Brest
+24.0,53.0,2010,2,Gródek
+24.0,53.0,2020,2,Gródek
+24.0,54.0,1970,1,Hrodna
+24.0,54.0,1980,1,Hrodna
+24.0,54.0,2010,5,Hrodna
+24.0,54.0,2020,1,Hrodna
+24.0,55.0,2020,1,Kaunas
+24.0,57.0,1970,9,Riga
+24.0,57.0,1980,1,Riga
+24.0,57.0,2000,2,Riga
+24.0,57.0,2010,1,Riga
+24.0,57.0,2020,1,Riga
+24.0,58.0,1970,1,Pärnu
+24.0,58.0,2000,1,Pärnu
+24.0,58.0,2010,1,Pärnu
+24.0,59.0,1970,1,Haapsalu
+24.0,59.0,1980,1,Haapsalu
+24.0,59.0,2000,5,Haapsalu
+24.0,59.0,2010,4,Haapsalu
+24.0,60.0,1980,11,Kirkkonummi
+24.0,60.0,1990,2,Kirkkonummi
+24.0,60.0,2000,6,Kirkkonummi
+24.0,60.0,2010,2,Kirkkonummi
+24.0,60.0,2020,1,Kirkkonummi
+24.0,61.0,1970,2,Tampere
+24.0,61.0,1980,6,Tampere
+24.0,61.0,1990,2,Tampere
+24.0,61.0,2000,3,Tampere
+24.0,61.0,2010,1,Tampere
+24.0,61.0,2020,3,Tampere
+24.0,62.0,1980,7,Hotel Tammer
+24.0,63.0,2010,1,Tuuri
+24.0,65.0,2010,1,Raahe
+24.0,66.0,2010,1,Tornio
+24.0,67.0,2010,1,Kolari
+24.0,68.0,1980,1,Raattama
+24.0,68.0,2010,6,Raattama
+24.0,69.0,1980,1,Näkkälä
+24.0,69.0,2010,2,Näkkälä
+25.0,37.0,2000,3,Mykonos
+25.0,37.0,2010,2,Mykonos
+25.0,38.0,2010,1,Aegean Sea
+25.0,45.0,2020,1,Bucegi Mountains
+25.0,46.0,2000,1,Southern Carpathians
+25.0,46.0,2010,1,Southern Carpathians
+25.0,46.0,2020,1,Southern Carpathians
+25.0,47.0,2020,2,Vatra Dornei
+25.0,52.0,2010,3,Horycy
+25.0,53.0,1970,1,Kosava
+25.0,53.0,2020,1,Kosava
+25.0,54.0,1990,1,Śviatapołk-Čaćviarcinski Manor in Žałudok
+25.0,54.0,2010,3,Śviatapołk-Čaćviarcinski Manor in Žałudok
+25.0,54.0,2020,1,Śviatapołk-Čaćviarcinski Manor in Žałudok
+25.0,55.0,2010,3,Vilnius
+25.0,55.0,2020,2,Vilnius
+25.0,58.0,1970,1,Tori
+25.0,58.0,2000,1,Tori
+25.0,59.0,1970,5,Tallinn
+25.0,59.0,1980,2,Tallinn
+25.0,59.0,1990,17,Tallinn
+25.0,59.0,2000,5,Tallinn
+25.0,59.0,2010,2,Tallinn
+25.0,59.0,2020,5,Tallinn
+25.0,60.0,1970,5,Helsinki
+25.0,60.0,1980,33,Helsinki
+25.0,60.0,1990,16,Helsinki
+25.0,60.0,2000,39,Helsinki
+25.0,60.0,2010,51,Helsinki
+25.0,60.0,2020,1,Helsinki
+25.0,61.0,1970,2,Riihimäki
+25.0,61.0,2000,2,Riihimäki
+25.0,65.0,1980,1,Oulu
+25.0,65.0,2000,5,Oulu
+25.0,65.0,2010,5,Oulu
+25.0,66.0,2010,2,Kemi
+25.0,68.0,2000,1,Levi
+25.0,68.0,2010,1,Levi
+25.0,70.0,2010,1,Finnmark
+26.0,-34.0,2010,1,Alexandria
+26.0,38.0,2020,1,Çeşme
+26.0,39.0,1970,2,Plomari
+26.0,40.0,2000,2,Çanakkale Province
+26.0,40.0,2010,3,Çanakkale Province
+26.0,44.0,1990,4,Bucharest
+26.0,44.0,2000,25,Bucharest
+26.0,44.0,2010,16,Bucharest
+26.0,44.0,2020,1,Bucharest
+26.0,45.0,1990,1,Holy Trinity Chapel
+26.0,47.0,1970,1,Carpathians
+26.0,47.0,2010,1,Carpathians
+26.0,52.0,2000,1,Liemiaševičy
+26.0,52.0,2010,3,Liemiaševičy
+26.0,53.0,2010,3,Baranavichy
+26.0,54.0,2010,1,Naliboki forest
+26.0,54.0,2020,1,Naliboki forest
+26.0,55.0,2000,1,Astraviec
+26.0,55.0,2010,1,Astraviec
+26.0,57.0,1970,1,Gauja
+26.0,58.0,1970,1,Valga County
+26.0,58.0,2000,5,Valga County
+26.0,58.0,2010,1,Valga County
+26.0,59.0,2000,1,Rakvere Castle
+26.0,60.0,1980,2,Porvoo
+26.0,60.0,1990,4,Porvoo
+26.0,60.0,2000,14,Porvoo
+26.0,60.0,2010,4,Porvoo
+26.0,60.0,2020,1,Porvoo
+26.0,61.0,1970,2,Lahti
+26.0,61.0,2000,1,Lahti
+26.0,61.0,2010,4,Lahti
+26.0,61.0,2020,1,Lahti
+26.0,62.0,1980,3,Jyväskylä
+26.0,62.0,1990,1,Jyväskylä
+26.0,62.0,2000,2,Jyväskylä
+26.0,65.0,2000,2,Yli-Ii
+26.0,65.0,2010,1,Yli-Ii
+26.0,67.0,2010,1,Lapland
+26.0,67.0,2020,1,Lapland
+27.0,37.0,2010,3,Kos
+27.0,38.0,1970,1,İzmir
+27.0,38.0,1990,1,İzmir
+27.0,38.0,2010,5,İzmir
+27.0,39.0,2000,1,Foça district
+27.0,39.0,2010,3,Foça district
+27.0,39.0,2020,1,Foça district
+27.0,40.0,2010,1,Torhasan
+27.0,43.0,1990,1,Shumen
+27.0,44.0,2010,1,Antimovo
+27.0,49.0,2010,2,Kamianets-Podilskyi
+27.0,52.0,1970,1,Polesia
+27.0,52.0,1980,2,Polesia
+27.0,52.0,1990,2,Polesia
+27.0,52.0,2000,2,Polesia
+27.0,52.0,2010,2,Polesia
+27.0,53.0,2010,3,Laktyšy
+27.0,54.0,1980,1,Belarusian State Museum of Folk Architecture and Life
+27.0,54.0,1990,1,Belarusian State Museum of Folk Architecture and Life
+27.0,54.0,2000,7,Belarusian State Museum of Folk Architecture and Life
+27.0,54.0,2010,5,Belarusian State Museum of Folk Architecture and Life
+27.0,54.0,2020,1,Belarusian State Museum of Folk Architecture and Life
+27.0,55.0,2010,1,Pastavy
+27.0,58.0,1970,1,Põlva County
+27.0,58.0,1980,1,Põlva County
+27.0,58.0,2000,2,Põlva County
+27.0,58.0,2010,6,Põlva County
+27.0,58.0,2020,1,Põlva County
+27.0,59.0,1990,1,Tabivere Rural Municipality
+27.0,59.0,2010,1,Tabivere Rural Municipality
+27.0,60.0,1990,1,Kymenlaakso
+27.0,60.0,2010,1,Kymenlaakso
+27.0,60.0,2020,1,Kymenlaakso
+27.0,61.0,2000,1,Koria
+27.0,61.0,2010,2,Koria
+27.0,62.0,2000,1,Mikkeli
+27.0,63.0,1980,2,Suonenjoki
+27.0,63.0,2020,1,Suonenjoki
+27.0,67.0,1980,2,Kemijärvi
+27.0,68.0,1980,1,Kaunispää
+27.0,70.0,2000,1,Utsjoki
+28.0,-26.0,1990,2,Johannesburg
+28.0,-26.0,2000,6,Johannesburg
+28.0,-26.0,2010,9,Johannesburg
+28.0,-26.0,2020,1,Johannesburg
+28.0,37.0,1980,1,Muğla
+28.0,37.0,2000,1,Muğla
+28.0,37.0,2010,1,Muğla
+28.0,38.0,1980,2,Nazilli
+28.0,38.0,2000,1,Nazilli
+28.0,38.0,2010,2,Nazilli
+28.0,38.0,2020,1,Nazilli
+28.0,52.0,1970,1,Toniež
+28.0,52.0,2000,1,Toniež
+28.0,52.0,2010,1,Toniež
+28.0,52.0,2020,1,Toniež
+28.0,53.0,2020,1,Vieciarevičy
+28.0,54.0,1970,1,Minsk
+28.0,54.0,1980,1,Minsk
+28.0,54.0,1990,5,Minsk
+28.0,54.0,2000,9,Minsk
+28.0,54.0,2010,32,Minsk
+28.0,54.0,2020,7,Minsk
+28.0,55.0,1980,1,Biarezinski Biosphere Reserve
+28.0,55.0,2010,1,Biarezinski Biosphere Reserve
+28.0,58.0,1980,2,Izborsk
+28.0,59.0,2020,2,Hermann Castle
+28.0,61.0,1980,1,Lappeenranta
+28.0,61.0,2010,2,Lappeenranta
+28.0,63.0,1980,2,Kuopio
+28.0,63.0,2010,6,Kuopio
+28.0,64.0,1980,1,Sotkamo
+28.0,64.0,2000,1,Sotkamo
+28.0,64.0,2010,2,Sotkamo
+28.0,65.0,2000,3,Puolanka
+28.0,65.0,2020,1,Puolanka
+28.0,67.0,1980,1,Pelkosenniemi
+28.0,67.0,1990,1,Pelkosenniemi
+28.0,67.0,2010,2,Pelkosenniemi
+28.0,70.0,2010,1,Finnmark
+29.0,37.0,1980,1,Q207998
+29.0,37.0,2020,1,Q207998
+29.0,39.0,2020,1,Uşak Province
+29.0,40.0,2010,1,Bursa
+29.0,41.0,1970,14,Istanbul
+29.0,41.0,1980,16,Istanbul
+29.0,41.0,1990,6,Istanbul
+29.0,41.0,2000,31,Istanbul
+29.0,41.0,2010,48,Istanbul
+29.0,41.0,2020,7,Istanbul
+29.0,44.0,1990,3,Constanța
+29.0,44.0,2010,4,Constanța
+29.0,45.0,1970,1,Izmail
+29.0,46.0,2010,1,Gagauzia
+29.0,47.0,1970,1,Chișinău
+29.0,47.0,2010,2,Chișinău
+29.0,53.0,2010,1,Babruysk
+29.0,53.0,2020,1,Babruysk
+29.0,54.0,1970,2,Byelorussian Soviet Socialist Republic
+29.0,55.0,1980,1,Vitebsk Region
+29.0,55.0,2010,2,Vitebsk Region
+29.0,56.0,2010,2,Rasony District
+29.0,57.0,2000,1,Pskov Oblast
+29.0,63.0,1990,1,Outokumpu
+29.0,63.0,2010,4,Outokumpu
+29.0,66.0,1980,1,Kuusamo
+29.0,66.0,2020,1,Kuusamo
+29.0,67.0,1980,1,Salla
+29.0,67.0,2010,1,Salla
+30.0,-1.0,2010,1,Bwindi Impenetrable National Park
+30.0,0.0,2010,1,Rwenzori Mountains National Park
+30.0,31.0,2010,1,Alexandria
+30.0,36.0,1990,1,Kastellorizo
+30.0,50.0,2010,1,Kyiv Oblast
+30.0,54.0,1970,1,Mahilyow
+30.0,54.0,1990,1,Mahilyow
+30.0,54.0,2010,1,Mahilyow
+30.0,54.0,2020,1,Mahilyow
+30.0,55.0,2010,1,Vitebsk
+30.0,60.0,1970,3,Saint Petersburg
+30.0,60.0,1980,6,Saint Petersburg
+30.0,60.0,1990,4,Saint Petersburg
+30.0,60.0,2000,4,Saint Petersburg
+30.0,60.0,2010,3,Saint Petersburg
+30.0,60.0,2020,3,Saint Petersburg
+30.0,63.0,1980,1,Joensuu
+30.0,63.0,1990,1,Joensuu
+30.0,63.0,2000,5,Joensuu
+30.0,63.0,2010,5,Joensuu
+30.0,64.0,1980,1,Kuhmo
+30.0,64.0,2000,1,Kuhmo
+30.0,64.0,2010,1,Kuhmo
+30.0,70.0,1970,1,Kirkenes
+31.0,-29.0,1990,1,KwaZulu-Natal
+31.0,30.0,1970,1,Cairo
+31.0,30.0,1980,1,Cairo
+31.0,30.0,2000,2,Cairo
+31.0,30.0,2010,2,Cairo
+31.0,30.0,2020,1,Cairo
+31.0,37.0,2020,1,Antalya
+31.0,46.0,1980,2,Odesa
+31.0,46.0,1990,1,Odesa
+31.0,46.0,2000,1,Odesa
+31.0,46.0,2010,1,Odesa
+31.0,46.0,2020,2,Odesa
+31.0,50.0,1970,1,Kyiv
+31.0,50.0,2010,4,Kyiv
+31.0,50.0,2020,1,Kyiv
+31.0,51.0,2010,1,Chernihiv Shestovytsia Airport
+31.0,52.0,2010,4,Gomel
+31.0,55.0,2020,2,Liozna
+31.0,60.0,2010,1,Rzhevskiy artillery range
+31.0,63.0,1980,1,Hattuvaara
+31.0,70.0,2000,1,Liinakhamari
+32.0,45.0,1980,1,Tarkhankut Cape
+32.0,47.0,1980,1,Mykolaiv
+32.0,50.0,2010,1,Chornobai
+32.0,58.0,2020,1,Novgorod Oblast
+32.0,60.0,1990,1,Leningrad Oblast
+32.0,60.0,2010,1,Leningrad Oblast
+32.0,61.0,2000,1,Mantsinsaari Island
+32.0,63.0,1970,1,Karelia
+32.0,67.0,1970,1,Kola Nuclear Power Plant
+32.0,70.0,2000,1,Titovka Lip
+33.0,-26.0,2010,1,Maputo
+33.0,26.0,2000,1,Luxor
+33.0,44.0,2000,1,Cape Fiolent
+33.0,64.0,2020,1,Karelia
+33.0,68.0,1970,1,Apatity
+33.0,68.0,2010,1,Apatity
+33.0,68.0,2020,1,Apatity
+33.0,69.0,1970,4,Polyarny
+33.0,69.0,1980,7,Polyarny
+33.0,69.0,2000,1,Polyarny
+33.0,69.0,2020,1,Polyarny
+34.0,31.0,2000,1,Gaza Strip
+34.0,31.0,2010,1,Gaza Strip
+34.0,43.0,1970,1,Black Sea
+34.0,44.0,1970,3,Yalta
+34.0,44.0,1980,4,Yalta
+34.0,44.0,2000,1,Yalta
+34.0,45.0,1970,1,Crimea
+34.0,45.0,1980,3,Crimea
+34.0,45.0,2000,7,Crimea
+34.0,45.0,2010,4,Crimea
+34.0,62.0,2020,1,Petrozavodsk
+34.0,63.0,1980,1,Medvezhyegorsk
+34.0,68.0,1970,9,Kirovsk
+34.0,68.0,1980,1,Kirovsk
+34.0,68.0,2010,3,Kirovsk
+34.0,68.0,2020,3,Kirovsk
+35.0,-1.0,2010,1,Masai Mara
+35.0,30.0,2000,1,Wadi Rum
+35.0,30.0,2010,6,Wadi Rum
+35.0,30.0,2020,1,Wadi Rum
+35.0,31.0,1970,1,Abdah
+35.0,32.0,1970,4,Tel Aviv
+35.0,32.0,1990,2,Tel Aviv
+35.0,32.0,2000,5,Tel Aviv
+35.0,32.0,2010,1,Tel Aviv
+35.0,32.0,2020,4,Tel Aviv
+35.0,37.0,2010,6,Adana
+35.0,39.0,2000,1,Cappadocia
+35.0,39.0,2010,2,Cappadocia
+35.0,45.0,1970,1,Aq Qaya
+35.0,45.0,1980,8,Aq Qaya
+35.0,45.0,2000,2,Aq Qaya
+35.0,45.0,2010,2,Aq Qaya
+35.0,48.0,1980,4,Dnipro
+35.0,48.0,1990,1,Dnipro
+35.0,54.0,2010,1,Kaluga Oblast
+35.0,57.0,2020,1,Tver Oblast
+35.0,68.0,1970,3,Murmansk Oblast
+35.0,68.0,1980,2,Murmansk Oblast
+35.0,68.0,1990,1,Murmansk Oblast
+35.0,68.0,2000,5,Murmansk Oblast
+35.0,68.0,2010,9,Murmansk Oblast
+35.0,68.0,2020,1,Murmansk Oblast
+35.0,69.0,2010,1,Teriberka
+35.0,69.0,2020,1,Teriberka
+36.0,32.0,2000,2,Amman
+36.0,34.0,1970,1,Damascus
+36.0,34.0,2000,1,Damascus
+36.0,34.0,2010,4,Damascus
+36.0,35.0,2010,6,Mashta al-Helu
+36.0,50.0,2010,1,Kharkiv
+36.0,52.0,2020,1,Kursk Nuclear Power Plant
+36.0,55.0,1980,1,Kaluga
+36.0,58.0,2010,1,Q4177256
+37.0,-3.0,2020,1,Mount Kilimanjaro
+37.0,35.0,2010,1,"Zara, Hama"
+37.0,55.0,2000,1,Serpukhov
+37.0,56.0,1970,2,Zelenograd
+37.0,56.0,2000,1,Zelenograd
+37.0,56.0,2020,2,Zelenograd
+38.0,37.0,2010,1,Aïn al-Arab
+38.0,44.0,2020,1,Cape Idokopas
+38.0,47.0,1980,1,Mariupol
+38.0,47.0,2010,3,Mariupol
+38.0,48.0,1970,5,Donetsk
+38.0,48.0,1980,6,Donetsk
+38.0,48.0,2000,1,Donetsk
+38.0,48.0,2010,1,Donetsk
+38.0,54.0,2020,1,Tula
+38.0,55.0,1970,1,Pushchino-on-Oka
+38.0,56.0,1970,5,Moscow
+38.0,56.0,1980,13,Moscow
+38.0,56.0,1990,13,Moscow
+38.0,56.0,2000,27,Moscow
+38.0,56.0,2010,25,Moscow
+38.0,56.0,2020,5,Moscow
+38.0,59.0,2000,1,Cherepovets
+38.0,60.0,1970,2,Sadovaya
+39.0,-6.0,2010,1,Zanzibar Islands
+39.0,22.0,2020,1,Jeddah
+39.0,37.0,2000,1,Şanlıurfa
+39.0,48.0,1970,3,Chystiakove
+39.0,57.0,1970,1,Rostov kremlin
+39.0,58.0,1970,1,Rybinsk
+40.0,21.0,1990,1,Mecca
+40.0,38.0,2010,1,Turkish Kurdistan
+40.0,40.0,2010,1,Kaçkar Mountains
+40.0,47.0,2010,2,Novocherkassk
+40.0,58.0,1970,1,Tutayev
+40.0,58.0,2020,1,Tutayev
+40.0,75.0,1970,1,Barents Sea
+41.0,37.0,2010,1,Mardin
+41.0,41.0,2000,2,Çamlıhemşin
+41.0,41.0,2010,1,Çamlıhemşin
+41.0,57.0,2000,2,Teykovsky District
+42.0,38.0,2010,1,Bitlis
+42.0,41.0,2000,1,Kemalpaşa
+42.0,42.0,1970,1,Batumi
+42.0,42.0,1980,2,Batumi
+42.0,42.0,2010,1,Batumi
+43.0,36.0,1970,2,Mosul
+43.0,40.0,2020,1,Kars Province
+43.0,41.0,2010,2,Kars
+43.0,44.0,1970,2,Yessentuki
+43.0,44.0,1980,1,Yessentuki
+44.0,33.0,2000,2,Baghdad
+44.0,36.0,2010,1,Kurdistan Region of Iraq
+44.0,36.0,2020,2,Kurdistan Region of Iraq
+44.0,41.0,1980,1,Gyumri
+44.0,41.0,2000,1,Gyumri
+44.0,56.0,1980,1,Nizhny Novgorod
+44.0,56.0,2020,1,Nizhny Novgorod
+45.0,-13.0,2020,1,Mayotte
+45.0,13.0,2010,1,Aden
+45.0,39.0,2000,1,Nakhchivan
+45.0,40.0,1970,1,Yerevan
+45.0,40.0,2010,1,Yerevan
+45.0,40.0,2020,1,Yerevan
+45.0,41.0,2020,1,Gazakh District
+45.0,42.0,2010,1,Tbilisi
+45.0,42.0,2020,3,Tbilisi
+45.0,56.0,1970,1,Rabotki
+46.0,35.0,2000,4,Banevreh
+46.0,40.0,2020,1,Kalbajar District
+46.0,41.0,2000,1,Ganja
+46.0,41.0,2010,2,Ganja
+46.0,41.0,2020,1,Ganja
+46.0,43.0,2010,1,Grozny
+46.0,61.0,2010,1,Veliky Ustyug
+47.0,25.0,1980,1,Riyadh
+47.0,25.0,2010,1,Riyadh
+47.0,25.0,2020,1,Riyadh
+47.0,40.0,2010,3,Khankendi
+47.0,40.0,2020,4,Khankendi
+47.0,41.0,2000,3,Shaki
+47.0,41.0,2010,2,Shaki
+47.0,42.0,1980,1,Zaqatala District
+48.0,31.0,2000,1,Basra
+48.0,39.0,2000,3,Zərdəbərə
+48.0,40.0,2010,1,Kurdamir District
+48.0,41.0,1980,4,Ismayilli
+48.0,41.0,2010,7,Ismayilli
+48.0,41.0,2020,2,Ismayilli
+48.0,57.0,2010,1,Mari El
+49.0,39.0,2010,1,Lankaran
+49.0,40.0,2000,2,Salyan
+49.0,41.0,2000,2,Khizi District
+49.0,41.0,2010,2,Khizi District
+49.0,42.0,2000,1,Pərdiqıran
+49.0,54.0,2020,1,Tolyatti
+49.0,56.0,2010,2,Kazan
+50.0,20.0,2020,1,Rub' al Khali
+50.0,40.0,1970,10,Baku
+50.0,40.0,1980,5,Baku
+50.0,40.0,1990,6,Baku
+50.0,40.0,2000,21,Baku
+50.0,40.0,2010,25,Baku
+50.0,40.0,2020,2,Baku
+50.0,41.0,2000,3,Sumgait
+50.0,53.0,2010,1,Samara
+50.0,59.0,1980,1,Kirov
+51.0,36.0,1970,3,Tehran
+51.0,36.0,1990,5,Tehran
+51.0,36.0,2000,3,Tehran
+51.0,36.0,2010,4,Tehran
+51.0,36.0,2020,2,Tehran
+51.0,40.0,1990,1,Neft Daşları
+52.0,33.0,1970,1,Isfahan
+52.0,33.0,2010,3,Isfahan
+54.0,23.0,2020,1,Liwa Oasis
+54.0,24.0,2010,1,Abu Dhabi
+54.0,24.0,2020,1,Abu Dhabi
+54.0,37.0,2020,1,Golestan Province
+54.0,69.0,2020,1,Khodovarikha
+55.0,-21.0,1980,1,Saint-Denis
+55.0,25.0,1980,1,Dubai
+55.0,25.0,2000,2,Dubai
+55.0,25.0,2010,7,Dubai
+55.0,25.0,2020,1,Dubai
+55.0,37.0,2020,1,Gonbad-e Kavus
+56.0,-21.0,2000,1,Réunion
+56.0,-21.0,2010,3,Réunion
+56.0,-21.0,2020,2,Réunion
+56.0,-4.0,1970,2,La Digue
+56.0,58.0,1970,1,Perm
+56.0,58.0,1980,1,Perm
+56.0,58.0,1990,1,Perm
+56.0,58.0,2010,2,Perm
+56.0,59.0,2020,1,Perm Krai
+57.0,57.0,1970,1,Kungur
+57.0,57.0,1980,4,Kungur
+57.0,57.0,2010,1,Kungur
+58.0,37.0,2000,1,Marzan
+58.0,58.0,2010,1,Usva
+58.0,59.0,2020,3,Gremyachinsk
+60.0,36.0,2020,1,Mashhad
+61.0,57.0,1970,2,Yekaterinburg
+61.0,57.0,1980,3,Yekaterinburg
+61.0,57.0,1990,7,Yekaterinburg
+61.0,57.0,2000,2,Yekaterinburg
+61.0,57.0,2010,2,Yekaterinburg
+61.0,59.0,2010,1,Sverdlovsk Oblast
+62.0,56.0,2010,1,Revun Rapid on Iset River
+69.0,35.0,2000,1,Kabul
+70.0,23.0,2000,1,Gujarat
+71.0,27.0,2000,1,Jaisalmer Fort
+71.0,51.0,2010,1,Astana
+72.0,24.0,2010,1,Siddhpur
+73.0,2.0,2010,1,Laamu Atoll
+73.0,19.0,1980,3,Mumbai
+73.0,19.0,1990,2,Mumbai
+73.0,19.0,2000,10,Mumbai
+73.0,19.0,2010,12,Mumbai
+73.0,19.0,2020,12,Mumbai
+73.0,21.0,2010,1,Surat
+73.0,22.0,2010,1,Vadodara
+73.0,23.0,2010,7,Ahmedabad
+73.0,34.0,1990,1,Murree
+73.0,41.0,2010,1,Osh
+74.0,15.0,2000,1,Goa
+74.0,15.0,2010,2,Goa
+74.0,16.0,2010,1,Sawantwadi
+74.0,19.0,2000,1,Pune
+74.0,20.0,2000,1,Godavari River
+74.0,27.0,2010,2,Rajasthan
+75.0,34.0,2000,1,Srinagar
+75.0,43.0,2010,1,Bishkek
+76.0,10.0,2010,1,Kerala
+76.0,10.0,2020,4,Kerala
+76.0,15.0,2010,1,Karnataka
+76.0,20.0,2010,1,Maharashtra
+76.0,22.0,2010,1,Khandwa
+76.0,27.0,1980,1,Jaipur
+76.0,27.0,2000,1,Jaipur
+76.0,29.0,2020,1,Haryana
+76.0,34.0,1970,1,Kashmir
+76.0,34.0,2000,1,Kashmir
+77.0,10.0,2010,1,Thodupuzha
+77.0,11.0,1970,1,Ooty
+77.0,11.0,1980,17,Ooty
+77.0,11.0,1990,93,Ooty
+77.0,11.0,2000,63,Ooty
+77.0,11.0,2010,21,Ooty
+77.0,11.0,2020,1,Ooty
+77.0,12.0,2020,2,Mysore
+77.0,13.0,1970,1,Ramanagara
+77.0,27.0,2000,1,Chand Baori
+77.0,28.0,2010,1,Pataudi
+77.0,29.0,1980,3,Delhi
+77.0,29.0,1990,8,Delhi
+77.0,29.0,2000,10,Delhi
+77.0,29.0,2010,32,Delhi
+77.0,29.0,2020,4,Delhi
+77.0,31.0,2020,1,Kasauli
+77.0,32.0,1990,1,Manali
+77.0,32.0,2000,1,Manali
+77.0,33.0,2020,1,Zanskar district
+77.0,34.0,2000,1,Magnetic Hill
+77.0,43.0,2010,1,Shamalgan
+78.0,17.0,1990,1,Hyderabad
+78.0,17.0,2000,1,Hyderabad
+78.0,17.0,2020,1,Hyderabad
+78.0,27.0,1990,1,Agra
+78.0,27.0,2000,1,Agra
+78.0,27.0,2020,1,Agra
+79.0,11.0,2000,1,Tamil Nadu
+79.0,11.0,2010,4,Tamil Nadu
+79.0,18.0,2020,1,Telangana
+79.0,31.0,2000,1,Uttarakhand
+79.0,31.0,2010,1,Uttarakhand
+79.0,31.0,2020,1,Uttarakhand
+79.0,34.0,2000,1,Pangong Tso
+80.0,7.0,2010,1,Colombo
+80.0,13.0,2020,2,Ramee Mall
+80.0,29.0,2020,1,Pithoragarh district
+80.0,30.0,2020,1,Pithoragarh district
+81.0,17.0,1990,1,Vijayawada
+81.0,17.0,2000,2,Vijayawada
+81.0,17.0,2010,9,Vijayawada
+81.0,17.0,2020,1,Vijayawada
+81.0,27.0,2020,2,Lucknow
+81.0,29.0,2010,1,Achham District
+82.0,17.0,2000,1,Godavari River
+82.0,17.0,2020,1,Godavari River
+82.0,28.0,2010,1,Nepalgunj
+83.0,18.0,1980,4,Visakhapatnam
+83.0,18.0,1990,1,Visakhapatnam
+83.0,18.0,2000,7,Visakhapatnam
+83.0,18.0,2010,3,Visakhapatnam
+83.0,18.0,2020,2,Visakhapatnam
+83.0,55.0,2010,1,Novosibirsk
+84.0,20.0,2010,3,Odisha
+84.0,28.0,2010,2,Pokhara
+84.0,29.0,1980,2,Annapurna II
+85.0,28.0,1980,1,Kathmandu
+85.0,28.0,2000,3,Kathmandu
+85.0,28.0,2010,4,Kathmandu
+86.0,20.0,1980,1,Bhubaneswar
+86.0,22.0,1980,1,Rairangpur
+86.0,22.0,2010,1,Rairangpur
+86.0,23.0,2020,1,Jamshedpur
+87.0,23.0,2000,1,West Bengal
+87.0,23.0,2010,1,West Bengal
+87.0,23.0,2020,1,West Bengal
+87.0,24.0,1980,2,Joychandi Pahar
+87.0,28.0,1980,1,Mount Everest
+87.0,28.0,1990,1,Mount Everest
+87.0,28.0,2000,2,Mount Everest
+87.0,28.0,2010,4,Mount Everest
+87.0,32.0,2000,1,Tibet Autonomous Region
+88.0,23.0,1970,1,Kolkata
+88.0,23.0,2010,5,Kolkata
+88.0,23.0,2020,1,Kolkata
+88.0,28.0,2010,1,Sikkim
+88.0,44.0,2020,1,Xinjiang
+89.0,26.0,2010,1,Panchagarh railway station
+90.0,24.0,2010,2,Nagarpur Upazila
+90.0,27.0,2000,1,Changlimithang Stadium
+91.0,24.0,1990,1,Panam City
+91.0,24.0,2000,1,Panam City
+91.0,26.0,2010,1,Chaygaon
+91.0,30.0,2000,2,Tibet
+91.0,30.0,2010,1,Tibet
+92.0,21.0,2010,1,Cox's Bazar District
+92.0,22.0,2010,2,Chittagong
+93.0,12.0,2000,1,Andaman Islands
+93.0,27.0,2010,1,Arunachal Pradesh
+94.0,27.0,2010,1,Majuli
+95.0,26.0,2010,1,Nagaland
+95.0,53.0,1990,1,Sayan Mountains
+96.0,53.0,1990,1,Sayan Mountains
+98.0,8.0,2000,1,Phuket
+98.0,8.0,2010,3,Phuket
+99.0,2.0,2020,1,North Sumatra
+99.0,3.0,2010,1,Paropo
+99.0,4.0,2000,1,Medan
+99.0,19.0,1970,1,Chiang Mai
+99.0,19.0,2020,1,Chiang Mai
+100.0,6.0,2020,2,Langkawi
+100.0,13.0,2000,1,Phetchaburi
+100.0,14.0,2000,1,Ratchaburi
+100.0,51.0,1980,1,Khövsgöl Lake
+101.0,13.0,2000,1,Assumption College Sriracha
+101.0,14.0,1970,2,Bangkok
+101.0,14.0,1980,3,Bangkok
+101.0,14.0,1990,2,Bangkok
+101.0,14.0,2000,13,Bangkok
+101.0,14.0,2010,21,Bangkok
+101.0,14.0,2020,3,Bangkok
+102.0,3.0,1990,2,Kuala Lumpur
+102.0,3.0,2010,1,Kuala Lumpur
+102.0,3.0,2020,1,Kuala Lumpur
+102.0,4.0,2020,1,Bentong
+102.0,12.0,2010,1,Ko Chang
+102.0,17.0,2020,1,Loei
+102.0,38.0,2010,1,Gansu
+103.0,6.0,2000,1,Redang Island
+103.0,16.0,2010,2,Khon Kaen
+103.0,25.0,2010,1,Yunnan
+103.0,30.0,1990,1,Sichuan
+103.0,30.0,2020,1,Sichuan
+104.0,-2.0,2010,1,Jambi
+104.0,13.0,2000,1,Angkor Thom
+104.0,53.0,2010,1,"Aleksandrovskoye, Irkutsk Oblast"
+105.0,60.0,2010,2,Siberia
+106.0,-6.0,2020,1,Rancasumur
+106.0,21.0,2020,1,Hanoi
+106.0,48.0,2010,2,Bayanchandmani
+106.0,57.0,2010,1,Irkutsk Oblast
+107.0,-7.0,2010,3,Ciwidey
+107.0,-7.0,2020,2,Ciwidey
+107.0,-6.0,2010,5,Jakarta
+107.0,-6.0,2020,3,Jakarta
+107.0,11.0,2020,1,Ho Chi Minh City
+107.0,48.0,2000,1,Gandantegchinlen Monastery
+108.0,-7.0,2000,1,Bandung
+108.0,-7.0,2010,3,Bandung
+109.0,1.0,2010,1,Singkawang
+109.0,31.0,2000,1,Fengjie County
+109.0,34.0,1980,1,Xi'an
+109.0,54.0,2010,2,Buryatia
+110.0,-8.0,1980,4,Yogyakarta
+110.0,-8.0,2010,7,Yogyakarta
+110.0,-8.0,2020,1,Yogyakarta
+110.0,2.0,2000,2,Kuching
+110.0,20.0,1990,1,Haikou
+110.0,20.0,2010,1,Haikou
+110.0,26.0,2000,1,Li River
+111.0,-8.0,2020,1,Surakarta
+111.0,25.0,2000,1,Li River
+112.0,31.0,2010,1,Hubei
+113.0,-26.0,2010,1,Dirk Hartog Island
+113.0,-8.0,2010,2,Malang
+113.0,-8.0,2020,1,Malang
+113.0,23.0,2010,2,Guangzhou
+113.0,44.0,2010,2,Inner Mongolia
+114.0,22.0,1970,26,Hong Kong
+114.0,22.0,1980,71,Hong Kong
+114.0,22.0,1990,92,Hong Kong
+114.0,22.0,2000,64,Hong Kong
+114.0,22.0,2010,79,Hong Kong
+114.0,22.0,2020,3,Hong Kong
+114.0,23.0,2010,1,Guangdong
+114.0,31.0,2010,1,Wuhan
+114.0,34.0,2000,1,Henan
+114.0,34.0,2010,2,Henan
+115.0,-8.0,2000,2,Bali
+115.0,41.0,2010,2,Xuanhua District
+116.0,-33.0,2010,3,Pinjarra
+116.0,-32.0,1980,1,Perth
+116.0,-32.0,2000,2,Perth
+116.0,-32.0,2010,1,Perth
+116.0,40.0,1970,1,Beijing
+116.0,40.0,1980,2,Beijing
+116.0,40.0,1990,4,Beijing
+116.0,40.0,2000,15,Beijing
+116.0,40.0,2010,56,Beijing
+116.0,40.0,2020,1,Beijing
+117.0,40.0,2010,1,Xianghe County
+118.0,0.0,2010,1,Bontang
+118.0,24.0,2010,1,Xiamen
+118.0,30.0,2010,1,Huangshan
+118.0,32.0,2010,1,Ma'anshan
+119.0,11.0,2010,1,Q111483
+119.0,32.0,1970,2,Nanjing
+119.0,32.0,2010,3,Nanjing
+120.0,15.0,1970,1,Q13895
+120.0,23.0,2010,6,Tainan TR station
+120.0,30.0,1990,2,Zhejiang
+120.0,30.0,2010,2,Zhejiang
+120.0,31.0,2010,1,Deqing County
+120.0,33.0,2010,1,Jiangsu
+120.0,36.0,2010,3,Qingdao
+121.0,-26.0,2000,1,Western Australia
+121.0,13.0,2010,1,Calapan
+121.0,15.0,1970,1,Manila
+121.0,15.0,1980,1,Manila
+121.0,15.0,1990,1,Manila
+121.0,15.0,2010,2,Manila
+121.0,22.0,2000,2,Hengchun Township
+121.0,23.0,2010,1,Nansi District
+121.0,25.0,2010,2,Bangka Lungshan Temple
+121.0,30.0,2010,1,Yuyao City
+121.0,31.0,1980,2,Shanghai
+121.0,31.0,1990,1,Shanghai
+121.0,31.0,2000,8,Shanghai
+121.0,31.0,2010,40,Shanghai
+121.0,31.0,2020,1,Shanghai
+121.0,38.0,2010,1,Penglai District
+122.0,-18.0,2000,1,Broome
+122.0,24.0,2000,1,Hualien County
+122.0,25.0,1970,1,Taipei
+122.0,25.0,1980,1,Taipei
+122.0,25.0,1990,1,Taipei
+122.0,25.0,2000,5,Taipei
+122.0,25.0,2010,23,Taipei
+122.0,25.0,2020,1,Taipei
+122.0,30.0,2010,1,Ningbo
+122.0,30.0,2020,1,Ningbo
+122.0,39.0,2010,1,Dalian
+123.0,26.0,2010,2,Uotsuri Island
+126.0,39.0,2000,1,Pyongyang
+126.0,39.0,2010,1,Pyongyang
+127.0,33.0,2010,1,Jeju Island
+127.0,35.0,2010,2,Goheung County
+127.0,36.0,2010,8,Daejeon
+127.0,37.0,2010,4,Dong-Ah Institute of Media and Arts
+127.0,38.0,1990,2,Seoul
+127.0,38.0,2000,22,Seoul
+127.0,38.0,2010,36,Seoul
+128.0,26.0,2010,1,Okinawa
+128.0,37.0,2010,1,Pyeongchang County
+129.0,33.0,1970,1,Goto
+129.0,35.0,2010,4,Busan
+129.0,37.0,2010,1,North Gyeongsang
+129.0,66.0,2010,1,Sakha
+129.0,66.0,2020,2,Sakha
+130.0,33.0,1970,1,Hashima Island
+130.0,33.0,2010,1,Hashima Island
+131.0,-25.0,1980,1,Uluru
+131.0,30.0,2010,1,Yakushima
+131.0,32.0,1970,1,Kirishima
+131.0,32.0,2000,2,Kirishima
+131.0,33.0,2020,1,Kumamoto Prefecture
+131.0,34.0,2000,1,Q85880996
+132.0,-13.0,1980,1,Gunlom Falls
+132.0,34.0,1990,2,Hiroshima
+132.0,34.0,2000,1,Hiroshima
+132.0,34.0,2020,2,Hiroshima
+132.0,43.0,1990,1,Vladivostok
+133.0,-20.0,2010,1,Northern Territory
+133.0,-13.0,1980,3,Kakadu National Park
+133.0,34.0,2010,1,Tomonoura
+134.0,-24.0,1980,1,Alice Springs
+134.0,-24.0,1990,2,Alice Springs
+134.0,33.0,1980,1,Muroto
+134.0,34.0,1980,2,Zentsūji-shi
+134.0,34.0,2000,1,Zentsūji-shi
+134.0,35.0,2000,1,Okayama Prefecture
+135.0,-29.0,1980,1,Coober Pedy
+135.0,-29.0,2000,1,Coober Pedy
+135.0,35.0,1990,1,Hyōgo Prefecture
+135.0,35.0,2000,1,Hyōgo Prefecture
+135.0,35.0,2020,1,Hyōgo Prefecture
+136.0,34.0,1980,1,Taiji
+136.0,34.0,2020,1,Taiji
+136.0,35.0,1980,2,Nara
+136.0,35.0,2000,4,Nara
+136.0,35.0,2020,3,Nara
+137.0,35.0,1970,2,Nagoya
+137.0,35.0,1990,7,Nagoya
+137.0,35.0,2010,3,Nagoya
+137.0,35.0,2020,1,Nagoya
+137.0,37.0,2010,1,Ishikawa Prefecture
+138.0,-35.0,1990,1,Maslin Beach
+138.0,35.0,1970,1,Mikkabi
+138.0,36.0,1970,1,Shiojiri
+138.0,36.0,2020,1,Shiojiri
+138.0,37.0,2020,1,Nagano Prefecture
+139.0,-36.0,2010,1,Port Elliot
+139.0,-35.0,1990,1,Adelaide
+139.0,-35.0,2000,1,Adelaide
+139.0,-35.0,2010,3,Adelaide
+139.0,-35.0,2020,1,Adelaide
+139.0,-30.0,2000,1,Arkaroola
+139.0,-4.0,2010,1,New Guinea
+139.0,35.0,1970,1,Fujisawa
+139.0,35.0,2020,1,Fujisawa
+140.0,-36.0,2010,1,Coorong National Park
+140.0,-5.0,2010,1,New Guinea
+140.0,35.0,1970,2,Yokohama
+140.0,36.0,1980,1,Tokyo
+140.0,36.0,1990,1,Tokyo
+140.0,36.0,2000,7,Tokyo
+140.0,36.0,2010,6,Tokyo
+140.0,36.0,2020,4,Tokyo
+140.0,37.0,2020,3,Tochigi Prefecture
+140.0,38.0,2000,1,Yamagata Prefecture
+141.0,-32.0,1990,1,Broken Hill
+141.0,-32.0,2000,1,Broken Hill
+141.0,-21.0,1980,1,McKinlay
+141.0,43.0,2000,1,"Hokkaido Korean Primary, Middle and High School"
+142.0,-38.0,2010,1,Warrnambool
+142.0,-37.0,2010,1,Murtoa
+142.0,-34.0,2000,1,Mildura
+142.0,43.0,2000,1,Hokkaidō
+142.0,43.0,2010,1,Hokkaidō
+143.0,-37.0,2000,1,Ararat
+143.0,-20.0,2000,1,Queensland
+143.0,-20.0,2010,1,Queensland
+143.0,-20.0,2020,1,Queensland
+143.0,43.0,2000,1,Hokkaidō
+143.0,43.0,2010,1,Hokkaidō
+143.0,44.0,2000,1,Hokkaidō
+143.0,44.0,2010,1,Hokkaidō
+144.0,-38.0,2000,4,Geelong
+144.0,-38.0,2010,2,Geelong
+144.0,-37.0,1970,1,Clunes
+144.0,-37.0,2000,3,Clunes
+144.0,-37.0,2010,1,Clunes
+145.0,-38.0,1980,2,Melbourne
+145.0,-38.0,1990,4,Melbourne
+145.0,-38.0,2000,8,Melbourne
+145.0,-38.0,2010,9,Melbourne
+145.0,-38.0,2020,10,Melbourne
+145.0,-37.0,2020,1,Mount Macedon
+145.0,-36.0,2010,1,Shepparton
+145.0,-16.0,1990,1,Port Douglas
+145.0,-16.0,2000,1,Port Douglas
+145.0,14.0,2020,1,Guam
+146.0,-36.0,2000,1,Corowa
+146.0,-32.0,1980,1,Canbelego
+146.0,-31.0,1980,1,Cobar
+146.0,-18.0,2000,1,Hinchinbrook Island
+146.0,-17.0,1990,1,Bramston Beach
+147.0,-43.0,2010,1,Hobart
+147.0,-37.0,1990,1,Dinner Plain
+147.0,-36.0,2010,1,Wodonga
+147.0,-32.0,1970,1,New South Wales
+149.0,-35.0,1990,1,Canberra
+149.0,-35.0,2010,3,Canberra
+149.0,-35.0,2020,1,Canberra
+149.0,-28.0,1990,1,St George
+150.0,-33.0,1970,1,Sofala
+151.0,-34.0,1970,1,Sydney
+151.0,-34.0,1980,12,Sydney
+151.0,-34.0,1990,22,Sydney
+151.0,-34.0,2000,35,Sydney
+151.0,-34.0,2010,29,Sydney
+151.0,-34.0,2020,4,Sydney
+151.0,-31.0,2000,1,Tamworth
+151.0,60.0,2020,1,Magadan
+153.0,-31.0,2020,1,"Homewood, Bellbrook"
+153.0,-28.0,2000,4,Village Roadshow Studios
+153.0,-28.0,2010,9,Village Roadshow Studios
+153.0,-27.0,1990,1,Tangalooma
+153.0,-27.0,2000,2,Tangalooma
+153.0,-27.0,2010,1,Tangalooma
+154.0,-28.0,2010,1,Hastings Point
+158.0,52.0,2020,1,Ksudach
+167.0,-78.0,2000,1,McMurdo Station
+167.0,-78.0,2010,1,McMurdo Station
+167.0,-45.0,2000,1,Fiordland National Park
+168.0,-46.0,2000,1,Waiau River
+168.0,-46.0,2010,1,Waiau River
+168.0,-45.0,2000,4,Waiau River
+169.0,-46.0,2010,1,Tapanui
+169.0,-45.0,2000,1,Queenstown
+169.0,-45.0,2010,1,Queenstown
+170.0,-44.0,2020,3,Lake Pukaki
+171.0,-46.0,2020,1,Dunedin
+171.0,-45.0,2020,1,Oamaru
+171.0,-44.0,2000,1,Mount Sunday
+172.0,-43.0,2000,1,Mount Olympus Ski Area
+173.0,-42.0,2000,1,Mount Owen
+175.0,-41.0,2010,2,Wellington
+175.0,-40.0,2020,1,Whanganui
+175.0,-37.0,1980,1,Auckland
+175.0,-37.0,1990,1,Auckland
+175.0,-37.0,2000,1,Auckland
+175.0,-37.0,2020,4,Auckland
+176.0,-38.0,2000,1,Rotorua
+176.0,-38.0,2010,1,Rotorua
+176.0,-38.0,2020,1,Rotorua
+177.0,-18.0,2000,2,Monuriki
+177.0,-17.0,1980,1,Nanuya Levu
+178.0,-38.0,2010,1,Waihau Bay

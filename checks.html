@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data and chart checks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@6.4.3"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+<style>
+  body { font: 14px/1.5 Inter, system-ui, sans-serif; color: #1f1f1f; background: #ffffff; margin: 24px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 17px; margin: 24px 0 8px; }
+  h3 { font-size: 14px; margin: 16px 0 4px; }
+  ul { list-style: none; padding: 0; margin: 0; }
+  li { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; }
+  .ok { color: #1a7f37; }
+  .fail { color: #c62828; font-weight: 600; }
+  table { border-collapse: collapse; font-size: 13px; }
+  td { border: 1px solid #dddddd; padding: 2px 8px; }
+  #charts { display: flex; flex-wrap: wrap; gap: 24px; }
+  figure { margin: 0; }
+  figcaption { font-size: 13px; }
+</style>
+</head>
+<body>
+<!--
+  A page for checking the project, not part of the visualisation. It runs
+  js/checks.js, which checks the data files and draws every chart.
+-->
+<h1>Data and chart checks</h1>
+<p>Checks the data files and draws every chart. Open this page through a local web server, the same way as index.html.</p>
+<p id="summary">Running the checks…</p>
+<div id="results"></div>
+<h2>Rendered charts</h2>
+<div id="charts"></div>
+<script src="js/checks.js"></script>
+</body>
+</html>

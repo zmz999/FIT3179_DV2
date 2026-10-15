@@ -1,0 +1,231 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "Co-production is a North Atlantic club, and Malaysia is barely in the room",
+    "subtitle": "Pairs of countries or regions that co-produced 15 or more widely seen films, 1970–2022"
+  },
+  "width": 760,
+  "height": 400,
+  "usermeta": {"aspect": 0.5263},
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "data/world-110m.topojson",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#EDE8E0",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "data/09_map_coproduction_links.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "a_num": "number",
+            "b_num": "number",
+            "links": "number",
+            "a_lon": "number",
+            "a_lat": "number",
+            "b_lon": "number",
+            "b_lat": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "filled": false,
+        "stroke": "#5E554C",
+        "strokeOpacity": 0.4
+      },
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "strokeWidth": {
+          "field": "links",
+          "type": "quantitative",
+          "title": "Films co-produced",
+          "scale": {"type": "sqrt", "range": [0.4, 7]},
+          "legend": {
+            "orient": "none",
+            "legendX": 8,
+            "legendY": {"expr": "height - 110"},
+            "values": [50, 500, 1400],
+            "direction": "vertical",
+            "symbolType": "stroke",
+            "symbolStrokeColor": "#5E554C",
+            "symbolOpacity": 0.7,
+            "fillColor": "#FFFFFF",
+            "padding": 6,
+            "cornerRadius": 4
+          }
+        },
+        "tooltip": [
+          {"field": "pair", "type": "nominal", "title": "title"},
+          {
+            "field": "links",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Films co-produced"
+          }
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "a_num",
+          "from": {
+            "data": {
+              "url": "data/02d_country_shares_wide.csv",
+              "format": {"type": "csv", "parse": {"iso_num": "number"}}
+            },
+            "key": "iso_num",
+            "fields": ["country"]
+          },
+          "as": ["a_name"]
+        },
+        {
+          "lookup": "b_num",
+          "from": {
+            "data": {
+              "url": "data/02d_country_shares_wide.csv",
+              "format": {"type": "csv", "parse": {"iso_num": "number"}}
+            },
+            "key": "iso_num",
+            "fields": ["country"]
+          },
+          "as": ["b_name"]
+        },
+        {"calculate": "datum.a_name + ' and ' + datum.b_name", "as": "pair"},
+        {
+          "calculate": "{type: 'LineString', coordinates: [[datum.a_lon, datum.a_lat], [datum.b_lon, datum.b_lat]]}",
+          "as": "geo"
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [{"lon": 114.507, "lat": 3.5313, "label": "Malaysia"}]
+      },
+      "mark": {
+        "type": "circle",
+        "color": "#E63946",
+        "opacity": 1,
+        "size": 90,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "tooltip": {"value": "Malaysia: no partnership reaches 15 films"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 114.507,
+            "lat": 3.5313,
+            "label": "Malaysia: no pair reaches 15 films"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "dy": 16,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#B3202D",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 4,
+            "strokeOpacity": 0.9
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": 16,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#B3202D"
+          }
+        }
+      ],
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

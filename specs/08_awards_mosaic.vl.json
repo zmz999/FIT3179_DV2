@@ -1,0 +1,242 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "The Oscars are opening up, slowly",
+    "subtitle": [
+      "Academy Award nominations by the film's region of production. Column width shows",
+      "each decade's nominations; figures give North America and Europe's combined share (%)."
+    ]
+  },
+  "width": 620,
+  "height": 340,
+  "data": {
+    "url": "data/08b_awards_mosaic_layout.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "decade": "number",
+        "nominations": "number",
+        "share_pct": "number",
+        "decade_total": "number",
+        "coverage_pct": "number",
+        "x0": "number",
+        "x1": "number",
+        "xmid": "number",
+        "width": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "indexof(['Africa', 'Oceania', 'Middle East & Central Asia'], datum.region) >= 0 ? 'Rest of the world' : datum.region",
+      "as": "region6"
+    },
+    {
+      "aggregate": [
+        {"op": "sum", "field": "share_pct", "as": "share_pct"},
+        {"op": "sum", "field": "nominations", "as": "nominations"}
+      ],
+      "groupby": ["decade", "region6", "x0", "x1", "xmid", "decade_total"]
+    },
+    {
+      "calculate": "indexof(['North America', 'Europe', 'East Asia', 'South & Southeast Asia', 'Latin America', 'Rest of the world'], datum.region6)",
+      "as": "order_idx"
+    },
+    {
+      "stack": "share_pct",
+      "groupby": ["decade"],
+      "sort": [{"field": "order_idx"}],
+      "as": ["y0", "y1"]
+    },
+    {
+      "calculate": "datum.decade === 2020 ? '2020–22' : datum.decade + 's'",
+      "as": "decade_label"
+    }
+  ],
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "regionPick",
+          "select": {
+            "type": "point",
+            "fields": ["region6"],
+            "on": "click",
+            "clear": "dblclick"
+          },
+          "bind": "legend"
+        }
+      ],
+      "mark": {"type": "rect", "stroke": "#FFFFFF", "strokeWidth": 1, "cursor": "pointer"},
+      "encoding": {
+        "x": {
+          "field": "x0",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [0, 100], "nice": false},
+          "axis": null
+        },
+        "x2": {"field": "x1"},
+        "y": {
+          "field": "y0",
+          "type": "quantitative",
+          "title": "Share of the decade's nominations",
+          "scale": {"domain": [0, 100], "nice": false},
+          "axis": {
+            "values": [0, 25, 50, 75, 100],
+            "labelExpr": "datum.value + '%'"
+          }
+        },
+        "y2": {"field": "y1"},
+        "color": {
+          "field": "region6",
+          "type": "nominal",
+          "title": "Region",
+          "scale": {
+            "domain": [
+              "North America",
+              "Europe",
+              "East Asia",
+              "South & Southeast Asia",
+              "Latin America",
+              "Rest of the world"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "title": null,
+            "symbolType": "square",
+            "columnPadding": 14,
+            "offset": 30
+          }
+        },
+        "opacity": {
+          "condition": {"param": "regionPick", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "region6", "type": "nominal", "title": "title"},
+          {"field": "decade_label", "type": "nominal", "title": "Decade"},
+          {
+            "field": "share_pct",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "% of the decade's nominations"
+          },
+          {
+            "field": "nominations",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Nominations"
+          },
+          {
+            "field": "decade_total",
+            "type": "quantitative",
+            "format": ",.0f",
+            "title": "Decade total"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.region6 === 'North America'"}],
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "baseline": "bottom",
+        "font": "Oswald, Inter, sans-serif",
+        "fontSize": 13,
+        "color": "#1F1B16"
+      },
+      "encoding": {
+        "x": {"field": "xmid", "type": "quantitative"},
+        "y": {"value": 0},
+        "text": {"field": "decade_label", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.region6 === 'Europe'"},
+        {"calculate": "format(datum.y1, '.1f')", "as": "pct"}
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "top",
+        "dy": 6,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1F1B16"
+      },
+      "encoding": {
+        "x": {"field": "xmid", "type": "quantitative"},
+        "y": {"field": "y1", "type": "quantitative"},
+        "text": {"field": "pct", "type": "nominal"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

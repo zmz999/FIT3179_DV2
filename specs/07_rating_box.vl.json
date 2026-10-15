@@ -1,0 +1,189 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": ["Five decades on, audiences score", "films almost exactly the same"],
+    "subtitle": [
+      "Audience ratings by decade (out of 10).",
+      "Box = middle half of films, line = median."
+    ]
+  },
+  "width": 230,
+  "height": 481,
+  "data": {
+    "url": "data/07_rating_decade_box.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "decade": "number",
+        "films": "number",
+        "min": "number",
+        "q1": "number",
+        "median": "number",
+        "q3": "number",
+        "max": "number",
+        "lower": "number",
+        "upper": "number"
+      }
+    }
+  },
+  "encoding": {
+    "y": {
+      "field": "decade",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'",
+        "labelFont": "Oswald, Inter, sans-serif",
+        "labelFontSize": 14,
+        "labelColor": "#1F1B16"
+      }
+    },
+    "tooltip": [
+      {"field": "decade", "type": "ordinal", "title": "title"},
+      {
+        "field": "films",
+        "type": "quantitative",
+        "format": ",",
+        "title": "Films"
+      },
+      {
+        "field": "q1",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Lower edge of box"
+      },
+      {
+        "field": "median",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Median"
+      },
+      {
+        "field": "q3",
+        "type": "quantitative",
+        "format": ".2f",
+        "title": "Upper edge of box"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule", "color": "#6B6259", "strokeWidth": 1},
+      "encoding": {
+        "x": {
+          "field": "lower",
+          "type": "quantitative",
+          "scale": {"domain": [3.2, 9.2], "nice": false},
+          "axis": {"values": [4, 5, 6, 7, 8, 9]},
+          "title": "Audience rating (out of 10)"
+        },
+        "x2": {"field": "upper"}
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "height": 26,
+        "cornerRadius": 2,
+        "color": "#D6CEC3"
+      },
+      "encoding": {
+        "x": {"field": "q1", "type": "quantitative"},
+        "x2": {"field": "q3"}
+      }
+    },
+    {
+      "mark": {
+        "type": "tick",
+        "thickness": 2.5,
+        "size": 26,
+        "opacity": 1,
+        "color": "#1F1B16"
+      },
+      "encoding": {"x": {"field": "median", "type": "quantitative"}}
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 12,
+        "color": "#1F1B16"
+      },
+      "encoding": {
+        "x": {"field": "upper", "type": "quantitative"},
+        "text": {"field": "median_label", "type": "nominal"}
+      },
+      "transform": [
+        {
+          "calculate": "(datum.decade === 1970 ? 'Median ' : '') + format(datum.median, '.2f')",
+          "as": "median_label"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

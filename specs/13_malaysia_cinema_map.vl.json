@@ -1,0 +1,472 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "Kuala Lumpur and Putrajaya have the most cinemas per person",
+    "subtitle": "Cinemas mapped in OpenStreetMap per million residents, by state (population: DOSM, 2026)"
+  },
+  "width": 700,
+  "height": 255,
+  "params": [
+    {
+      "name": "klang",
+      "value": {"type": "MultiPoint", "coordinates": [[101.42, 2.66], [101.96, 3.37]]}
+    },
+    {"name": "locatorBox", "expr": "geoBounds('layer_0_projection', klang)"},
+    {
+      "name": "insetBox",
+      "expr": "geoBounds('layer_0_projection', {type: 'MultiPoint', coordinates: [[105.2, 0.22], [109, 4.55]]})"
+    }
+  ],
+  "data": {
+    "url": "data/13_malaysia_states.topojson",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.state",
+      "from": {
+        "data": {
+          "url": "data/13_malaysia_cinemas_state.csv",
+          "format": {
+            "type": "csv",
+            "parse": {
+              "cinemas": "number",
+              "population_m": "number",
+              "per_million": "number",
+              "lon": "number",
+              "lat": "number"
+            }
+          }
+        },
+        "key": "state",
+        "fields": ["label", "cinemas", "population_m", "per_million"]
+      }
+    },
+    {
+      "calculate": "!isValid(datum.per_million) ? 'No cinema mapped' : datum.per_million < 2.5 ? 'Under 2.5' : datum.per_million < 4 ? '2.5 to 4' : datum.per_million < 5.5 ? '4 to 5.5' : '5.5 and over'",
+      "as": "band"
+    },
+    {
+      "calculate": "isValid(datum.per_million) ? format(datum.per_million, '.1f') : 'No cinema mapped'",
+      "as": "rate"
+    }
+  ],
+  "layer": [
+    {
+      "projection": {"type": "mercator"},
+      "layer": [
+        {
+          "mark": {"type": "geoshape", "stroke": "#FFFFFF", "strokeWidth": 0.8},
+          "encoding": {
+            "color": {
+              "field": "band",
+              "type": "nominal",
+              "title": "Cinemas per million",
+              "scale": {
+                "domain": [
+                  "Under 2.5",
+                  "2.5 to 4",
+                  "4 to 5.5",
+                  "5.5 and over",
+                  "No cinema mapped"
+                ],
+                "range": ["#F2C77F", "#D17E27", "#8B440A", "#3F1A02", "#DCD6CE"]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "symbolType": "square",
+                "symbolSize": 160,
+                "columnPadding": 16
+              }
+            },
+            "tooltip": [
+              {"field": "label", "type": "nominal", "title": "title"},
+              {
+                "field": "cinemas",
+                "type": "quantitative",
+                "title": "Cinemas mapped"
+              },
+              {
+                "field": "population_m",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "Population (millions)"
+              },
+              {"field": "rate", "type": "nominal", "title": "Cinemas per million"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "data/13_malaysia_cinemas_state.csv",
+            "format": {
+              "type": "csv",
+              "parse": {
+                "cinemas": "number",
+                "population_m": "number",
+                "per_million": "number",
+                "lon": "number",
+                "lat": "number"
+              }
+            }
+          },
+          "transform": [
+            {
+              "filter": "indexof(['Sarawak', 'Sabah', 'Pahang', 'Johor'], datum.state) >= 0"
+            },
+            {
+              "calculate": "datum.state === 'Pahang' ? datum.lat + 0.15 : datum.lat",
+              "as": "lat"
+            },
+            {
+              "calculate": "isValid(datum.per_million) ? datum.label + ' ' + format(datum.per_million, '.1f') : datum.label",
+              "as": "text"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16"
+          },
+          "encoding": {
+            "longitude": {"field": "lon", "type": "quantitative"},
+            "latitude": {"field": "lat", "type": "quantitative"},
+            "text": {"field": "text", "type": "nominal"}
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {"state": "Perlis", "tlon": 99.55, "tlat": 6.85, "align": "right"},
+              {"state": "Kedah", "tlon": 99.55, "tlat": 6.25, "align": "right"},
+              {
+                "state": "Pulau Pinang",
+                "tlon": 99.55,
+                "tlat": 5.6,
+                "align": "right"
+              },
+              {"state": "Perak", "tlon": 99.55, "tlat": 4.95, "align": "right"},
+              {
+                "state": "Selangor",
+                "tlon": 99.55,
+                "tlat": 3.75,
+                "align": "right",
+                "plon": 101.2,
+                "plat": 3.5
+              },
+              {
+                "state": "Negeri Sembilan",
+                "tlon": 99.55,
+                "tlat": 2.35,
+                "align": "right",
+                "plon": 102.15,
+                "plat": 2.65
+              },
+              {"state": "Melaka", "tlon": 99.55, "tlat": 1.75, "align": "right"},
+              {"state": "Kelantan", "tlon": 103.75, "tlat": 6.3, "align": "left"},
+              {
+                "state": "Terengganu",
+                "tlon": 103.75,
+                "tlat": 5.55,
+                "align": "left"
+              },
+              {"state": "W.P. Labuan", "tlon": 114, "tlat": 6.45, "align": "right"}
+            ]
+          },
+          "transform": [
+            {
+              "lookup": "state",
+              "from": {
+                "data": {
+                  "url": "data/13_malaysia_cinemas_state.csv",
+                  "format": {
+                    "type": "csv",
+                    "parse": {
+                      "cinemas": "number",
+                      "population_m": "number",
+                      "per_million": "number",
+                      "lon": "number",
+                      "lat": "number"
+                    }
+                  }
+                },
+                "key": "state",
+                "fields": ["label", "per_million", "lon", "lat"]
+              }
+            },
+            {
+              "calculate": "isValid(datum.per_million) ? datum.label + ' ' + format(datum.per_million, '.1f') : datum.label + ': none mapped'",
+              "as": "text"
+            },
+            {"calculate": "isValid(datum.plon) ? datum.plon : datum.lon", "as": "plon"},
+            {"calculate": "isValid(datum.plat) ? datum.plat : datum.lat", "as": "plat"}
+          ],
+          "layer": [
+            {
+              "mark": {"type": "rule", "color": "#6B6259", "strokeWidth": 0.8},
+              "encoding": {
+                "longitude": {"field": "tlon", "type": "quantitative"},
+                "latitude": {"field": "tlat", "type": "quantitative"},
+                "longitude2": {"field": "plon"},
+                "latitude2": {"field": "plat"}
+              }
+            },
+            {
+              "transform": [{"filter": "datum.align === 'right'"}],
+              "mark": {
+                "type": "text",
+                "align": "right",
+                "dx": -4,
+                "fontSize": 12,
+                "color": "#1F1B16"
+              },
+              "encoding": {
+                "longitude": {"field": "tlon", "type": "quantitative"},
+                "latitude": {"field": "tlat", "type": "quantitative"},
+                "text": {"field": "text", "type": "nominal"}
+              }
+            },
+            {
+              "transform": [{"filter": "datum.align === 'left'"}],
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "dx": 4,
+                "fontSize": 12,
+                "color": "#1F1B16"
+              },
+              "encoding": {
+                "longitude": {"field": "tlon", "type": "quantitative"},
+                "latitude": {"field": "tlat", "type": "quantitative"},
+                "text": {"field": "text", "type": "nominal"}
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "projection": {
+        "type": "mercator",
+        "fit": {"expr": "klang"},
+        "extent": {"expr": "insetBox"},
+        "clipExtent": {"expr": "insetBox"}
+      },
+      "layer": [
+        {
+          "mark": {"type": "geoshape", "stroke": "#FFFFFF", "strokeWidth": 1.2},
+          "encoding": {
+            "color": {
+              "field": "band",
+              "type": "nominal",
+              "title": "Cinemas per million",
+              "scale": {
+                "domain": [
+                  "Under 2.5",
+                  "2.5 to 4",
+                  "4 to 5.5",
+                  "5.5 and over",
+                  "No cinema mapped"
+                ],
+                "range": ["#F2C77F", "#D17E27", "#8B440A", "#3F1A02", "#DCD6CE"]
+              },
+              "legend": {
+                "orient": "top",
+                "direction": "horizontal",
+                "symbolType": "square",
+                "symbolSize": 160,
+                "columnPadding": 16
+              }
+            },
+            "tooltip": [
+              {"field": "label", "type": "nominal", "title": "title"},
+              {
+                "field": "cinemas",
+                "type": "quantitative",
+                "title": "Cinemas mapped"
+              },
+              {
+                "field": "population_m",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "Population (millions)"
+              },
+              {"field": "rate", "type": "nominal", "title": "Cinemas per million"}
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {"state": "W.P. Kuala Lumpur", "tlon": 101.69, "tlat": 3.254, "pos": "above"},
+              {"state": "W.P. Putrajaya", "tlon": 101.695, "tlat": 2.866, "pos": "below"}
+            ]
+          },
+          "transform": [
+            {
+              "lookup": "state",
+              "from": {
+                "data": {
+                  "url": "data/13_malaysia_cinemas_state.csv",
+                  "format": {
+                    "type": "csv",
+                    "parse": {"cinemas": "number", "per_million": "number"}
+                  }
+                },
+                "key": "state",
+                "fields": ["label", "cinemas", "per_million"]
+              }
+            },
+            {
+              "calculate": "datum.cinemas === 1 ? [datum.label + ' ' + format(datum.per_million, '.1f'), '(one cinema)'] : datum.label + ' ' + format(datum.per_million, '.1f')",
+              "as": "text"
+            }
+          ],
+          "encoding": {
+            "longitude": {"field": "tlon", "type": "quantitative"},
+            "latitude": {"field": "tlat", "type": "quantitative"},
+            "text": {"field": "text", "type": "nominal"}
+          },
+          "layer": [
+            {
+              "transform": [{"filter": "datum.pos === 'above'"}],
+              "mark": {
+                "type": "text",
+                "baseline": "bottom",
+                "dy": -4,
+                "fontSize": 12,
+                "fontWeight": 600,
+                "color": "#1F1B16"
+              }
+            },
+            {
+              "transform": [{"filter": "datum.pos === 'below'"}],
+              "mark": {
+                "type": "text",
+                "baseline": "top",
+                "dy": 4,
+                "fontSize": 12,
+                "fontWeight": 600,
+                "color": "#1F1B16"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "data": {"values": [{}]},
+      "layer": [
+        {
+          "mark": {"type": "rect", "filled": false, "color": "#1F1B16", "strokeWidth": 1},
+          "encoding": {
+            "x": {"value": {"expr": "locatorBox[0][0]"}},
+            "x2": {"value": {"expr": "locatorBox[1][0]"}},
+            "y": {"value": {"expr": "locatorBox[0][1]"}},
+            "y2": {"value": {"expr": "locatorBox[1][1]"}}
+          }
+        },
+        {
+          "mark": {"type": "rule", "color": "#1F1B16", "strokeWidth": 0.8},
+          "encoding": {
+            "x": {"value": {"expr": "locatorBox[1][0]"}},
+            "y": {"value": {"expr": "(locatorBox[0][1] + locatorBox[1][1]) / 2"}},
+            "x2": {"value": {"expr": "insetBox[0][0]"}},
+            "y2": {"value": {"expr": "(insetBox[0][1] + insetBox[1][1]) / 2"}}
+          }
+        },
+        {
+          "mark": {"type": "rect", "filled": false, "color": "#1F1B16", "strokeWidth": 1},
+          "encoding": {
+            "x": {"value": {"expr": "insetBox[0][0]"}},
+            "x2": {"value": {"expr": "insetBox[1][0]"}},
+            "y": {"value": {"expr": "insetBox[0][1]"}},
+            "y2": {"value": {"expr": "insetBox[1][1]"}}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "bottom",
+            "dy": -4,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#6B6259",
+            "text": "Klang Valley, enlarged"
+          },
+          "encoding": {
+            "x": {"value": {"expr": "insetBox[0][0]"}},
+            "y": {"value": {"expr": "insetBox[0][1]"}}
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

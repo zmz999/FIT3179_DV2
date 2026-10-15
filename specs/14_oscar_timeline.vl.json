@@ -1,0 +1,275 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "Eleven entries, no nominations yet",
+    "subtitle": "Malaysia's submissions for the Academy Award for Best International Feature Film, 2004–2026"
+  },
+  "width": 760,
+  "height": 112,
+  "layer": [
+    {
+      "data": {"values": [{"x1": 2003.6, "x2": 2026.4}]},
+      "mark": {"type": "rule", "color": "#CFC6BA", "strokeWidth": 1},
+      "encoding": {
+        "x": {
+          "field": "x1",
+          "type": "quantitative",
+          "scale": {"domain": [2003.4, 2026.6], "nice": false, "zero": false},
+          "axis": null
+        },
+        "x2": {"field": "x2"},
+        "y": {"value": 74}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"year": 2004},
+          {"year": 2005},
+          {"year": 2006},
+          {"year": 2007},
+          {"year": 2008},
+          {"year": 2009},
+          {"year": 2010},
+          {"year": 2011},
+          {"year": 2012},
+          {"year": 2013},
+          {"year": 2014},
+          {"year": 2015},
+          {"year": 2016},
+          {"year": 2017},
+          {"year": 2018},
+          {"year": 2019},
+          {"year": 2020},
+          {"year": 2021},
+          {"year": 2022},
+          {"year": 2023},
+          {"year": 2024},
+          {"year": 2025},
+          {"year": 2026}
+        ]
+      },
+      "mark": {
+        "type": "tick",
+        "orient": "vertical",
+        "color": "#CFC6BA",
+        "thickness": 1,
+        "size": 6
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [2003.4, 2026.6], "nice": false, "zero": false},
+          "axis": null
+        },
+        "y": {"value": 74}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x1": 2004.5,
+            "x2": 2011.5,
+            "label": "Eight years between the first and second entries"
+          },
+          {"x1": 2014.5, "x2": 2026.5, "label": "Nine entries in twelve years"}
+        ]
+      },
+      "transform": [{"calculate": "(datum.x1 + datum.x2) / 2", "as": "xm"}],
+      "layer": [
+        {
+          "mark": {"type": "rule", "color": "#6B6259", "strokeWidth": 1},
+          "encoding": {
+            "x": {
+              "field": "x1",
+              "type": "quantitative",
+              "scale": {
+                "domain": [2003.4, 2026.6],
+                "nice": false,
+                "zero": false
+              },
+              "axis": null
+            },
+            "x2": {"field": "x2"},
+            "y": {"value": 18}
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "color": "#6B6259",
+            "baseline": "bottom",
+            "dy": -3
+          },
+          "encoding": {
+            "x": {
+              "field": "xm",
+              "type": "quantitative",
+              "scale": {
+                "domain": [2003.4, 2026.6],
+                "nice": false,
+                "zero": false
+              },
+              "axis": null
+            },
+            "y": {"value": 18},
+            "text": {"field": "label"}
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/14_malaysia_oscar_submissions.csv",
+        "format": {
+          "type": "csv",
+          "parse": {"year": "number", "ceremony": "number"}
+        }
+      },
+      "transform": [
+        {
+          "calculate": "datum.ceremony + (datum.ceremony % 100 >= 11 && datum.ceremony % 100 <= 13 ? 'th' : datum.ceremony % 10 === 1 ? 'st' : datum.ceremony % 10 === 2 ? 'nd' : datum.ceremony % 10 === 3 ? 'rd' : 'th') + ' Academy Awards'",
+          "as": "ceremony_name"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [2003.4, 2026.6], "nice": false, "zero": false},
+          "axis": null
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "square",
+            "size": 676,
+            "strokeWidth": 1.5,
+            "opacity": 1
+          },
+          "encoding": {
+            "y": {"value": 48},
+            "fill": {
+              "condition": {
+                "test": "datum.result === 'Result pending'",
+                "value": "#FFFFFF"
+              },
+              "value": "#E63946"
+            },
+            "stroke": {"value": "#E63946"},
+            "strokeDash": {
+              "condition": {
+                "test": "datum.result === 'Result pending'",
+                "value": [3, 2]
+              },
+              "value": [1, 0]
+            },
+            "tooltip": [
+              {"field": "film", "type": "nominal", "title": "title"},
+              {
+                "field": "year",
+                "type": "quantitative",
+                "format": "d",
+                "title": "Submitted"
+              },
+              {
+                "field": "ceremony_name",
+                "type": "nominal",
+                "title": "Ceremony"
+              },
+              {"field": "result", "type": "nominal", "title": "Result"}
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "font": "Oswald, Inter, sans-serif",
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "#1F1B16",
+            "baseline": "top"
+          },
+          "encoding": {
+            "y": {"value": 81},
+            "text": {"field": "year", "type": "quantitative", "format": "d"}
+          }
+        },
+        {
+          "transform": [{"filter": "datum.result === 'Result pending'"}],
+          "mark": {"type": "text", "color": "#6B6259", "baseline": "top"},
+          "encoding": {"y": {"value": 98}, "text": {"value": "pending"}}
+        }
+      ]
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

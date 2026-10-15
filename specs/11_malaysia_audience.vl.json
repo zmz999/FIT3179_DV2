@@ -1,0 +1,211 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": [
+      "Local films more than doubled",
+      "their audience, then outdrew Hollywood"
+    ],
+    "subtitle": [
+      "Cinema admissions in Malaysia, millions (FINAS).",
+      "Percentages: local films' share of all admissions.",
+      "2026 covers January to July only."
+    ]
+  },
+  "width": 200,
+  "height": 270,
+  "data": {
+    "url": "data/11_malaysia_official_figures.csv",
+    "format": {"type": "csv", "parse": {"year": "number", "value": "number"}}
+  },
+  "transform": [
+    {
+      "filter": "datum.metric === 'admissions_m' || datum.metric === 'local_share_pct'"
+    },
+    {
+      "pivot": "metric",
+      "value": "value",
+      "groupby": ["period", "year", "group"]
+    },
+    {"filter": "isValid(datum.admissions_m)"},
+    {
+      "calculate": "datum.group === 'Hollywood films' ? datum.period + ', Hollywood' : datum.period",
+      "as": "row"
+    },
+    {
+      "calculate": "datum.year + (datum.group === 'Hollywood films' ? 0.5 : 0)",
+      "as": "row_order"
+    },
+    {
+      "calculate": "format(datum.admissions_m, '.2f') + 'm' + (isValid(datum.local_share_pct) ? ' · ' + datum.local_share_pct + '%' : '')",
+      "as": "label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "row",
+      "type": "ordinal",
+      "title": null,
+      "scale": {
+        "domain": [
+          "2023",
+          "2024",
+          "2025",
+          "gap",
+          "Jan–Jul 2026",
+          "Jan–Jul 2026, Hollywood"
+        ]
+      },
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFont": "Oswald, Inter, sans-serif",
+        "labelFontSize": 14,
+        "labelPadding": 8,
+        "labelExpr": "datum.value === 'gap' ? '' : datum.value === 'Jan–Jul 2026' ? 'Malaysian' : indexof(datum.value, 'Hollywood') >= 0 ? 'Hollywood' : datum.value",
+        "labelColor": {
+          "condition": {
+            "test": "indexof(datum.value, 'Hollywood') >= 0",
+            "value": "#0072B2"
+          },
+          "value": "#1F1B16"
+        }
+      }
+    },
+    "x": {
+      "field": "admissions_m",
+      "type": "quantitative",
+      "title": "Admissions (millions)",
+      "scale": {"domain": [0, 16]},
+      "axis": {"values": [0, 5, 10, 15], "grid": true, "domain": false}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "cornerRadiusEnd": 2, "height": {"band": 0.72}},
+      "encoding": {
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": ["Malaysian films", "Hollywood films"],
+            "range": ["#E63946", "#0072B2"]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolType": "square"
+          }
+        },
+        "tooltip": [
+          {"field": "group", "type": "nominal", "title": "title"},
+          {"field": "period", "type": "nominal", "title": "Period"},
+          {
+            "field": "admissions_m",
+            "type": "quantitative",
+            "format": ".2f",
+            "title": "Admissions (millions)"
+          },
+          {
+            "field": "local_share_pct",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Share of all admissions (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#1F1B16"
+      },
+      "encoding": {"text": {"field": "label", "type": "nominal"}}
+    },
+    {
+      "data": {"values": [{"row": "gap"}]},
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dy": 4,
+        "fontSize": 12,
+        "fontWeight": 600,
+        "color": "#6B6259"
+      },
+      "encoding": {
+        "y": {"field": "row", "type": "ordinal"},
+        "x": {"value": 0},
+        "text": {"value": "January–July 2026"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

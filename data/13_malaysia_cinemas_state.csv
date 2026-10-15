@@ -1,0 +1,17 @@
+state,label,cinemas,population_m,per_million,data_quality,lon,lat
+Johor,Johor,16,4.224,3.79,mapped,103.3011,2.0478
+Kedah,Kedah,12,2.237,5.36,mapped,100.6782,5.8104
+Kelantan,Kelantan,0,1.925,,under-mapped,102.0677,5.4033
+Melaka,Melaka,5,1.057,4.73,mapped,102.2917,2.2998
+Negeri Sembilan,Negeri Sembilan,3,1.248,2.4,mapped,102.225,2.8404
+Pahang,Pahang,4,1.686,2.37,mapped,102.5908,3.6253
+Perak,Perak,11,2.578,4.27,mapped,100.9836,4.7997
+Perlis,Perlis,0,0.297,,under-mapped,100.2667,6.4902
+Pulau Pinang,Penang,9,1.808,4.98,mapped,100.4558,5.3557
+Sabah,Sabah,13,3.767,3.45,mapped,117.2177,5.5767
+Sarawak,Sarawak,5,2.54,1.97,mapped,113.6595,2.9254
+Selangor,Selangor,27,7.454,3.62,mapped,101.4738,3.2325
+Terengganu,Terengganu,2,1.261,1.59,mapped,102.9796,4.8934
+W.P. Kuala Lumpur,Kuala Lumpur,20,2.082,9.6,mapped,101.6824,3.1395
+W.P. Labuan,Labuan,0,0.101,,under-mapped,115.2191,5.3173
+W.P. Putrajaya,Putrajaya,1,0.121,8.24,mapped,101.7003,2.9301

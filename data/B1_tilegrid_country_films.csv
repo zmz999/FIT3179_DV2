@@ -1,0 +1,193 @@
+iso_a3,country,x,y,films_all,films_2000s_on,is_malaysia
+AFG,Afghanistan,22,8,3.5,3.5,False
+ALB,Albania,15,9,2.2,2.1,False
+DZA,Algeria,13,11,3.7,3.2,False
+AGO,Angola,13,17,0.7,0.7,False
+ATA,Antarctica,15,23,0.0,0.0,False
+ATG,Antigua & Barbuda,7,4,0.0,0.0,False
+ARG,Argentina,6,14,206.0,181.2,False
+ARM,Armenia,20,6,1.8,1.8,False
+AUS,Australia,24,19,436.4,337.0,False
+AUT,Austria,15,6,101.0,85.3,False
+AZE,Azerbaijan,21,7,0.8,0.8,False
+BHS,Bahamas,4,2,2.5,2.0,False
+BHR,Bahrain,20,9,0.0,0.0,False
+BGD,Bangladesh,23,8,2.0,2.0,False
+BRB,Barbados,8,6,0.3,0.3,False
+BLR,Belarus,17,4,2.5,2.5,False
+BEL,Belgium,13,5,333.9,302.3,False
+BLZ,Belize,2,3,0.0,0.0,False
+BEN,Benin,15,14,0.0,0.0,False
+BTN,Bhutan,24,7,2.0,1.5,False
+BOL,Bolivia,6,11,4.3,3.3,False
+BIH,Bosnia & Herzegovina,15,7,4.1,3.8,False
+BWA,Botswana,15,18,2.2,1.2,False
+BRA,Brazil,8,11,416.0,366.6,False
+BRN,Brunei Darussalam,25,12,0.0,0.0,False
+BGR,Bulgaria,17,7,29.6,28.2,False
+BFA,Burkina Faso,13,13,0.5,0.3,False
+BDI,Burundi,15,16,0.0,0.0,False
+KHM,Cambodia,25,10,5.6,5.6,False
+CMR,Cameroon,14,15,1.0,0.7,False
+CAN,Canada,1,1,1492.4,1283.6,False
+CPV,Cabo Verde,10,15,0.0,0.0,False
+CAF,Central African Republic,16,14,0.0,0.0,False
+TCD,Chad,14,13,0.6,0.6,False
+CHL,Chile,6,13,53.2,52.0,False
+CHN,China,24,6,393.6,374.6,False
+COL,Colombia,5,9,45.0,41.6,False
+COM,Comoros,18,18,0.0,0.0,False
+COG,Congo,14,16,1.2,1.2,False
+COD,Congo (Democratic Republic of the),15,15,0.0,0.0,False
+CRI,Costa Rica,3,7,3.0,3.0,False
+CIV,Côte d'Ivoire,12,15,1.4,1.2,False
+HRV,Croatia,14,7,6.5,6.1,False
+CUB,Cuba,4,3,9.9,8.0,False
+CYP,Cyprus,17,10,2.4,1.9,False
+CZE,Czech Republic,15,5,85.0,43.9,False
+DNK,Denmark,14,3,216.3,172.9,False
+DJI,Djibouti,17,13,0.0,0.0,False
+DMA,Dominica,7,7,0.0,0.0,False
+DOM,Dominican Republic,6,4,14.3,14.3,False
+ECU,Ecuador,5,10,4.2,3.2,False
+EGY,Egypt,16,11,58.7,54.7,False
+SLV,El Salvador,1,5,0.2,0.2,False
+GNQ,Equatorial Guinea,13,16,0.0,0.0,False
+ERI,Eritrea,16,13,0.0,0.0,False
+EST,Estonia,17,2,10.5,10.0,False
+ETH,Ethiopia,17,14,0.8,0.8,False
+FJI,Fiji,27,19,0.0,0.0,False
+FIN,Finland,17,1,91.4,74.4,False
+FRA,France,12,5,3086.2,2300.8,False
+GAB,Gabon,14,17,0.0,0.0,False
+GMB,Gambia,12,12,0.0,0.0,False
+GEO,Georgia,21,6,8.4,8.4,False
+DEU,Germany,14,4,1175.9,921.4,False
+GHA,Ghana,13,14,0.8,0.6,False
+GRC,Greece,16,9,52.9,42.6,False
+GRL,Greenland,8,1,0.5,0.5,False
+GRD,Grenada,7,8,0.0,0.0,False
+GTM,Guatemala,1,4,3.2,3.2,False
+GIN,Guinea,11,14,0.5,0.0,False
+GNB,Guinea-Bissau,11,13,0.0,0.0,False
+GUY,Guyana,6,10,0.0,0.0,False
+HTI,Haiti,5,4,0.6,0.2,False
+HND,Honduras,2,5,0.5,0.5,False
+HUN,Hungary,16,6,76.8,51.4,False
+ISL,Iceland,10,1,36.3,34.3,False
+IND,India,22,9,1068.5,962.9,False
+IDN,Indonesia,25,13,36.5,34.2,False
+IRN,Iran (Islamic Republic of),20,8,48.2,33.6,False
+IRQ,Iraq,20,7,2.5,2.5,False
+IRL,Ireland,10,4,149.2,131.4,False
+ISR,Israel,18,10,52.7,43.5,False
+ITA,Italy,13,7,1804.2,1037.3,False
+JAM,Jamaica,4,4,2.5,0.5,False
+JPN,Japan,27,6,1577.0,1149.0,False
+JOR,Jordan,18,8,2.0,2.0,False
+KAZ,Kazakhstan,24,5,5.2,4.6,False
+KEN,Kenya,17,15,2.7,2.7,False
+KIR,Kiribati,27,17,0.0,0.0,False
+PRK,North Korea,25,6,1.0,0.0,False
+KOR,South Korea,25,7,699.3,671.1,False
+XKX,Kosovo,16,8,0.0,0.0,False
+KWT,Kuwait,19,8,0.6,0.2,False
+KGZ,Kyrgyzstan,23,6,0.0,0.0,False
+LAO,Lao People's Democratic Republic,25,9,0.3,0.3,False
+LVA,Latvia,17,3,6.8,6.8,False
+LBN,Lebanon,18,9,6.0,5.1,False
+LSO,Lesotho,17,19,0.0,0.0,False
+LBR,Liberia,12,14,0.3,0.3,False
+LBY,Libya,15,11,0.7,0.0,False
+LTU,Lithuania,16,4,9.3,8.8,False
+LUX,Luxembourg,13,6,42.1,39.4,False
+MKD,Macedonia,17,8,3.6,3.3,False
+MDG,Madagascar,19,19,0.0,0.0,False
+MWI,Malawi,15,17,0.3,0.3,False
+MYS,Malaysia,24,11,7.2,6.9,True
+MDV,Maldives,21,12,0.0,0.0,False
+MLI,Mali,14,12,0.5,0.3,False
+MLT,Malta,11,8,5.0,5.0,False
+MHL,Marshall Islands,26,15,0.0,0.0,False
+MRT,Mauritania,11,12,0.0,0.0,False
+MUS,Mauritius,19,20,1.5,1.5,False
+MEX,Mexico,1,3,452.7,346.0,False
+FSM,Micronesia (Federated States of),26,16,0.0,0.0,False
+MDA,Moldova (Republic of),18,5,0.0,0.0,False
+MNG,Mongolia,25,5,3.8,3.8,False
+MNE,Montenegro,15,8,1.2,1.2,False
+MAR,Morocco,12,11,16.6,15.2,False
+MOZ,Mozambique,16,17,1.0,1.0,False
+MMR,Myanmar,24,8,0.8,0.8,False
+NAM,Namibia,15,19,1.3,0.3,False
+NRU,Nauru,26,17,0.0,0.0,False
+NPL,Nepal,23,9,1.3,1.0,False
+NLD,Netherlands,13,4,207.5,176.9,False
+NZL,New Zealand,26,21,85.8,68.5,False
+NIC,Nicaragua,2,6,0.2,0.0,False
+NER,Niger,15,12,0.0,0.0,False
+NGA,Nigeria,13,15,9.6,9.6,False
+NOR,Norway,15,1,125.6,115.8,False
+OMN,Oman,19,11,0.0,0.0,False
+PAK,Pakistan,21,8,6.0,6.0,False
+PLW,Palau,25,16,0.0,0.0,False
+PAN,Panama,4,8,2.0,2.0,False
+PNG,Papua New Guinea,25,17,0.5,0.5,False
+PRY,Paraguay,6,12,4.6,4.6,False
+PER,Peru,5,11,28.8,23.7,False
+PHL,Philippines,26,11,37.7,26.4,False
+POL,Poland,15,4,279.8,207.7,False
+PRT,Portugal,11,6,39.1,32.0,False
+QAT,Qatar,19,10,8.6,8.6,False
+ROU,Romania,17,6,73.8,63.9,False
+RUS,Russian Federation,25,4,509.0,345.5,False
+RWA,Rwanda,16,16,1.3,1.3,False
+KNA,St. Kitts & Nevis,6,5,0.0,0.0,False
+LCA,St. Lucia,7,5,0.0,0.0,False
+VCT,St. Vincent & the Grenadines,7,6,0.0,0.0,False
+WSM,Samoa,28,18,0.0,0.0,False
+STP,Sao Tome and Principe,11,16,0.0,0.0,False
+SAU,Saudi Arabia,19,9,4.9,4.7,False
+SEN,Senegal,13,12,5.8,2.7,False
+SRB,Serbia,16,7,50.0,28.1,False
+SYC,Seychelles,18,17,0.0,0.0,False
+SLE,Sierra Leone,12,13,0.0,0.0,False
+SGP,Singapore,24,13,15.7,15.4,False
+SVK,Slovakia,16,5,9.8,8.5,False
+SVN,Slovenia,14,6,7.7,7.7,False
+SLB,Solomon Islands,26,18,0.3,0.0,False
+SOM,Somalia,18,14,0.0,0.0,False
+ZAF,South Africa,16,20,82.1,71.3,False
+SSD,South Sudan,15,13,0.0,0.0,False
+ESP,Spain,12,6,801.2,638.1,False
+LKA,Sri Lanka,22,11,0.8,0.8,False
+SDN,Sudan,16,12,0.2,0.2,False
+SUR,Suriname,7,11,0.0,0.0,False
+SWZ,Swaziland,16,19,0.2,0.2,False
+SWE,Sweden,16,1,267.2,197.2,False
+CHE,Switzerland,14,5,110.2,75.7,False
+SYR,Syria,19,7,2.7,2.7,False
+TJK,Tajikistan,23,7,0.5,0.0,False
+TZA,Tanzania,17,16,0.4,0.2,False
+THA,Thailand,24,10,113.0,109.5,False
+TLS,Timor-Leste,25,14,0.5,0.5,False
+TGO,Togo,14,14,0.0,0.0,False
+TON,Tonga,28,19,0.0,0.0,False
+TTO,Trinidad & Tobago,7,9,0.0,0.0,False
+TUN,Tunisia,14,11,7.6,4.7,False
+TUR,Turkey,18,7,340.2,243.7,False
+TKM,Turkmenistan,22,7,0.0,0.0,False
+TUV,Tuvalu,27,18,0.0,0.0,False
+UGA,Uganda,16,15,2.3,2.3,False
+UKR,Ukraine,17,5,28.9,28.6,False
+ARE,United Arab Emirates,20,10,17.0,17.0,False
+GBR,Great Britain and Northern Ireland,11,4,2521.1,1821.4,False
+USA,United States of America,1,2,15831.0,11146.9,False
+URY,Uruguay,7,12,15.7,15.4,False
+UZB,Uzbekistan,22,6,0.5,0.3,False
+VUT,Vanuatu,26,19,0.5,0.5,False
+VEN,Venezuela,6,9,16.2,14.7,False
+VNM,Viet Nam,26,9,9.4,8.2,False
+YEM,Yemen,18,11,0.0,0.0,False
+ZMB,Zambia,14,18,0.5,0.5,False
+ZWE,Zimbabwe,16,18,1.2,0.0,False

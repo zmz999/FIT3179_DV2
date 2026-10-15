@@ -1,0 +1,178 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
+  "title": {
+    "text": "The Western died. The documentary took its place.",
+    "subtitle": "Each genre's share of the decade's widely seen films (%)"
+  },
+  "width": 400,
+  "height": 430,
+  "data": {
+    "url": "data/05_genre_decade.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"decade": "number", "films": "number", "share_pct": "number"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "stroke": "#FFFFFF", "strokeWidth": 1.5},
+      "encoding": {
+        "color": {
+          "field": "share_pct",
+          "type": "quantitative",
+          "title": "% of decade",
+          "scale": {
+            "type": "sqrt",
+            "range": [
+              "#F2C77F",
+              "#E49A3E",
+              "#C8701A",
+              "#9C4E0C",
+              "#6B3206",
+              "#3F1A02"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "gradientLength": 150
+          }
+        }
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 12},
+      "encoding": {
+        "text": {"field": "share_pct", "type": "quantitative", "format": ".1f"},
+        "color": {
+          "condition": {"test": "datum.share_pct >= 6.7", "value": "#FFFFFF"},
+          "value": "#000000"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "decade",
+      "type": "ordinal",
+      "title": null,
+      "axis": {
+        "orient": "top",
+        "labelAngle": 0,
+        "labelFont": "Oswald, Inter, sans-serif",
+        "labelFontSize": 13,
+        "labelColor": "#1F1B16",
+        "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'"
+      }
+    },
+    "y": {
+      "field": "genre",
+      "type": "nominal",
+      "title": null,
+      "sort": {"field": "sorter", "op": "max", "order": "descending"},
+      "axis": {
+        "labelFontWeight": {
+          "condition": {
+            "test": "datum.value === 'Western' || datum.value === 'Documentary'",
+            "value": 700
+          },
+          "value": 400
+        },
+        "labelColor": {
+          "condition": {
+            "test": "datum.value === 'Western' || datum.value === 'Documentary'",
+            "value": "#1F1B16"
+          },
+          "value": "#6B6259"
+        }
+      }
+    },
+    "tooltip": [
+      {"field": "genre", "type": "nominal", "title": "title"},
+      {"field": "decade", "type": "ordinal", "title": "Decade"},
+      {
+        "field": "share_pct",
+        "type": "quantitative",
+        "format": ".1f",
+        "title": "% of the decade's films"
+      },
+      {
+        "field": "films",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Films"
+      }
+    ]
+  },
+  "transform": [
+    {
+      "joinaggregate": [{"op": "sum", "field": "films", "as": "genre_total"}],
+      "groupby": ["genre"]
+    },
+    {"calculate": "datum.genre_total", "as": "sorter"}
+  ],
+  "config": {
+    "background": "#FFFFFF",
+    "font": "Inter, system-ui, sans-serif",
+    "title": {
+      "font": "Oswald, Inter, sans-serif",
+      "fontSize": 19,
+      "fontWeight": 600,
+      "color": "#1F1B16",
+      "anchor": "start",
+      "subtitleFont": "Inter, system-ui, sans-serif",
+      "subtitleFontSize": 14,
+      "subtitleColor": "#6B6259",
+      "subtitlePadding": 6,
+      "offset": 14
+    },
+    "axis": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#6B6259",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 500,
+      "gridColor": "#E5DFD6",
+      "domainColor": "#D6CEC3",
+      "tickColor": "#D6CEC3",
+      "labelPadding": 4
+    },
+    "legend": {
+      "labelFont": "Inter, system-ui, sans-serif",
+      "labelFontSize": 12,
+      "labelColor": "#1F1B16",
+      "titleFont": "Inter, system-ui, sans-serif",
+      "titleFontSize": 12,
+      "titleColor": "#6B6259",
+      "titleFontWeight": 600
+    },
+    "text": {
+      "font": "Inter, system-ui, sans-serif",
+      "fontSize": 12,
+      "color": "#1F1B16"
+    },
+    "view": {"stroke": null},
+    "range": {
+      "category": [
+        "#0072B2",
+        "#009E73",
+        "#E69F00",
+        "#CC79A7",
+        "#56B4E9",
+        "#A39E96"
+      ],
+      "heatmap": [
+        "#F2C77F",
+        "#E49A3E",
+        "#C8701A",
+        "#9C4E0C",
+        "#6B3206",
+        "#3F1A02"
+      ],
+      "ramp": ["#F2C77F", "#E49A3E", "#C8701A", "#9C4E0C", "#6B3206", "#3F1A02"]
+    }
+  }
+}

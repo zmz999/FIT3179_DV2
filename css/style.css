@@ -1,0 +1,153 @@
+/* Page styles: colours, fonts, layout grid and spacing scale.
+   The chart colours are set in the Vega-Lite specs. */
+:root{
+  --ink:#1F1B16; --muted:#6B6259; --line:#E5DFD6;
+  --page:#F7F5F2; --card:#FFFFFF; --my:#E63946;
+  /* the chart colours for Malaysia and Hollywood, in shades that pass 4.5:1 as text */
+  --my-text:#B3202D; --hollywood:#0072B2;
+  --gold:#C8A165;
+  --head:'Oswald',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+
+  /* the grid */
+  --grid:820px; --gutter:24px;
+  --wide:1040px; /* the wider measure of the three world maps */
+  --col:calc((var(--grid) - 11 * var(--gutter)) / 12);
+  --span-8:calc(8 * var(--col) + 7 * var(--gutter));
+  --span-10:calc(10 * var(--col) + 9 * var(--gutter));
+
+  /* the spacing scale */
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --s7:96px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);
+     font-family:var(--body);font-size:17px;line-height:1.65;
+     -webkit-font-smoothing:antialiased}
+.wrap{max-width:calc(var(--grid) + 2 * var(--s3));margin:0 auto;padding:0 var(--s3)}
+/* The main column may run wider than the grid so the world maps can break out to the
+   wide measure, centred on the same axis; every other card and row keeps the grid. */
+main.wrap{max-width:calc(var(--wide) + 2 * var(--s3))}
+main .card,main .row-2{max-width:var(--grid)}
+main .card.wide{max-width:var(--wide)}
+
+/* Title band and closing band */
+.hero,.coda{background:var(--ink);color:#F7F5F2;text-align:center}
+.hero{padding:var(--s7) 0 calc(var(--s7) + var(--s2));margin-bottom:var(--s7)}
+.kicker{font-family:var(--body);font-size:12px;letter-spacing:.16em;
+        text-transform:uppercase;color:var(--gold);margin:0 0 var(--s2)}
+.hero h1{font-family:var(--head);font-weight:600;font-size:clamp(40px,7vw,72px);
+         line-height:1.02;margin:0 0 var(--s2);letter-spacing:-.01em}
+.standfirst{font-size:21px;color:#CFC7BC;margin:0 auto;max-width:var(--span-10)}
+
+/* Section headings */
+section{margin-bottom:var(--s7)}
+.eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.16em;
+         text-transform:uppercase;color:var(--muted);margin:0 0 var(--s1);
+         text-align:center}
+h2{font-family:var(--head);font-weight:600;font-size:34px;line-height:1.15;
+   margin:0 0 var(--s4);letter-spacing:-.005em;text-align:center}
+h2::after{content:"";display:block;width:56px;height:2px;background:var(--gold);
+          margin:var(--s2) auto 0}
+/* Space between a heading and the content below it */
+h2 + .card,h2 + .takeaways{margin-top:var(--s4)}
+
+/* Text: one centred column, eight grid columns wide */
+.prose{max-width:var(--span-8);margin:0 auto var(--s3)}
+p{margin:0 0 var(--s3)}
+.prose p:last-child{margin-bottom:0}
+.lede{font-size:20px;color:#3A332B}
+strong{font-weight:600}
+/* Figures in the text that carry a chart colour, so the colour key is met before the charts */
+strong.malaysia{color:var(--my-text)}
+strong.hollywood{color:var(--hollywood)}
+
+/* Chart cards */
+.card{margin:var(--s5) auto;padding:var(--s3);background:var(--card);
+      border:1px solid var(--line);border-radius:10px}
+figure{margin:0}
+/* Chart captions, aligned with the left edge of the chart */
+.card .viz{padding-bottom:var(--s2);border-bottom:1px solid var(--line)}
+figcaption{margin:var(--s2) 0 0;
+           font-size:15px;line-height:1.55;color:var(--muted);
+           max-width:33em}
+/* Data source line at the end of each caption */
+figcaption .source{display:block;margin-top:var(--s1);font-size:13px}
+/* Two charts side by side. Each card shares the row's two tracks (chart, then
+   caption), so the dividers and captions of the pair line up. */
+.row-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+       grid-template-rows:auto auto;column-gap:var(--s3);row-gap:0;margin:var(--s5) auto}
+.row-2 .card{margin:0;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0}
+/* Chart containers; a chart wider than its card scrolls inside it */
+.viz{width:100%;min-height:60px;overflow-x:auto}
+
+/* Hide the vega-embed actions menu */
+.vega-embed summary{display:none}
+/* Centre each chart in its card and show its input controls below it, on the left,
+   so the chart title is read first */
+.viz.vega-embed{display:flex;flex-direction:column;align-items:center;
+                align-items:safe center}
+.vega-embed .vega-bindings{align-self:flex-start;font-family:var(--body);
+  font-size:14px;margin:var(--s2) 0 0;display:flex;gap:10px;align-items:center}
+/* Hide the controls area of charts without controls */
+.vega-embed .vega-bindings:empty{display:none}
+.vega-embed select{font-family:var(--body);font-size:14px;padding:6px 10px;
+  border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+/* Decade sliders. The chart itself names the chosen decade (2020 reads as
+   2020–22), so the slider's raw number is hidden. */
+.vega-embed .vega-bind label{display:flex;align-items:center;gap:10px}
+.vega-embed input[type=range]{width:240px;margin:0;accent-color:var(--ink);cursor:pointer}
+.vega-embed input[type=range] + span{display:none}
+/* Tooltips. vega-embed's own tooltip style is off (js/main.js), so the page sets all of
+   it: hidden until a mark is hovered, the name first in the heading typeface, then each
+   label in muted ink beside its value in bold. The resets keep the section-heading
+   styles off the tooltip's heading. */
+#vg-tooltip-element{visibility:hidden;position:fixed;z-index:1000;max-width:340px;
+  padding:10px 12px;font-family:var(--body);font-size:13px;line-height:1.4;color:var(--ink);
+  white-space:pre-line;background:var(--card);border:1px solid var(--line);border-radius:6px;
+  box-shadow:0 4px 14px rgba(31,27,22,.12)}
+#vg-tooltip-element.visible{visibility:visible}
+#vg-tooltip-element h2{margin:0 0 6px;font-family:var(--head);font-size:15px;font-weight:600;
+  line-height:1.25;letter-spacing:0;text-align:left}
+#vg-tooltip-element h2::after{content:none}
+#vg-tooltip-element table{border-spacing:0}
+#vg-tooltip-element td{padding:2px 0;vertical-align:top}
+#vg-tooltip-element td.key{max-width:200px;padding-right:12px;color:var(--muted)}
+#vg-tooltip-element td.value{font-weight:600}
+
+/* Closing summary */
+.coda{padding:var(--s7) 0;margin-bottom:0}
+.coda h2{color:#F7F5F2}
+.coda p{color:#CFC7BC;text-align:left}
+.coda .eyebrow{text-align:center}
+.coda .lede{color:#EFE9E1}
+.takeaways{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
+           gap:var(--s4) var(--s5);margin:var(--s4) auto var(--s5);padding:0;
+           max-width:var(--grid)}
+.takeaways li{text-align:left;border-top:2px solid var(--gold);padding-top:var(--s2)}
+.takeaways b{display:block;font-family:var(--head);font-weight:600;
+             font-size:38px;line-height:1.1;color:var(--gold)}
+.takeaways span{display:block;font-size:15px;line-height:1.45;color:#CFC7BC;
+                margin-top:var(--s1)}
+
+/* Footer */
+footer.wrap{border-top:1px solid var(--line);padding-top:var(--s6);padding-bottom:var(--s7);
+            color:var(--muted);font-size:15px}
+/* Footer paragraphs kept to about 60 characters a line */
+footer .prose p{max-width:33em}
+footer h2{font-size:22px;color:var(--ink);text-align:center}
+footer a{color:var(--ink)}
+.sources{margin:0 0 var(--s3);padding-left:var(--s3)}
+.sources li{margin-bottom:var(--s1)}
+
+/* Narrow screens */
+@media (max-width:720px){
+  body{font-size:16px}
+  .hero{padding:var(--s6) 0;margin-bottom:var(--s6)}
+  .coda{padding:var(--s6) 0}
+  h2{font-size:26px}
+  section{margin-bottom:var(--s6)}
+  .card{padding:14px;margin:var(--s4) auto}
+  .row-2{grid-template-columns:minmax(0,1fr);margin:var(--s4) auto}
+  .row-2 .card + .card{margin-top:var(--s4)}
+  .takeaways{grid-template-columns:1fr;gap:var(--s3)}
+  .takeaways b{font-size:30px}
+}

@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Bar chart of cinema admissions in Malaysia; admissions for Malaysian films grew from 5.87 million in 2023 to 14.83 million in 2025, and from January to July 2026 reached 7.55 million against 6.94 million for Hollywood films.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": [
@@ -59,8 +60,9 @@
       "axis": {
         "domain": false,
         "ticks": false,
-        "labelFont": "Oswald, Inter, sans-serif",
-        "labelFontSize": 14,
+        "labelFont": "Inter, system-ui, sans-serif",
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
         "labelPadding": 8,
         "labelExpr": "datum.value === 'gap' ? '' : datum.value === 'Jan–Jul 2026' ? 'Malaysian' : indexof(datum.value, 'Hollywood') >= 0 ? 'Hollywood' : datum.value",
         "labelColor": {
@@ -93,7 +95,9 @@
             "range": ["#E63946", "#0072B2"]
           },
           "legend": {
-            "orient": "top",
+            "orient": "none",
+            "legendX": -63,
+            "legendY": -30,
             "direction": "horizontal",
             "symbolType": "square"
           }
@@ -149,9 +153,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

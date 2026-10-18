@@ -108,9 +108,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

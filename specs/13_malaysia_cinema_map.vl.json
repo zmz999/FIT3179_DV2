@@ -1,13 +1,22 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Choropleth map of cinemas mapped in OpenStreetMap per million residents in each Malaysian state and federal territory, with an inset of the Klang Valley; Kuala Lumpur has the most at 9.6 and Putrajaya 8.2.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": "Kuala Lumpur and Putrajaya have the most cinemas per person",
-    "subtitle": "Cinemas mapped in OpenStreetMap per million residents, by state (population: DOSM, 2026)"
+    "subtitle": [
+      "Cinemas mapped in OpenStreetMap per million residents,",
+      "by state (population: DOSM, 2026)"
+    ]
   },
   "width": 700,
   "height": 255,
+  "usermeta": {"minWidth": 520},
   "params": [
+    {
+      "name": "legendRows",
+      "expr": "containerSize()[0] < 340 ? 3 : containerSize()[0] < 510 ? 2 : 1"
+    },
     {
       "name": "klang",
       "value": {"type": "MultiPoint", "coordinates": [[101.42, 2.66], [101.96, 3.37]]}
@@ -74,7 +83,10 @@
                 "range": ["#F2C77F", "#D17E27", "#8B440A", "#3F1A02", "#DCD6CE"]
               },
               "legend": {
-                "orient": "top",
+                "orient": "none",
+                "legendX": -120,
+                "legendY": {"expr": "-52 - (legendRows - 1) * 18"},
+                "columns": {"expr": "legendRows === 3 ? 2 : legendRows === 2 ? 3 : 0"},
                 "direction": "horizontal",
                 "symbolType": "square",
                 "symbolSize": 160,
@@ -117,8 +129,12 @@
               "filter": "indexof(['Sarawak', 'Sabah', 'Pahang', 'Johor'], datum.state) >= 0"
             },
             {
-              "calculate": "datum.state === 'Pahang' ? datum.lat + 0.15 : datum.lat",
+              "calculate": "datum.state === 'Pahang' ? datum.lat + 0.3 : datum.lat",
               "as": "lat"
+            },
+            {
+              "calculate": "datum.state === 'Pahang' ? datum.lon + 0.35 : datum.lon",
+              "as": "lon"
             },
             {
               "calculate": "isValid(datum.per_million) ? datum.label + ' ' + format(datum.per_million, '.1f') : datum.label",
@@ -274,7 +290,10 @@
                 "range": ["#F2C77F", "#D17E27", "#8B440A", "#3F1A02", "#DCD6CE"]
               },
               "legend": {
-                "orient": "top",
+                "orient": "none",
+                "legendX": -120,
+                "legendY": {"expr": "-52 - (legendRows - 1) * 18"},
+                "columns": {"expr": "legendRows === 3 ? 2 : legendRows === 2 ? 3 : 0"},
                 "direction": "horizontal",
                 "symbolType": "square",
                 "symbolSize": 160,
@@ -410,9 +429,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

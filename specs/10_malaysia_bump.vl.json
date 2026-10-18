@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Bump chart of the rank of seven genres among Malaysian-produced films by decade; horror climbed from seventh in the 1990s to second in 2020–22, while drama stayed first.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": [
@@ -34,8 +35,9 @@
       "title": null,
       "axis": {
         "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'",
-        "labelFont": "Oswald, Inter, sans-serif",
-        "labelFontSize": 14,
+        "labelFont": "Inter, system-ui, sans-serif",
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
         "labelColor": "#1F1B16",
         "grid": false,
         "labelAngle": 0
@@ -185,9 +187,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

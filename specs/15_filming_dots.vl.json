@@ -1,13 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Proportional symbol world map of filming locations recorded in Wikidata from 1970 to 2022, with a decade slider; shoots cluster in North America and Europe, and Malaysia's eight shoots are marked in red.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
-    "text": "Films come from everywhere now. They are still shot in the same few places.",
-    "subtitle": "Filming locations recorded in Wikidata, 1970–2022. Circle area shows the number of shoots."
+    "text": [
+      "Films come from everywhere now.",
+      "They are still shot in the same few places."
+    ],
+    "subtitle": [
+      "Filming locations recorded in Wikidata, 1970–2022.",
+      "Circle area shows the number of shoots."
+    ],
+    "dx": {"expr": "textInset"}
   },
   "width": 760,
-  "height": 400,
-  "usermeta": {"aspect": 0.5263},
+  "height": 350,
+  "usermeta": {"aspect": 0.46},
   "params": [
     {
       "name": "eraSel",
@@ -19,20 +27,46 @@
         "step": 10,
         "name": "Decade"
       }
+    },
+    {
+      "name": "textInset",
+      "expr": "max(0, (containerSize()[0] - 770) / 2)"
+    },
+    {"name": "narrow", "expr": "containerSize()[0] < 600"},
+    {"name": "dotScale", "expr": "narrow ? width / 760 : 1"},
+    {
+      "name": "zoomTo",
+      "value": "World",
+      "bind": {
+        "input": "radio",
+        "options": ["World", "North America", "Europe", "Asia"],
+        "name": "Zoom to"
+      }
+    },
+    {
+      "name": "zoomBox",
+      "expr": "zoomTo === 'North America' ? [-127, 18, -66, 55] : zoomTo === 'Europe' ? [-11, 35, 35, 62] : zoomTo === 'Asia' ? [66, -11, 146, 46] : [-180, -56, 180, 84]"
     }
   ],
-  "projection": {"type": "equalEarth"},
+  "projection": {
+    "type": "equalEarth",
+    "fit": {
+      "expr": "{type: 'MultiPoint', coordinates: [[zoomBox[0], zoomBox[1]], [zoomBox[2], zoomBox[1]], [zoomBox[0], zoomBox[3]], [zoomBox[2], zoomBox[3]], [zoomBox[0], clamp(0, zoomBox[1], zoomBox[3])], [zoomBox[2], clamp(0, zoomBox[1], zoomBox[3])], [(zoomBox[0] + zoomBox[2]) / 2, zoomBox[1]], [(zoomBox[0] + zoomBox[2]) / 2, zoomBox[3]]]}"
+    }
+  },
   "layer": [
     {
       "data": {
         "url": "data/world-110m.topojson",
         "format": {"type": "topojson", "feature": "countries"}
       },
+      "transform": [{"filter": "datum.id !== 10"}],
       "mark": {
         "type": "geoshape",
         "fill": "#EDE8E0",
         "stroke": "#FFFFFF",
-        "strokeWidth": 0.5
+        "strokeWidth": 0.5,
+        "clip": true
       }
     },
     {
@@ -60,7 +94,8 @@
         "color": "#8B440A",
         "opacity": 0.5,
         "stroke": "#FFFFFF",
-        "strokeWidth": 0.3
+        "strokeWidth": 0.3,
+        "clip": true
       },
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
@@ -73,14 +108,17 @@
             "type": "linear",
             "zero": true,
             "domain": [0, 1642],
-            "range": [3, 1300]
+            "range": [3, {"expr": "3 + 1297 * dotScale"}]
           },
           "legend": {
             "orient": "none",
-            "legendX": 8,
-            "legendY": {"expr": "height - 120"},
+            "legendX": {"expr": "textInset"},
+            "legendY": {"expr": "height + 14"},
             "values": [10, 100, 800],
-            "direction": "vertical"
+            "direction": "horizontal",
+            "titleOrient": "left",
+            "titlePadding": 12,
+            "columnPadding": 18
           }
         },
         "order": {"field": "shoots", "type": "quantitative", "sort": "descending"},
@@ -131,6 +169,9 @@
             "field": "place",
             "oneOf": ["Los Angeles", "Vancouver", "London", "Hong Kong", "Toronto", "Paris", "Atlanta", "New York City"]
           }
+        },
+        {
+          "filter": "!narrow || indexof(['Los Angeles', 'London', 'Hong Kong'], datum.place) >= 0"
         }
       ],
       "encoding": {
@@ -152,23 +193,25 @@
           "transform": [{"filter": {"field": "place", "oneOf": ["Los Angeles", "Vancouver", "London", "Hong Kong", "Toronto"]}}],
           "mark": {
             "type": "text",
-            "dy": -14,
+            "dy": {"expr": "narrow && datum.place === 'Los Angeles' ? 15 : -14"},
             "fontSize": 12,
             "fontWeight": 600,
             "color": "#1F1B16",
             "stroke": "#FFFFFF",
             "strokeWidth": 3,
-            "strokeOpacity": 0.9
+            "strokeOpacity": 0.9,
+            "clip": true
           }
         },
         {
           "transform": [{"filter": {"field": "place", "oneOf": ["Los Angeles", "Vancouver", "London", "Hong Kong", "Toronto"]}}],
           "mark": {
             "type": "text",
-            "dy": -14,
+            "dy": {"expr": "narrow && datum.place === 'Los Angeles' ? 15 : -14"},
             "fontSize": 12,
             "fontWeight": 600,
-            "color": "#1F1B16"
+            "color": "#1F1B16",
+            "clip": true
           }
         },
         {
@@ -181,7 +224,8 @@
             "color": "#1F1B16",
             "stroke": "#FFFFFF",
             "strokeWidth": 3,
-            "strokeOpacity": 0.9
+            "strokeOpacity": 0.9,
+            "clip": true
           }
         },
         {
@@ -191,7 +235,8 @@
             "dy": 15,
             "fontSize": 12,
             "fontWeight": 600,
-            "color": "#1F1B16"
+            "color": "#1F1B16",
+            "clip": true
           }
         },
         {
@@ -205,7 +250,8 @@
             "color": "#1F1B16",
             "stroke": "#FFFFFF",
             "strokeWidth": 3,
-            "strokeOpacity": 0.9
+            "strokeOpacity": 0.9,
+            "clip": true
           }
         },
         {
@@ -216,7 +262,8 @@
             "dx": 10,
             "fontSize": 12,
             "fontWeight": 600,
-            "color": "#1F1B16"
+            "color": "#1F1B16",
+            "clip": true
           }
         }
       ]
@@ -243,7 +290,8 @@
         "size": 40,
         "opacity": 0.95,
         "stroke": "#FFFFFF",
-        "strokeWidth": 0.6
+        "strokeWidth": 0.6,
+        "clip": true
       },
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
@@ -259,27 +307,167 @@
       }
     },
     {
-      "data": {"values": [{}]},
-      "mark": {
-        "type": "text",
-        "text": {"expr": "eraSel === 1960 ? 'All decades' : eraSel === 2020 ? '2020–22' : eraSel + 's'"},
-        "align": "left",
-        "baseline": "top",
-        "font": "Oswald, Inter, sans-serif",
-        "fontSize": 26,
-        "fontWeight": 600,
-        "color": "#6B6259"
+      "data": {
+        "url": "data/B2_filming_notes.csv",
+        "format": {"type": "csv", "parse": {"era": "number", "n": "number", "lon": "number", "lat": "number"}}
       },
-      "encoding": {"x": {"value": 0}, "y": {"value": 2}}
+      "transform": [
+        {"filter": "datum.era === eraSel && zoomTo === 'World' && isValid(datum.lon)"},
+        {"calculate": "3 + datum.n / 1642 * 1297 * dotScale", "as": "circle_area"}
+      ],
+      "mark": {
+        "type": "circle",
+        "filled": false,
+        "stroke": "#1F1B16",
+        "strokeWidth": 1.5,
+        "opacity": 1,
+        "clip": true
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {"field": "circle_area", "type": "quantitative", "scale": null},
+        "tooltip": [
+          {"field": "place", "type": "nominal", "title": "title"},
+          {"field": "n", "type": "quantitative", "format": ",", "title": "Shoots recorded nearby"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/B2_filming_notes.csv",
+        "format": {"type": "csv", "parse": {"era": "number", "n": "number", "p": "number"}}
+      },
+      "transform": [
+        {"filter": "datum.era === eraSel && zoomTo === 'World'"},
+        {
+          "calculate": "[replace(replace(datum.line1, '{n}', format(datum.n, ',')), '{p}', format(datum.p, ',')), replace(replace(datum.line2, '{n}', format(datum.n, ',')), '{p}', format(datum.p, ','))]",
+          "as": "note"
+        }
+      ],
+      "encoding": {
+        "x": {"value": {"expr": "textInset"}},
+        "y": {"value": {"expr": "narrow ? height - 30 : height - 64"}},
+        "text": {"field": "note"}
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "top",
+            "fontSize": {"expr": "narrow ? 11 : 13"},
+            "lineHeight": {"expr": "narrow ? 14 : 17"},
+            "color": "#1F1B16",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 4,
+            "strokeJoin": "round"
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "top",
+            "fontSize": {"expr": "narrow ? 11 : 13"},
+            "lineHeight": {"expr": "narrow ? 14 : 17"},
+            "color": "#1F1B16"
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "url": "data/B2_shoots_by_region.csv",
+        "format": {"type": "csv", "parse": {"decade": "number", "shoots": "number"}}
+      },
+      "transform": [
+        {"filter": "eraSel === 1960 || datum.decade === eraSel"},
+        {"calculate": "datum.region === 'Africa' ? datum.shoots : 0", "as": "africa"},
+        {
+          "aggregate": [
+            {"op": "sum", "field": "shoots", "as": "total"},
+            {"op": "sum", "field": "africa", "as": "africa"}
+          ]
+        },
+        {"filter": "zoomTo === 'World' && datum.total > 0"},
+        {
+          "calculate": "['Africa: ' + format(datum.africa / datum.total, '.1%'), eraSel === 1960 ? 'of all recorded shoots' : 'of the decade\\'s shoots']",
+          "as": "note"
+        },
+        {"calculate": "21", "as": "lon"},
+        {"calculate": "narrow ? -4 : -12", "as": "lat"}
+      ],
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "note"}
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "fontSize": {"expr": "narrow ? 11 : 13"},
+            "lineHeight": {"expr": "narrow ? 14 : 17"},
+            "color": "#1F1B16",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 4,
+            "strokeJoin": "round",
+            "clip": true
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "fontSize": {"expr": "narrow ? 11 : 13"},
+            "lineHeight": {"expr": "narrow ? 14 : 17"},
+            "color": "#1F1B16",
+            "clip": true
+          }
+        }
+      ]
+    },
+    {
+      "data": {"values": [{}]},
+      "encoding": {"x": {"value": {"expr": "textInset"}}, "y": {"value": 2}},
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "text": {"expr": "eraSel === 1960 ? 'All decades' : eraSel === 2020 ? '2020–22' : eraSel + 's'"},
+            "align": "left",
+            "baseline": "top",
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": {"expr": "narrow ? 18 : 24"},
+            "fontWeight": 600,
+            "color": "#6B6259",
+            "stroke": "#FFFFFF",
+            "strokeWidth": {"expr": "narrow ? 4 : 5"},
+            "strokeJoin": "round"
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "text": {"expr": "eraSel === 1960 ? 'All decades' : eraSel === 2020 ? '2020–22' : eraSel + 's'"},
+            "align": "left",
+            "baseline": "top",
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": {"expr": "narrow ? 18 : 24"},
+            "fontWeight": 600,
+            "color": "#6B6259"
+          }
+        }
+      ]
     }
   ],
   "config": {
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

@@ -1,9 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Ridgeline chart of the budgets of each year's 20 biggest films by decade, in 2025 US dollars; the share costing $100 million or more rose from 7.7% in the 1970s to 88.4% in the 2010s.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": "The $100 million film went from rare to routine",
-    "subtitle": "Budget spread of each year's 20 biggest films, by decade, in 2025 US dollars"
+    "subtitle": [
+      "Budget spread of each year's 20 biggest films,",
+      "by decade, in 2025 US dollars"
+    ]
   },
   "data": {
     "url": "data/04_ridgeline_budget_decade.csv",
@@ -26,8 +30,9 @@
       "header": {
         "labelAngle": 0,
         "labelAlign": "left",
-        "labelFont": "Oswald, Inter, sans-serif",
-        "labelFontSize": 14,
+        "labelFont": "Inter, system-ui, sans-serif",
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
         "labelColor": "#1F1B16",
         "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'"
       }
@@ -43,24 +48,8 @@
           "type": "area",
           "interpolate": "monotone",
           "line": {"color": "#1F1B16", "strokeWidth": 1},
+          "color": "#F2C77F",
           "fillOpacity": 0.85
-        },
-        "encoding": {
-          "color": {
-            "field": "decade",
-            "type": "ordinal",
-            "scale": {
-              "range": [
-                "#EBB160",
-                "#D98931",
-                "#BB6616",
-                "#92480B",
-                "#663005",
-                "#3F1A02"
-              ]
-            },
-            "legend": null
-          }
         }
       },
       {
@@ -139,7 +128,7 @@
         "scale": {"domain": [0, 0.26]}
       },
       "tooltip": [
-        {"field": "decade", "type": "ordinal", "title": "Decade"},
+        {"field": "decade_label", "type": "nominal", "title": "Decade"},
         {
           "field": "budget_usd",
           "type": "quantitative",
@@ -155,9 +144,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",
@@ -216,6 +205,10 @@
   },
   "transform": [
     {"filter": "datum.log_budget >= 4.8 && datum.log_budget <= 9.2"},
+    {
+      "calculate": "datum.decade === 2020 ? '2020–22' : datum.decade + 's'",
+      "as": "decade_label"
+    },
     {"calculate": "datum.log_budget >= 8 ? datum.density : 0", "as": "density_100m"},
     {
       "joinaggregate": [{"op": "sum", "field": "density_100m", "as": "share_100m"}],

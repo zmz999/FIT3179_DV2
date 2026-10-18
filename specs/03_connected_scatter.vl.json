@@ -1,15 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Connected scatterplot of the median budget against the median box office of each year's 20 biggest films, averaged by decade on log scales; from the 1970s to the 2010s budgets rose about eightfold and box office about fourfold.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
-    "text": "The money going in grew nearly twice as fast as the money coming out",
+    "text": [
+      "The money going in grew nearly twice as fast",
+      "as the money coming out"
+    ],
     "subtitle": [
-      "Median budget and box office of each year's 20 biggest films, in 2025 US dollars (log scales).",
-      "Darker dots are later years; dashed lines mark box office of 8, 4 and 2 times the budget."
+      "Black dots: decade averages of each year's medians",
+      "for its 20 biggest films (2025 US$, log scales).",
+      "Grey dots: single years; dashed lines: 8×, 4×, 2× budget."
     ]
   },
   "width": 520,
   "height": 400,
+  "params": [
+    {"name": "narrow", "expr": "width < 360"}
+  ],
   "data": {
     "url": "data/03_budget_revenue_year.csv",
     "format": {
@@ -84,42 +92,105 @@
       "encoding": {"text": {"field": "label", "type": "nominal"}}
     },
     {
-      "mark": {"type": "line", "strokeWidth": 1.2, "color": "#C4BCB1"},
-      "encoding": {"order": {"field": "year", "type": "quantitative"}}
+      "mark": {"type": "point", "filled": true, "size": 34, "color": "#CFC6BA", "opacity": 1}
     },
     {
-      "mark": {
-        "type": "point",
-        "filled": true,
-        "size": 66,
-        "stroke": "#FFFFFF",
-        "strokeWidth": 0.6,
-        "opacity": 1
-      },
-      "encoding": {
-        "color": {
-          "field": "decade",
-          "type": "ordinal",
-          "title": "Decade",
-          "scale": {
-            "range": [
-              "#EBB160",
-              "#D98931",
-              "#BB6616",
-              "#92480B",
-              "#663005",
-              "#3F1A02"
-            ]
-          },
-          "legend": null
+      "transform": [{"filter": "datum.year === 2020"}],
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "text": {"expr": "narrow ? ['2020:', 'cinemas closed'] : '2020: cinemas closed'"},
+            "align": {"expr": "narrow ? 'center' : 'left'"},
+            "baseline": {"expr": "narrow ? 'top' : 'middle'"},
+            "dx": {"expr": "narrow ? 0 : 8"},
+            "dy": {"expr": "narrow ? 30 : 1"},
+            "fontSize": 12,
+            "color": "#6B6259",
+            "stroke": "#FFFFFF",
+            "strokeWidth": 4
+          }
         },
-        "tooltip": [
-          {
-            "field": "year",
-            "type": "quantitative",
-            "format": "d",
-            "title": "title"
+        {
+          "mark": {
+            "type": "text",
+            "text": {"expr": "narrow ? ['2020:', 'cinemas closed'] : '2020: cinemas closed'"},
+            "align": {"expr": "narrow ? 'center' : 'left'"},
+            "baseline": {"expr": "narrow ? 'top' : 'middle'"},
+            "dx": {"expr": "narrow ? 0 : 8"},
+            "dy": {"expr": "narrow ? 30 : 1"},
+            "fontSize": 12,
+            "color": "#6B6259"
+          }
+        }
+      ]
+    },
+    {
+      "transform": [
+        {
+          "aggregate": [
+            {"op": "mean", "field": "median_budget_musd", "as": "median_budget_musd"},
+            {"op": "mean", "field": "median_revenue_musd", "as": "median_revenue_musd"}
+          ],
+          "groupby": ["decade"]
+        },
+        {
+          "calculate": "datum.decade === 2020 ? '2020–22' : datum.decade + 's'",
+          "as": "label"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {"type": "line", "color": "#1F1B16", "strokeWidth": 2},
+          "encoding": {"order": {"field": "decade", "type": "quantitative"}}
+        },
+        {
+          "transform": [{"filter": {"field": "decade", "oneOf": [1970, 1980]}}],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 10,
+            "dy": 12,
+            "fontSize": 13,
+            "fontWeight": 600,
+            "color": "#1F1B16"
           },
+          "encoding": {"text": {"field": "label"}}
+        },
+        {
+          "transform": [{"filter": {"field": "decade", "oneOf": [1990, 2000]}}],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -10,
+            "dy": -8,
+            "fontSize": 13,
+            "fontWeight": 600,
+            "color": "#1F1B16"
+          },
+          "encoding": {"text": {"field": "label"}}
+        },
+        {
+          "transform": [{"filter": {"field": "decade", "oneOf": [2010, 2020]}}],
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 10,
+            "dy": 1,
+            "fontSize": 13,
+            "fontWeight": 600,
+            "color": "#1F1B16"
+          },
+          "encoding": {"text": {"field": "label"}}
+        }
+      ]
+    },
+    {
+      "description": "An invisible copy of the yearly dots with a larger hit area, drawn above the decade line and labels so that every dot shows its tooltip.",
+      "mark": {"type": "point", "filled": true, "size": 80, "opacity": 0},
+      "encoding": {
+        "tooltip": [
+          {"field": "year", "type": "quantitative", "format": "d", "title": "title"},
           {
             "field": "median_budget_musd",
             "type": "quantitative",
@@ -138,58 +209,62 @@
     {
       "transform": [
         {
-          "filter": "indexof([1970, 1980, 1990, 2010, 2019, 2022], datum.year) >= 0"
+          "aggregate": [
+            {"op": "mean", "field": "median_budget_musd", "as": "median_budget_musd"},
+            {"op": "mean", "field": "median_revenue_musd", "as": "median_revenue_musd"}
+          ],
+          "groupby": ["decade"]
+        },
+        {
+          "calculate": "datum.decade === 2020 ? '2020–22' : datum.decade + 's'",
+          "as": "label"
+        },
+        {
+          "calculate": "datum.median_revenue_musd / datum.median_budget_musd",
+          "as": "ratio"
         }
       ],
       "mark": {
-        "type": "text",
-        "dx": 8,
-        "dy": -8,
-        "fontSize": 12,
-        "fontWeight": 600,
+        "type": "point",
+        "filled": true,
+        "size": 90,
         "color": "#1F1B16",
-        "align": "left"
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5,
+        "opacity": 1
       },
       "encoding": {
-        "text": {"field": "year", "type": "quantitative", "format": "d"}
+        "tooltip": [
+          {"field": "label", "type": "nominal", "title": "title"},
+          {
+            "field": "median_budget_musd",
+            "type": "quantitative",
+            "format": "$,.0f",
+            "title": "Average median budget (US$m)"
+          },
+          {
+            "field": "median_revenue_musd",
+            "type": "quantitative",
+            "format": "$,.0f",
+            "title": "Average median box office (US$m)"
+          },
+          {
+            "field": "ratio",
+            "type": "quantitative",
+            "format": ".1f",
+            "title": "Box office ÷ budget"
+          }
+        ]
       }
-    },
-    {
-      "transform": [{"filter": "datum.year === 2000"}],
-      "mark": {
-        "type": "text",
-        "dx": -8,
-        "dy": -8,
-        "fontSize": 12,
-        "fontWeight": 600,
-        "color": "#1F1B16",
-        "align": "right"
-      },
-      "encoding": {
-        "text": {"field": "year", "type": "quantitative", "format": "d"}
-      }
-    },
-    {
-      "transform": [{"filter": "datum.year === 2020"}],
-      "mark": {
-        "type": "text",
-        "dx": 10,
-        "dy": 2,
-        "fontSize": 12,
-        "fontWeight": 600,
-        "color": "#1F1B16",
-        "align": "left"
-      },
-      "encoding": {"text": {"value": "2020: cinemas close for the pandemic"}}
     }
   ],
   "config": {
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

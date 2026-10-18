@@ -1,13 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Proportional symbol world map of each country or region's share of the decade's widely seen films, with a decade slider; the United States peaks at 55% in the 1990s, and Malaysia is ringed in red.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
-    "text": "Hollywood peaked in the 1990s, then a different world came back",
-    "subtitle": "Circle area shows each country or region's share of the decade's widely seen films"
+    "text": [
+      "Hollywood peaked in the 1990s,",
+      "then a different world came back"
+    ],
+    "subtitle": [
+      "Circle area shows each country or region's share",
+      "of the decade's widely seen films"
+    ],
+    "dx": {"expr": "textInset"}
   },
   "width": 760,
-  "height": 380,
-  "usermeta": {"aspect": 0.5},
+  "height": 350,
+  "usermeta": {"aspect": 0.46},
   "params": [
     {
       "name": "decadeSel",
@@ -19,34 +27,49 @@
         "step": 10,
         "name": "Decade"
       }
+    },
+    {
+      "name": "textInset",
+      "expr": "max(0, (containerSize()[0] - 770) / 2)"
+    },
+    {"name": "narrow", "expr": "containerSize()[0] < 450"},
+    {
+      "name": "legendRows",
+      "expr": "narrow ? 3 : containerSize()[0] < 666 ? 2 : 1"
+    },
+    {
+      "name": "zoomTo",
+      "value": "World",
+      "bind": {
+        "input": "radio",
+        "options": ["World", "North America", "Europe", "Asia"],
+        "name": "Zoom to"
+      }
+    },
+    {
+      "name": "zoomBox",
+      "expr": "zoomTo === 'North America' ? [-127, 18, -66, 55] : zoomTo === 'Europe' ? [-11, 35, 35, 62] : zoomTo === 'Asia' ? [66, -11, 146, 46] : [-180, -56, 180, 84]"
     }
   ],
-  "projection": {"type": "equalEarth"},
+  "projection": {
+    "type": "equalEarth",
+    "fit": {
+      "expr": "{type: 'MultiPoint', coordinates: [[zoomBox[0], zoomBox[1]], [zoomBox[2], zoomBox[1]], [zoomBox[0], zoomBox[3]], [zoomBox[2], zoomBox[3]], [zoomBox[0], clamp(0, zoomBox[1], zoomBox[3])], [zoomBox[2], clamp(0, zoomBox[1], zoomBox[3])], [(zoomBox[0] + zoomBox[2]) / 2, zoomBox[1]], [(zoomBox[0] + zoomBox[2]) / 2, zoomBox[3]]]}"
+    }
+  },
   "layer": [
-    {
-      "data": {"values": [{}]},
-      "mark": {
-        "type": "text",
-        "text": {"expr": "decadeSel === 2020 ? '2020–22' : decadeSel + 's'"},
-        "align": "left",
-        "baseline": "top",
-        "font": "Oswald, Inter, sans-serif",
-        "fontSize": 26,
-        "fontWeight": 600,
-        "color": "#6B6259"
-      },
-      "encoding": {"x": {"value": 0}, "y": {"value": 2}}
-    },
     {
       "data": {
         "url": "data/world-110m.topojson",
         "format": {"type": "topojson", "feature": "countries"}
       },
+      "transform": [{"filter": "datum.id !== 10"}],
       "mark": {
         "type": "geoshape",
         "fill": "#EDE8E0",
         "stroke": "#FFFFFF",
-        "strokeWidth": 0.5
+        "strokeWidth": 0.5,
+        "clip": true
       }
     },
     {
@@ -81,7 +104,8 @@
             "type": "circle",
             "opacity": 0.8,
             "stroke": "#FFFFFF",
-            "strokeWidth": 0.8
+            "strokeWidth": 0.8,
+            "clip": true
           },
           "encoding": {
             "longitude": {"field": "lon", "type": "quantitative"},
@@ -93,12 +117,16 @@
               "scale": {
                 "type": "linear",
                 "domain": [0, 60],
-                "range": [0, 5200]
+                "range": [0, {"expr": "narrow ? 5200 * width / 760 : 5200"}]
               },
               "legend": {
                 "orient": "none",
-                "legendX": 4,
-                "legendY": {"expr": "height - 144"},
+                "legendX": {"expr": "textInset"},
+                "legendY": {"expr": "height + 14"},
+                "direction": "horizontal",
+                "titleOrient": {"expr": "narrow ? 'top' : 'left'"},
+                "titlePadding": {"expr": "narrow ? 6 : 12"},
+                "columnPadding": 18,
                 "values": [1, 10, 30],
                 "labelExpr": "datum.value + '%'",
                 "symbolFillColor": "#B8B0A5",
@@ -121,7 +149,10 @@
                 ]
               },
               "legend": {
-                "orient": "top",
+                "orient": "none",
+                "legendX": {"expr": "textInset"},
+                "legendY": {"expr": "-32 - (legendRows - 1) * 17"},
+                "columns": {"expr": "legendRows === 3 ? 2 : legendRows === 2 ? 3 : 0"},
                 "direction": "horizontal",
                 "title": null,
                 "symbolType": "circle",
@@ -159,12 +190,23 @@
             "type": "text",
             "color": "#FFFFFF",
             "fontSize": 14,
-            "fontWeight": 600
+            "fontWeight": 600,
+            "clip": true
           },
           "encoding": {
             "longitude": {"field": "lon", "type": "quantitative"},
             "latitude": {"field": "lat", "type": "quantitative"},
-            "text": {"field": "label"}
+            "text": {"field": "label"},
+            "tooltip": [
+              {"field": "country", "type": "nominal", "title": "title"},
+              {"field": "region6", "type": "nominal", "title": "Region"},
+              {
+                "field": "share_pct",
+                "type": "quantitative",
+                "format": ".2f",
+                "title": "% of the decade's films"
+              }
+            ]
           }
         }
       ]
@@ -187,7 +229,20 @@
           }
         }
       },
-      "transform": [{"filter": "datum.iso_num === 458"}],
+      "transform": [
+        {"filter": "datum.iso_num === 458"},
+        {
+          "calculate": "isValid(datum['d' + decadeSel]) ? format(datum['d' + decadeSel], '.2r') : 'none recorded'",
+          "as": "share_label"
+        }
+      ],
+      "encoding": {
+        "tooltip": [
+          {"field": "country", "type": "nominal", "title": "title"},
+          {"field": "region", "type": "nominal", "title": "Region"},
+          {"field": "share_label", "type": "nominal", "title": "% of the decade's films"}
+        ]
+      },
       "layer": [
         {
           "mark": {
@@ -197,7 +252,8 @@
             "filled": false,
             "opacity": 1,
             "color": "#E63946",
-            "strokeWidth": 2
+            "strokeWidth": 2,
+            "clip": true
           },
           "encoding": {
             "longitude": {"field": "lon", "type": "quantitative"},
@@ -209,12 +265,46 @@
             "type": "text",
             "dy": 16,
             "color": "#B3202D",
-            "fontWeight": 600
+            "fontWeight": 600,
+            "clip": true
           },
           "encoding": {
             "longitude": {"field": "lon", "type": "quantitative"},
             "latitude": {"field": "lat", "type": "quantitative"},
             "text": {"value": "Malaysia"}
+          }
+        }
+      ]
+    },
+    {
+      "data": {"values": [{}]},
+      "encoding": {"x": {"value": {"expr": "textInset"}}, "y": {"value": 2}},
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "text": {"expr": "decadeSel === 2020 ? '2020–22' : decadeSel + 's'"},
+            "align": "left",
+            "baseline": "top",
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": {"expr": "narrow ? 18 : 24"},
+            "fontWeight": 600,
+            "color": "#6B6259",
+            "stroke": "#FFFFFF",
+            "strokeWidth": {"expr": "narrow ? 4 : 5"},
+            "strokeJoin": "round"
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "text": {"expr": "decadeSel === 2020 ? '2020–22' : decadeSel + 's'"},
+            "align": "left",
+            "baseline": "top",
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": {"expr": "narrow ? 18 : 24"},
+            "fontWeight": 600,
+            "color": "#6B6259"
           }
         }
       ]
@@ -224,9 +314,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

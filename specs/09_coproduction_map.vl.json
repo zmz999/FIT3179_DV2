@@ -1,25 +1,60 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Flow map of the pairs of countries or regions that co-produced at least 15 widely seen films from 1970 to 2022; pairs within Europe and North America made 80.7% of these films, and no Malaysian pair reaches 15.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
-    "text": "Co-production is a North Atlantic club, and Malaysia is barely in the room",
-    "subtitle": "Pairs of countries or regions that co-produced 15 or more widely seen films, 1970–2022"
+    "text": [
+      "Co-production is a North Atlantic club,",
+      "and Malaysia is barely in the room"
+    ],
+    "subtitle": [
+      "Pairs of countries or regions that co-produced",
+      "15 or more widely seen films, 1970–2022"
+    ],
+    "dx": {"expr": "textInset"}
   },
+  "params": [
+    {
+      "name": "textInset",
+      "expr": "max(0, (containerSize()[0] - 770) / 2)"
+    },
+    {"name": "narrow", "expr": "width < 420"},
+    {
+      "name": "zoomTo",
+      "value": "World",
+      "bind": {
+        "input": "radio",
+        "options": ["World", "North America", "Europe", "Asia"],
+        "name": "Zoom to"
+      }
+    },
+    {
+      "name": "zoomBox",
+      "expr": "zoomTo === 'North America' ? [-127, 18, -66, 55] : zoomTo === 'Europe' ? [-11, 35, 35, 62] : zoomTo === 'Asia' ? [66, -11, 146, 46] : [-180, -56, 180, 84]"
+    }
+  ],
   "width": 760,
-  "height": 400,
-  "usermeta": {"aspect": 0.5263},
-  "projection": {"type": "equalEarth"},
+  "height": 350,
+  "usermeta": {"aspect": 0.46},
+  "projection": {
+    "type": "equalEarth",
+    "fit": {
+      "expr": "{type: 'MultiPoint', coordinates: [[zoomBox[0], zoomBox[1]], [zoomBox[2], zoomBox[1]], [zoomBox[0], zoomBox[3]], [zoomBox[2], zoomBox[3]], [zoomBox[0], clamp(0, zoomBox[1], zoomBox[3])], [zoomBox[2], clamp(0, zoomBox[1], zoomBox[3])], [(zoomBox[0] + zoomBox[2]) / 2, zoomBox[1]], [(zoomBox[0] + zoomBox[2]) / 2, zoomBox[3]]]}"
+    }
+  },
   "layer": [
     {
       "data": {
         "url": "data/world-110m.topojson",
         "format": {"type": "topojson", "feature": "countries"}
       },
+      "transform": [{"filter": "datum.id !== 10"}],
       "mark": {
         "type": "geoshape",
         "fill": "#EDE8E0",
         "stroke": "#FFFFFF",
-        "strokeWidth": 0.5
+        "strokeWidth": 0.5,
+        "clip": true
       }
     },
     {
@@ -42,7 +77,8 @@
         "type": "geoshape",
         "filled": false,
         "stroke": "#5E554C",
-        "strokeOpacity": 0.4
+        "strokeOpacity": 0.4,
+        "clip": true
       },
       "encoding": {
         "shape": {"field": "geo", "type": "geojson"},
@@ -53,16 +89,18 @@
           "scale": {"type": "sqrt", "range": [0.4, 7]},
           "legend": {
             "orient": "none",
-            "legendX": 8,
-            "legendY": {"expr": "height - 110"},
+            "legendX": {"expr": "textInset"},
+            "legendY": {"expr": "height + 14"},
             "values": [50, 500, 1400],
-            "direction": "vertical",
+            "direction": "horizontal",
+            "titleOrient": {"expr": "narrow ? 'top' : 'left'"},
+            "titlePadding": {"expr": "narrow ? 6 : 12"},
+            "columnPadding": {"expr": "narrow ? 12 : 18"},
             "symbolType": "stroke",
+            "symbolSize": 400,
+            "clipHeight": 16,
             "symbolStrokeColor": "#5E554C",
-            "symbolOpacity": 0.7,
-            "fillColor": "#FFFFFF",
-            "padding": 6,
-            "cornerRadius": 4
+            "symbolOpacity": 0.7
           }
         },
         "tooltip": [
@@ -117,7 +155,8 @@
         "opacity": 1,
         "size": 90,
         "stroke": "#FFFFFF",
-        "strokeWidth": 1.2
+        "strokeWidth": 1.2,
+        "clip": true
       },
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
@@ -126,42 +165,41 @@
       }
     },
     {
-      "data": {
-        "values": [
-          {
-            "lon": 114.507,
-            "lat": 3.5313,
-            "label": "Malaysia: no pair reaches 15 films"
-          }
-        ]
-      },
+      "data": {"values": [{"lon": 114.507, "lat": 3.5313}]},
       "layer": [
         {
           "mark": {
             "type": "text",
-            "dy": 16,
+            "text": {"expr": "narrow ? ['Malaysia: no pair', 'reaches 15 films'] : 'Malaysia: no pair reaches 15 films'"},
+            "align": {"expr": "narrow ? 'right' : 'center'"},
+            "dx": {"expr": "narrow ? -8 : 0"},
+            "dy": {"expr": "narrow ? -6 : 16"},
             "fontSize": 12,
             "fontWeight": 600,
             "color": "#B3202D",
             "stroke": "#FFFFFF",
             "strokeWidth": 4,
-            "strokeOpacity": 0.9
+            "strokeOpacity": 0.9,
+            "clip": true
           }
         },
         {
           "mark": {
             "type": "text",
-            "dy": 16,
+            "text": {"expr": "narrow ? ['Malaysia: no pair', 'reaches 15 films'] : 'Malaysia: no pair reaches 15 films'"},
+            "align": {"expr": "narrow ? 'right' : 'center'"},
+            "dx": {"expr": "narrow ? -8 : 0"},
+            "dy": {"expr": "narrow ? -6 : 16"},
             "fontSize": 12,
             "fontWeight": 600,
-            "color": "#B3202D"
+            "color": "#B3202D",
+            "clip": true
           }
         }
       ],
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
-        "latitude": {"field": "lat", "type": "quantitative"},
-        "text": {"field": "label", "type": "nominal"}
+        "latitude": {"field": "lat", "type": "quantitative"}
       }
     }
   ],
@@ -169,9 +207,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

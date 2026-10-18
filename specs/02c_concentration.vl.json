@@ -1,15 +1,26 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Rows of tiles, one per decade, ranking countries and regions by their share of widely seen films; the United States alone made up half in the 1990s, while today it takes the United States, France and the United Kingdom together.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
-    "text": "It took one country to account for half of 1990s cinema. Today it takes three.",
+    "text": [
+      "Half of 1990s cinema came from one country.",
+      "Today it takes three."
+    ],
     "subtitle": [
-      "Countries or regions in order of their share of the decade's widely seen films.",
-      "The black bar marks where the running total passes half; each row stops at four-fifths."
+      "Each decade's countries or regions, largest share first.",
+      "The black bar marks half; each row stops at four-fifths."
     ]
   },
   "width": 700,
   "height": 270,
+  "usermeta": {"minWidth": 520},
+  "params": [
+    {
+      "name": "legendRows",
+      "expr": "containerSize()[0] < 360 ? 3 : containerSize()[0] < 540 ? 2 : 1"
+    }
+  ],
   "data": {
     "url": "data/02_country_shares_decade.csv",
     "format": {
@@ -64,8 +75,9 @@
       "axis": {
         "domain": false,
         "ticks": false,
-        "labelFont": "Oswald, Inter, sans-serif",
-        "labelFontSize": 14,
+        "labelFont": "Inter, system-ui, sans-serif",
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
         "labelColor": "#1F1B16",
         "labelPadding": 8
       }
@@ -98,7 +110,23 @@
               "Rest of the world"
             ]
           },
-          "legend": null
+          "legend": {
+            "orient": "none",
+            "legendX": -59,
+            "legendY": {"expr": "-30 - (legendRows - 1) * 17"},
+            "columns": {"expr": "legendRows === 3 ? 2 : legendRows === 2 ? 3 : 0"},
+            "direction": "horizontal",
+            "title": null,
+            "symbolType": "square",
+            "columnPadding": 14,
+            "values": [
+              "North America",
+              "Europe",
+              "East Asia",
+              "South & Southeast Asia",
+              "Latin America"
+            ]
+          }
         },
         "tooltip": [
           {"field": "country", "type": "nominal", "title": "title"},
@@ -149,7 +177,7 @@
     },
     {
       "transform": [{"filter": "datum.iso_a3 !== 'HKG'"}],
-      "mark": {"type": "text", "fontSize": 12, "fontWeight": 600},
+      "mark": {"type": "text", "fontSize": {"expr": "containerSize()[0] < 600 ? 10 : 12"}, "fontWeight": 600},
       "encoding": {
         "x": {
           "field": "rank",
@@ -170,7 +198,7 @@
       "transform": [{"filter": "datum.iso_a3 === 'HKG'"}],
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": {"expr": "containerSize()[0] < 600 ? 10 : 12"},
         "fontWeight": 600,
         "lineBreak": "\n",
         "lineHeight": 13,
@@ -197,9 +225,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

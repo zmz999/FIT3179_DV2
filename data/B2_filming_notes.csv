@@ -1,0 +1,7 @@
+era,line1,line2,n,p,place,lon,lat
+1970,"Europe recorded {n} shoots,","North America {p}",1142,716,,,
+1980,"Los Angeles: {n} shoots,","up from {p} in the 1970s",197,99,Los Angeles,-118,34
+1990,"Hong Kong: {n} shoots,","its busiest decade",92,,Hong Kong,114,22
+2000,"Vancouver: {n} shoots,","up from {p} in the 1990s",245,75,Vancouver,-123,49
+2010,"Atlanta: {n} shoots,","up from {p} in the 2000s",229,39,Atlanta,-84,34
+2020,"Atlanta: {n} shoots, more","than Los Angeles ({p})",56,40,Atlanta,-84,34

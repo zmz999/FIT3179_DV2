@@ -1,0 +1,51 @@
+decade,region,shoots
+1970,North America,716
+1970,Europe,1142
+1970,East Asia,40
+1970,South & Southeast Asia,13
+1970,Latin America,38
+1970,Middle East & Central Asia,38
+1970,Oceania,5
+1970,Africa,9
+1980,North America,1262
+1980,Europe,1123
+1980,East Asia,86
+1980,South & Southeast Asia,43
+1980,Latin America,61
+1980,Middle East & Central Asia,34
+1980,Oceania,29
+1980,Africa,7
+1990,North America,2019
+1990,Europe,1069
+1990,East Asia,116
+1990,South & Southeast Asia,120
+1990,Latin America,51
+1990,Middle East & Central Asia,18
+1990,Oceania,39
+1990,Africa,5
+2000,North America,2920
+2000,Europe,2188
+2000,East Asia,152
+2000,South & Southeast Asia,150
+2000,Latin America,142
+2000,Middle East & Central Asia,93
+2000,Oceania,88
+2000,Africa,20
+2000,Antarctica,3
+2010,North America,2808
+2010,Europe,3028
+2010,East Asia,324
+2010,South & Southeast Asia,198
+2010,Latin America,148
+2010,Middle East & Central Asia,163
+2010,Oceania,83
+2010,Africa,67
+2010,Antarctica,1
+2020,North America,400
+2020,Europe,687
+2020,East Asia,28
+2020,South & Southeast Asia,70
+2020,Latin America,76
+2020,Middle East & Central Asia,42
+2020,Oceania,31
+2020,Africa,22

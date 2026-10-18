@@ -29,9 +29,9 @@ const SPECS = [
 const MIN_MARKS = {
   '01_stacked_area': 361,
   '02_world_shares': 296,
-  '02c_concentration': 112,
-  '03_connected_scatter': 164,
-  '04_ridgeline': 378,
+  '02c_concentration': 135,
+  '03_connected_scatter': 176,
+  '04_ridgeline': 372,
   '05_genre_heatmap': 291,
   '06_hexbin': 454,
   '07_rating_box': 63,
@@ -51,7 +51,7 @@ const REGIONS = ['North America', 'Europe', 'East Asia', 'South & Southeast Asia
                  'Middle East & Central Asia', 'Africa', 'Oceania'];
 
 const EMBED_OPTIONS = { actions: false, renderer: 'canvas', tooltip: { theme: 'light' } };
-const FONTS = ['400 12px Inter', '500 12px Inter', '600 12px Inter', '500 12px Oswald', '600 12px Oswald'];
+const FONTS = ['400 12px Inter', '500 12px Inter', '600 12px Inter', '400 12px "DM Serif Display"'];
 
 // ---- results ---------------------------------------------------------------
 
@@ -316,6 +316,62 @@ async function checkData() {
   const myShoots = await readCsv('data/B2_malaysia_shoots.csv');
   check(myShoots.length === 8, `eight Malaysian filming locations (${myShoots.length})`);
 
+  // Shoots by region (the Africa note) must add up to the grid, decade by decade.
+  const byRegion = await readCsv('data/B2_shoots_by_region.csv');
+  const gridDecades = groupBy(b2, 'decade'), regionDecades = groupBy(byRegion, 'decade');
+  check([...gridDecades].every(([d, rows]) => regionDecades.has(d) &&
+      sum(rows.map(r => num(r.shoots))) === sum(regionDecades.get(d).map(r => num(r.shoots)))),
+    'shoots by region add up to the filming grid in every decade');
+  // Each decade note's figures must match the grid or the regions, and its claims must hold.
+  const notesB2 = new Map((await readCsv('data/B2_filming_notes.csv')).map(r => [num(r.era), r]));
+  const at = (place, decade) => sum(b2.filter(r => r.place === place && num(r.decade) === decade).map(r => num(r.shoots)));
+  const inRegion = (region, decade) => sum(byRegion.filter(r => r.region === region && num(r.decade) === decade).map(r => num(r.shoots)));
+  const expected = {
+    1970: [inRegion('Europe', 1970), inRegion('North America', 1970)],
+    1980: [at('Los Angeles', 1980), at('Los Angeles', 1970)],
+    1990: [at('Hong Kong', 1990), NaN],
+    2000: [at('Vancouver', 2000), at('Vancouver', 1990)],
+    2010: [at('Atlanta', 2010), at('Atlanta', 2000)],
+    2020: [at('Atlanta', 2020), at('Los Angeles', 2020)],
+  };
+  const same = (a, b) => a === b || (Number.isNaN(a) && Number.isNaN(b));
+  check(Object.entries(expected).every(([era, [n, p]]) => notesB2.has(num(era)) &&
+      same(num(notesB2.get(num(era)).n), n) && same(num(notesB2.get(num(era)).p), p)),
+    'every figure in the filming map\'s decade notes matches the data');
+  const hk = DECADES.map(d => at('Hong Kong', d));
+  const top2020 = Math.max(...b2.filter(r => num(r.decade) === 2020).map(r => num(r.shoots)));
+  check(Math.max(...hk) === at('Hong Kong', 1990) && top2020 === at('Atlanta', 2020),
+    'the notes\' claims hold: the 1990s were Hong Kong\'s busiest decade and Atlanta led 2020-22');
+  const africaShares = DECADES.map(d => inRegion('Africa', d) / sum(byRegion.filter(r => num(r.decade) === d).map(r => num(r.shoots))));
+  check(Math.max(...africaShares) < 0.02,
+    `Africa never holds 2% of a decade's recorded shoots, as the text says (highest ${(100 * Math.max(...africaShares)).toFixed(2)}%)`);
+
+  // Each part opens with a key figure; recompute every one from the data files.
+  section = 'Key figures';
+  const forHalf = decade => {
+    const shares = s2.filter(r => num(r.decade) === decade).map(r => num(r.share_pct)).sort((a, b) => b - a);
+    let total = 0, count = 0;
+    for (const v of shares) { count += 1; total += v; if (total > 50) break; }
+    return count;
+  };
+  check(forHalf(1990) === 1 && forHalf(2020) === 3,
+    `part one: 1 country made up half of the 1990s' films, 3 in 2020-22 (${forHalf(1990)}, ${forHalf(2020)})`);
+  const inEuNa = n => ['Europe', 'North America'].includes((wide.get(num(n)) || {}).region);
+  const euNaShare = 100 * sum(s9.filter(r => inEuNa(r.a_num) && inEuNa(r.b_num)).map(r => num(r.links))) /
+    sum(s9.map(r => num(r.links)));
+  check(fixed(euNaShare, 1) === '80.7',
+    `part two: 80.7% of the co-produced films on the map are by pairs within Europe and North America (${fixed(euNaShare, 1)}%)`);
+  const over100m = decade => 100 * sum(s4.filter(r => num(r.decade) === decade && num(r.log_budget) >= 8).map(r => num(r.density)));
+  check(fixed(over100m(1970), 1) === '7.7' && fixed(over100m(2010), 1) === '88.4',
+    `part three: 7.7% of the 1970s' biggest films cost $100m or more, 88.4% in the 2010s (${fixed(over100m(1970), 1)}%, ${fixed(over100m(2010), 1)}%)`);
+  const ratingGain = num(s6b[s6b.length - 1].avg_rating) - num(s6b[0].avg_rating);
+  check(fixed(ratingGain, 1) === '0.6',
+    `part four: the average rating is 0.6 higher in the dearest budget range than the cheapest (${fixed(ratingGain, 2)})`);
+  const localAdmissions = year => num(s11.find(r => num(r.year) === year && r.group === 'Malaysian films' &&
+    r.metric === 'admissions_m').value);
+  check(fixed(localAdmissions(2025) / localAdmissions(2023), 1) === '2.5',
+    `part five: Malaysian films' admissions grew 2.5 times from 2023 to 2025 (${localAdmissions(2023)}m to ${localAdmissions(2025)}m)`);
+
   section = 'Map coverage';
   const world = JSON.parse(await fetchText('data/world-110m.topojson'));
   const outlines = vega.read(JSON.stringify(world), { type: 'topojson', feature: 'countries' });
@@ -473,6 +529,9 @@ async function checkCharts() {
     const name = nameOf(path);
     const figure = document.createElement('figure');
     const target = document.createElement('div');
+    // As wide as a chart card on the page, so the specs' width-dependent settings
+    // (containerSize()) draw the laptop layout here too
+    target.style.minWidth = '770px';
     const caption = document.createElement('figcaption');
     figure.append(target, caption);
     container.append(figure);

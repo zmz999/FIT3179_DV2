@@ -1,12 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Timeline of Malaysia's eleven submissions for the Academy Award for Best International Feature Film from 2004 to 2026; none of the first ten was nominated and the 2026 entry awaits its ceremony.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": "Eleven entries, no nominations yet",
-    "subtitle": "Malaysia's submissions for the Academy Award for Best International Feature Film, 2004–2026"
+    "subtitle": [
+      "Malaysia's submissions for the Academy Award",
+      "for Best International Feature Film, 2004–2026"
+    ]
   },
   "width": 760,
   "height": 112,
+  "params": [
+    {"name": "narrow", "expr": "width < 680"}
+  ],
   "layer": [
     {
       "data": {"values": [{"x1": 2003.6, "x2": 2026.4}]},
@@ -74,12 +81,21 @@
           {
             "x1": 2004.5,
             "x2": 2011.5,
-            "label": "Eight years between the first and second entries"
+            "label": "Eight years between the first and second entries",
+            "short": ["Eight years between", "the first two entries"]
           },
-          {"x1": 2014.5, "x2": 2026.5, "label": "Nine entries in twelve years"}
+          {
+            "x1": 2014.5,
+            "x2": 2026.5,
+            "label": "Nine entries in twelve years",
+            "short": ["Nine entries", "in twelve years"]
+          }
         ]
       },
-      "transform": [{"calculate": "(datum.x1 + datum.x2) / 2", "as": "xm"}],
+      "transform": [
+        {"calculate": "(datum.x1 + datum.x2) / 2", "as": "xm"},
+        {"calculate": "narrow ? datum.short : datum.label", "as": "text"}
+      ],
       "layer": [
         {
           "mark": {"type": "rule", "color": "#6B6259", "strokeWidth": 1},
@@ -103,7 +119,7 @@
             "type": "text",
             "color": "#6B6259",
             "baseline": "bottom",
-            "dy": -3
+            "dy": {"expr": "narrow ? -17 : -3"}
           },
           "encoding": {
             "x": {
@@ -117,7 +133,7 @@
               "axis": null
             },
             "y": {"value": 18},
-            "text": {"field": "label"}
+            "text": {"field": "text"}
           }
         }
       ]
@@ -149,7 +165,7 @@
         {
           "mark": {
             "type": "square",
-            "size": 676,
+            "size": {"expr": "narrow ? pow(min(26, width / 23.2 * 0.8), 2) : 676"},
             "strokeWidth": 1.5,
             "opacity": 1
           },
@@ -190,11 +206,13 @@
         {
           "mark": {
             "type": "text",
-            "font": "Oswald, Inter, sans-serif",
-            "fontSize": 12,
+            "font": "Inter, system-ui, sans-serif",
+            "fontSize": {"expr": "narrow ? 10 : 10.5"},
             "fontWeight": 600,
             "color": "#1F1B16",
-            "baseline": "top"
+            "angle": {"expr": "narrow ? 270 : 0"},
+            "align": {"expr": "narrow ? 'right' : 'center'"},
+            "baseline": {"expr": "narrow ? 'middle' : 'top'"}
           },
           "encoding": {
             "y": {"value": 81},
@@ -203,8 +221,17 @@
         },
         {
           "transform": [{"filter": "datum.result === 'Result pending'"}],
-          "mark": {"type": "text", "color": "#6B6259", "baseline": "top"},
-          "encoding": {"y": {"value": 98}, "text": {"value": "pending"}}
+          "mark": {
+            "type": "text",
+            "color": "#6B6259",
+            "baseline": "top",
+            "align": {"expr": "narrow ? 'right' : 'center'"},
+            "dx": {"expr": "narrow ? 6 : 0"}
+          },
+          "encoding": {
+            "y": {"value": {"expr": "narrow ? 110 : 98"}},
+            "text": {"value": "pending"}
+          }
         }
       ]
     }
@@ -213,9 +240,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

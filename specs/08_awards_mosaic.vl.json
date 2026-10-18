@@ -1,15 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Mosaic chart of Academy Award nominations by the region that made the film, one column per decade sized by its nominations; North America and Europe's share fell from 97.8% in the 1970s to 90.5% in 2020–22.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": "The Oscars are opening up, slowly",
     "subtitle": [
-      "Academy Award nominations by the film's region of production. Column width shows",
-      "each decade's nominations; figures give North America and Europe's combined share (%)."
+      "Academy Award nominations by the film's region of production.",
+      "Column width shows each decade's nominations; figures give",
+      "North America and Europe's combined share (%)."
     ]
   },
   "width": 620,
   "height": 340,
+  "params": [
+    {
+      "name": "legendRows",
+      "expr": "containerSize()[0] < 450 ? 3 : containerSize()[0] < 666 ? 2 : 1"
+    }
+  ],
   "data": {
     "url": "data/08b_awards_mosaic_layout.csv",
     "format": {
@@ -104,12 +112,14 @@
             ]
           },
           "legend": {
-            "orient": "top",
+            "orient": "none",
+            "legendX": -58,
+            "legendY": {"expr": "-44 - (legendRows - 1) * 17"},
+            "columns": {"expr": "legendRows === 3 ? 2 : legendRows === 2 ? 3 : 0"},
             "direction": "horizontal",
             "title": null,
             "symbolType": "square",
-            "columnPadding": 14,
-            "offset": 30
+            "columnPadding": 14
           }
         },
         "opacity": {
@@ -141,19 +151,26 @@
       }
     },
     {
-      "transform": [{"filter": "datum.region6 === 'North America'"}],
+      "transform": [
+        {"filter": "datum.region6 === 'North America'"},
+        {
+          "calculate": "width < 330 ? (datum.decade === 2020 ? '’20–22' : '’' + slice(datum.decade + '', 2) + 's') : datum.decade_label",
+          "as": "header"
+        }
+      ],
       "mark": {
         "type": "text",
         "dy": -8,
         "baseline": "bottom",
-        "font": "Oswald, Inter, sans-serif",
-        "fontSize": 13,
+        "font": "Inter, system-ui, sans-serif",
+        "fontSize": {"expr": "width < 330 ? 11 : 12"},
+        "fontWeight": 600,
         "color": "#1F1B16"
       },
       "encoding": {
         "x": {"field": "xmid", "type": "quantitative"},
         "y": {"value": 0},
-        "text": {"field": "decade_label", "type": "nominal"}
+        "text": {"field": "header", "type": "nominal"}
       }
     },
     {
@@ -165,7 +182,7 @@
         "type": "text",
         "baseline": "top",
         "dy": 6,
-        "fontSize": 12,
+        "fontSize": {"expr": "width < 330 ? 11 : 12"},
         "fontWeight": 600,
         "color": "#1F1B16"
       },
@@ -180,9 +197,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

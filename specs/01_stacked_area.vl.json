@@ -1,9 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Stacked area chart of each region's share of the world's widely seen films, year by year from 1970 to 2022; North America's share peaks at 64% in 1990.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
-    "text": "North American films peaked at 64% of the total in 1990",
-    "subtitle": "Share of each year's widely seen films, by region of production, 1970–2022"
+    "text": "North America's share peaked at 64% in 1990",
+    "subtitle": [
+      "Share of each year's widely seen films,",
+      "by region of production, 1970–2022"
+    ]
   },
   "width": 760,
   "height": 300,
@@ -155,9 +159,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

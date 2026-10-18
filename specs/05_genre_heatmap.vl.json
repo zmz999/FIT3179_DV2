@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Heatmap of each genre's share of the decade's widely seen films from the 1970s to 2020–22; the Western fell from 2.8% to 0.4% while the documentary rose from 1.8% to 6.6%.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": "The Western died. The documentary took its place.",
@@ -34,7 +35,9 @@
             ]
           },
           "legend": {
-            "orient": "top",
+            "orient": "none",
+            "legendX": -96,
+            "legendY": -86,
             "direction": "horizontal",
             "gradientLength": 150
           }
@@ -60,10 +63,11 @@
       "axis": {
         "orient": "top",
         "labelAngle": 0,
-        "labelFont": "Oswald, Inter, sans-serif",
-        "labelFontSize": 13,
+        "labelFont": "Inter, system-ui, sans-serif",
         "labelColor": "#1F1B16",
-        "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'"
+        "labelFontSize": {"expr": "width < 270 ? 11 : 12"},
+        "labelFontWeight": 600,
+        "labelExpr": "width < 270 ? (datum.value == 2020 ? '’20–22' : '’' + slice(datum.value + '', 2) + 's') : (datum.value == 2020 ? '2020–22' : datum.value + 's')"
       }
     },
     "y": {
@@ -116,9 +120,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",

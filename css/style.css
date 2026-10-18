@@ -6,7 +6,11 @@
   /* the chart colours for Malaysia and Hollywood, in shades that pass 4.5:1 as text */
   --my-text:#B3202D; --hollywood:#0072B2;
   --gold:#C8A165;
-  --head:'Oswald',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif;
+  /* Titles (the page title, section headings, chart titles and tooltip titles) are set in a
+     serif, DM Serif Display, a high-contrast display face in the manner of film posters and
+     magazines; all other text, numbers included, is set in a sans serif, Inter.
+     DM Serif Display has a single weight, so titles are never set bold. */
+  --head:'DM Serif Display',Georgia,'Times New Roman',serif; --body:'Inter',system-ui,sans-serif;
 
   /* the grid */
   --grid:820px; --gutter:24px;
@@ -15,9 +19,21 @@
   --span-8:calc(8 * var(--col) + 7 * var(--gutter));
   --span-10:calc(10 * var(--col) + 9 * var(--gutter));
 
+  /* the reading measure: about ten words a line, in each text's own size */
+  --measure:25em;
+
   /* the spacing scale */
   --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --s7:96px;
 }
+/* Vertical rhythm, as the reader sees it (gaps between visible text and edges), the
+   same everywhere on the page:
+   - one block gap, about 36-40px, between any two consecutive blocks: paragraphs,
+     chart cards, key figures and the label of the next part alike. A new part is
+     marked by its label and heading, not by extra space;
+   - an edge (a card's, or a dark band's) has that block gap outside it and 24px of
+     padding inside it, so crossing into a band reads like crossing into a chart card;
+   - inside a block, smaller steps: about 12px between lines of text, 20px between a
+     part's label and heading, and 31px from a heading's rule to its text. */
 *{box-sizing:border-box}
 body{margin:0;background:var(--page);color:var(--ink);
      font-family:var(--body);font-size:17px;line-height:1.65;
@@ -31,27 +47,39 @@ main .card.wide{max-width:var(--wide)}
 
 /* Title band and closing band */
 .hero,.coda{background:var(--ink);color:#F7F5F2;text-align:center}
-.hero{padding:var(--s7) 0 calc(var(--s7) + var(--s2));margin-bottom:var(--s7)}
+.hero{padding:var(--s3) 0;margin-bottom:var(--s4)}
 .kicker{font-family:var(--body);font-size:12px;letter-spacing:.16em;
         text-transform:uppercase;color:var(--gold);margin:0 0 var(--s2)}
-.hero h1{font-family:var(--head);font-weight:600;font-size:clamp(40px,7vw,72px);
-         line-height:1.02;margin:0 0 var(--s2);letter-spacing:-.01em}
+.hero h1{font-family:var(--head);font-weight:400;font-size:clamp(40px,7vw,72px);
+         line-height:1.05;margin:0 0 var(--s2);letter-spacing:-.01em;text-wrap:balance}
 .standfirst{font-size:21px;color:#CFC7BC;margin:0 auto;max-width:var(--span-10)}
 
-/* Section headings */
-section{margin-bottom:var(--s7)}
+/* Section headings, on the left edge of the text column so each part's label,
+   heading and text start on one line */
+section{margin-bottom:var(--s4)}
 .eyebrow{font-family:var(--body);font-size:12px;letter-spacing:.16em;
-         text-transform:uppercase;color:var(--muted);margin:0 0 var(--s1);
-         text-align:center}
-h2{font-family:var(--head);font-weight:600;font-size:34px;line-height:1.15;
-   margin:0 0 var(--s4);letter-spacing:-.005em;text-align:center}
+         text-transform:uppercase;color:var(--muted);margin:0 auto var(--s1);
+         max-width:var(--span-8)}
+h2{font-family:var(--head);font-weight:400;font-size:34px;line-height:1.15;
+   margin:0 auto var(--s3);max-width:var(--span-8);text-align:left;text-wrap:balance}
 h2::after{content:"";display:block;width:56px;height:2px;background:var(--gold);
-          margin:var(--s2) auto 0}
+          margin:var(--s2) 0 0}
 /* Space between a heading and the content below it */
 h2 + .card,h2 + .takeaways{margin-top:var(--s4)}
+/* Each part's key figure: its main finding as one number, set large in the text typeface
+   like the closing figures, after the opening sentence that raises the question */
+.prose .keyfig{margin:var(--s3) 0 var(--s4)}
+.keyfig b{display:block;font-family:var(--body);font-weight:600;font-size:36px;line-height:1.1;
+          letter-spacing:-.015em}
+.keyfig small{font-family:var(--body);font-weight:500;font-size:18px;color:var(--muted);margin:0 .15em}
+.keyfig span{display:block;margin-top:var(--s1);max-width:var(--measure);
+             font-size:15px;line-height:1.45;color:var(--muted)}
 
-/* Text: one centred column, eight grid columns wide */
+/* Text: one centred column, eight grid columns wide. Paragraphs and lists stop at the
+   reading measure, so they keep the column's left edge but not its full width. */
 .prose{max-width:var(--span-8);margin:0 auto var(--s3)}
+.prose > p,.prose > ul{max-width:var(--measure)}
+.prose:last-child{margin-bottom:0}
 p{margin:0 0 var(--s3)}
 .prose p:last-child{margin-bottom:0}
 .lede{font-size:20px;color:#3A332B}
@@ -61,7 +89,7 @@ strong.malaysia{color:var(--my-text)}
 strong.hollywood{color:var(--hollywood)}
 
 /* Chart cards */
-.card{margin:var(--s5) auto;padding:var(--s3);background:var(--card);
+.card{margin:var(--s4) auto;padding:var(--s3);background:var(--card);
       border:1px solid var(--line);border-radius:10px}
 figure{margin:0}
 /* Chart captions, aligned with the left edge of the chart */
@@ -71,31 +99,59 @@ figcaption{margin:var(--s2) 0 0;
            max-width:33em}
 /* Data source line at the end of each caption */
 figcaption .source{display:block;margin-top:var(--s1);font-size:13px}
+/* A caption has two parts: how to read the chart, then how to use it, with the
+   source. On full-width and wide cards the parts sit side by side, so the caption
+   spans the card instead of leaving its right side empty; paired cards and narrow
+   screens keep them one above the other. */
+figcaption .read,figcaption .use{display:block}
+figcaption .read{max-width:var(--measure)}
+/* The notes on how to use a chart keep to a narrower measure */
+figcaption .use{margin-top:var(--s1);max-width:22em}
+@media (min-width:721px){
+  main > section > .card figcaption{display:grid;max-width:none;
+    grid-template-columns:minmax(0,var(--measure)) minmax(0,1fr);column-gap:var(--s5)}
+  main > section > .card figcaption .use{margin-top:0;font-size:14px}
+}
+/* In the wide map cards the controls and the caption start where the text of every
+   other card starts, and only the map runs wider. The maps' own titles and legends
+   are moved in by the same amount (textInset in their specifications). */
+.card.wide figcaption,.card.wide .vega-bindings{
+  margin-left:max(0px,calc((100% - var(--grid) + 2 * var(--s3) + 2px) / 2))}
 /* Two charts side by side. Each card shares the row's two tracks (chart, then
    caption), so the dividers and captions of the pair line up. */
 .row-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-       grid-template-rows:auto auto;column-gap:var(--s3);row-gap:0;margin:var(--s5) auto}
+       grid-template-rows:auto auto;column-gap:var(--s3);row-gap:0;margin:var(--s4) auto}
 .row-2 .card{margin:0;display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0}
-/* Chart containers; a chart wider than its card scrolls inside it */
+/* Chart containers; a chart wider than its card scrolls inside it, and its caption
+   starts by saying so (js/main.js marks the card) */
 .viz{width:100%;min-height:60px;overflow-x:auto}
+figure.scrolls figcaption::before{content:"Scroll sideways to see the whole chart.";
+  display:block;grid-column:1 / -1;margin-bottom:var(--s1);font-size:13px;color:var(--ink)}
 
 /* Hide the vega-embed actions menu */
 .vega-embed summary{display:none}
-/* Centre each chart in its card and show its input controls below it, on the left,
-   so the chart title is read first */
-.viz.vega-embed{display:flex;flex-direction:column;align-items:center;
-                align-items:safe center}
+/* Each chart starts at the left of its card, so its title lines up with its caption
+   even when it is narrower than the card, and its input controls sit below it, so
+   the chart title is read first */
+.viz.vega-embed{display:flex;flex-direction:column;align-items:flex-start}
 .vega-embed .vega-bindings{align-self:flex-start;font-family:var(--body);
-  font-size:14px;margin:var(--s2) 0 0;display:flex;gap:10px;align-items:center}
+  font-size:14px;margin:var(--s2) 0 0;display:flex;flex-wrap:wrap;gap:12px 32px;
+  align-items:center}
 /* Hide the controls area of charts without controls */
 .vega-embed .vega-bindings:empty{display:none}
 .vega-embed select{font-family:var(--body);font-size:14px;padding:6px 10px;
   border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+/* Each control shows its name, then its input. */
+.vega-embed .vega-bind,.vega-embed .vega-bind > label{display:flex;align-items:center;gap:10px}
+.vega-embed .vega-bind-name{white-space:nowrap}
 /* Decade sliders. The chart itself names the chosen decade (2020 reads as
    2020–22), so the slider's raw number is hidden. */
-.vega-embed .vega-bind label{display:flex;align-items:center;gap:10px}
 .vega-embed input[type=range]{width:240px;margin:0;accent-color:var(--ink);cursor:pointer}
 .vega-embed input[type=range] + span{display:none}
+/* Zoom presets: the options in one row of radio buttons */
+.vega-embed .vega-bind-radio{display:flex;flex-wrap:wrap;gap:4px 14px}
+.vega-embed .vega-bind-radio label{display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.vega-embed input[type=radio]{margin:0;accent-color:var(--ink);cursor:pointer}
 /* Tooltips. vega-embed's own tooltip style is off (js/main.js), so the page sets all of
    it: hidden until a mark is hovered, the name first in the heading typeface, then each
    label in muted ink beside its value in bold. The resets keep the section-heading
@@ -105,7 +161,7 @@ figcaption .source{display:block;margin-top:var(--s1);font-size:13px}
   white-space:pre-line;background:var(--card);border:1px solid var(--line);border-radius:6px;
   box-shadow:0 4px 14px rgba(31,27,22,.12)}
 #vg-tooltip-element.visible{visibility:visible}
-#vg-tooltip-element h2{margin:0 0 6px;font-family:var(--head);font-size:15px;font-weight:600;
+#vg-tooltip-element h2{margin:0 0 6px;font-family:var(--head);font-size:16px;font-weight:400;
   line-height:1.25;letter-spacing:0;text-align:left}
 #vg-tooltip-element h2::after{content:none}
 #vg-tooltip-element table{border-spacing:0}
@@ -114,40 +170,40 @@ figcaption .source{display:block;margin-top:var(--s1);font-size:13px}
 #vg-tooltip-element td.value{font-weight:600}
 
 /* Closing summary */
-.coda{padding:var(--s7) 0;margin-bottom:0}
+.coda{padding:var(--s3) 0;margin-bottom:0}
 .coda h2{color:#F7F5F2}
 .coda p{color:#CFC7BC;text-align:left}
-.coda .eyebrow{text-align:center}
 .coda .lede{color:#EFE9E1}
 .takeaways{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
-           gap:var(--s4) var(--s5);margin:var(--s4) auto var(--s5);padding:0;
+           gap:var(--s4) var(--s5);margin:var(--s4) auto var(--s3);padding:0;
            max-width:var(--grid)}
 .takeaways li{text-align:left;border-top:2px solid var(--gold);padding-top:var(--s2)}
-.takeaways b{display:block;font-family:var(--head);font-weight:600;
-             font-size:38px;line-height:1.1;color:var(--gold)}
+.takeaways b{display:block;font-family:var(--body);font-weight:600;
+             font-size:34px;line-height:1.1;letter-spacing:-.015em;color:var(--gold)}
 .takeaways span{display:block;font-size:15px;line-height:1.45;color:#CFC7BC;
                 margin-top:var(--s1)}
 
 /* Footer */
-footer.wrap{border-top:1px solid var(--line);padding-top:var(--s6);padding-bottom:var(--s7);
+footer.wrap{border-top:1px solid var(--line);padding-top:var(--s4);padding-bottom:var(--s5);
             color:var(--muted);font-size:15px}
-/* Footer paragraphs kept to about 60 characters a line */
-footer .prose p{max-width:33em}
-footer h2{font-size:22px;color:var(--ink);text-align:center}
+footer h2{font-size:22px;color:var(--ink)}
 footer a{color:var(--ink)}
 .sources{margin:0 0 var(--s3);padding-left:var(--s3)}
 .sources li{margin-bottom:var(--s1)}
 
+/* Paired charts stack once a half-width card is too narrow for them: below 840 px
+   the widest pair needs more than half the row */
+@media (max-width:839px){
+  .row-2{grid-template-columns:minmax(0,1fr)}
+  .row-2 .card + .card{margin-top:var(--s4)}
+}
+
 /* Narrow screens */
 @media (max-width:720px){
   body{font-size:16px}
-  .hero{padding:var(--s6) 0;margin-bottom:var(--s6)}
-  .coda{padding:var(--s6) 0}
   h2{font-size:26px}
-  section{margin-bottom:var(--s6)}
-  .card{padding:14px;margin:var(--s4) auto}
-  .row-2{grid-template-columns:minmax(0,1fr);margin:var(--s4) auto}
-  .row-2 .card + .card{margin-top:var(--s4)}
+  .keyfig b{font-size:30px}
+  .card{padding:14px}
   .takeaways{grid-template-columns:1fr;gap:var(--s3)}
-  .takeaways b{font-size:30px}
+  .takeaways b{font-size:28px}
 }

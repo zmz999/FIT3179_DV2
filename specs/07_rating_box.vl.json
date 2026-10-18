@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "Box plots of audience ratings by decade; the median stays between 6.25 and 6.57 out of 10 across five decades.",
   "padding": {"left": 0, "top": 5, "right": 5, "bottom": 5},
   "title": {
     "text": ["Five decades on, audiences score", "films almost exactly the same"],
@@ -34,8 +35,9 @@
       "title": null,
       "axis": {
         "labelExpr": "datum.value == 2020 ? '2020–22' : datum.value + 's'",
-        "labelFont": "Oswald, Inter, sans-serif",
-        "labelFontSize": 14,
+        "labelFont": "Inter, system-ui, sans-serif",
+        "labelFontSize": 13,
+        "labelFontWeight": 600,
         "labelColor": "#1F1B16"
       }
     },
@@ -127,9 +129,9 @@
     "background": "#FFFFFF",
     "font": "Inter, system-ui, sans-serif",
     "title": {
-      "font": "Oswald, Inter, sans-serif",
-      "fontSize": 19,
-      "fontWeight": 600,
+      "font": "DM Serif Display, Georgia, serif",
+      "fontSize": 18,
+      "fontWeight": 400,
       "color": "#1F1B16",
       "anchor": "start",
       "subtitleFont": "Inter, system-ui, sans-serif",
